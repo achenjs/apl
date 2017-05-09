@@ -1,0 +1,21 @@
+{
+  "name": "zeus-frontend",
+  "description": "",
+  "main": "",
+  "authors": [
+    "wangwenchen <wangwenchen@apluslabs.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

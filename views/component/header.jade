@@ -1,0 +1,16 @@
+block content
+  div.header.container
+    div.row
+      div.col-md-1
+      div.col-md-2
+        img(src='/images/logo.png')
+      div.col-md-7
+        - var items = ["首页", "APL登录", "生态服务", "智造服务", "硬创学院", "最新动态"]
+        ul
+          each item, i in items
+            li #{item}
+      div.col-md-1
+        span 中文
+        span /
+        span English
+      div.col-md-1
