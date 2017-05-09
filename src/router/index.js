@@ -1,9 +1,9 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import Home from '@/components/Home';
-import Demo from '@/components/demo';
+import Vue from 'vue'
+import Router from 'vue-router'
+const Home = resolve => require(['@/components/Home'], resolve)
+const Demo = resolve => require(['@/components/demo'], resolve)
 
-Vue.use(Router);
+Vue.use(Router)
 
 export default new Router({
   mode: 'history',
@@ -12,11 +12,13 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home,
-    },
-    {
-      path: '/demo',
-      name: 'Demo',
-      component: Demo
+      children: [
+        {
+          path: '/demo',
+          name: 'Demo',
+          component: Demo
+        }
+      ]
     }
   ]
-});
+})

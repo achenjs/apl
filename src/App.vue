@@ -11,5 +11,4 @@ export default {
 </script>
 
 <style lang="styl">
-@import '../node_modules/element-ui/lib/theme-default/index.css';
 </style>
