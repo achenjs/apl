@@ -1,19 +1,24 @@
 .header {
-  font-size: 12px;
-  height: 80px;
-  line-height: 80px;
-  background-color: rgba(255, 255, 255, .7);
+  width: 100%;
+  height: 60px;
+  font-size: 14px;
+  line-height: 60px;
+  background-color: rgba(255, 255, 255, 0.7);
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 12;
-}
-.header img {
-  width: 136px;
-  height: 80px;
-}
-.header ul li{
-  display: inline-block;
-  padding: 0 20px;
-  text-align: center;
-}
+  z-index: 12; }
+  .header img {
+    width: 136px;
+    height: 60px; }
+  .header ul li {
+    display: inline-block;
+    padding: 0 20px;
+    text-align: center;
+    cursor: pointer; }
+    .header ul li a {
+      color: #000000;
+      text-decoration: none;
+      display: inline-block; }
+      .header ul li a:hover {
+        color: #b0484d; }

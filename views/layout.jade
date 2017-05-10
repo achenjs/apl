@@ -3,9 +3,14 @@ html
   head
     title= title
     link(rel='stylesheet', href='/lib/bootstrap/dist/css/bootstrap.min.css')
-    link(rel='stylesheet', href='/styles/index.css')
     link(rel='stylesheet', href='/styles/header.css')
-  body
-    block content
+    link(rel='stylesheet', href='/styles/footer.css')
+    - if (styleLink)
+      link(rel='stylesheet', href='/styles/#{styleLink}.css')
     script(src='/lib/jquery/dist/jquery.min.js')
     script(src='/lib/bootstrap/dist/js/bootstrap.min.js')
+    script(src='/lib/axios/dist/axios.min.js')
+
+  body
+    block content
+  

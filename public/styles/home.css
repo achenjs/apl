@@ -1,0 +1,43 @@
+.home {
+  padding-top: 300px; }
+  .home .carousel .carousel-list {
+    width: 100%;
+    height: 450px;
+    position: relative; }
+    .home .carousel .carousel-list .carousel-item {
+      width: 100%;
+      height: 100%;
+      position: relative; }
+  .home .founder .content h3 {
+    text-align: center; }
+  .home .founder .content ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 0; }
+    .home .founder .content ul li {
+      width: 33%;
+      text-align: center; }
+      .home .founder .content ul li img {
+        width: 200px;
+        height: 200px; }
+      .home .founder .content ul li .info {
+        width: 250px;
+        margin: auto; }
+        .home .founder .content ul li .info .title p {
+          font-size: 12px;
+          font-weight: bold; }
+        .home .founder .content ul li .info .description {
+          font-size: 12px; }
+          .home .founder .content ul li .info .description p {
+            text-align: left;
+            text-indent: 2em; }
