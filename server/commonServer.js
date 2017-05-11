@@ -9,12 +9,11 @@ exports.request = function request(options, callback,params,NoPrintResult) {
   if(params){
       if(typeof params=="string"){
           post_data = params;
-      }else{
+      } else {
           post_data = JSON.stringify(params);
       }
-      logInfo = logInfo +",params:"+post_data;
+      logInfo = logInfo + ",params:" + post_data;
   }
-	console.log(logInfo)
 	var post_req = http.request(options, function(result) {
 		var data = '';
 	  result.setEncoding("utf8");

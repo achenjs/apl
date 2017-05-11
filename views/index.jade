@@ -2,5 +2,8 @@ extends layout
 
 block content
   include ./component/header
-  include ./home
+  - if(styleLink == 'home')
+    include ./home
+  - else if (styleLink == 'ecology')
+    include ./ecology
   include ./component/footer

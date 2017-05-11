@@ -1,7 +1,12 @@
 block content
   div.home
+    //- 轮播
     div.carousel
       ul.carousel-list
+      i.Btn.left-btn
+      i.Btn.right-btn
+      ul.carousel-index-list
+    //- 创始人团队
     div.founder.row
       div.col-md-2
       div.col-md-8.content
@@ -36,5 +41,24 @@ block content
               div.description
                 p 乔会君先生是人工智能时代知名的天使投资人、人工智能产业创新联盟副理事长，曾带领团队长期服务于全球各大运营商，在产品研发、供应链等方面拥有丰富的经验。
       div.col-md-2
-      script(src='/javascripts/home.js')
+    //- 最新动态
+    div.news-latest.row
+      div.col-md-2
+      div.col-md-8.content
+        h3 最新动态
+        p.more 查看更多 >
+        div.latest
+        //  
+          dl
+            dt
+              img(src='/images/latest01.png')
+            dd
+              h5
+                i  
+                span(title='洪泰智造工场洪泰智造工场洪泰智造工场洪泰智造工场洪泰智造工场洪泰智造工场洪泰智造工场') 洪泰智造工场洪泰智造工场洪泰智造工场洪泰智造工场洪泰智造工场洪泰智造工场洪泰智造工场
+              div.text 3月27日，洪泰智造工场「未来办公室」亮
+                  相，人脸+虹膜识别，磁悬浮导电、VR、导航机器人等多个热门的智能硬件技术及产品，在洪泰智造工场9层孵化空间集中亮相。锦江区政协主席张松、副主席赵万松、秘书长黄茂林、锦江区科信局局长张官友等参加了此次体验日活动、创品机器人、疆域智能等创业团队代表向与会嘉宾详细讲解了科技创业成果。
+              p.date 2017-05-11
+      div.col-md-2
+    script(src='/javascripts/home.js')
     

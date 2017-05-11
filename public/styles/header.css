@@ -3,11 +3,7 @@
   height: 60px;
   font-size: 14px;
   line-height: 60px;
-  background-color: rgba(255, 255, 255, 0.7);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 12; }
+  background-color: rgba(255, 255, 255, 0.7); }
   .header img {
     width: 136px;
     height: 60px; }
@@ -21,4 +17,6 @@
       text-decoration: none;
       display: inline-block; }
       .header ul li a:hover {
+        color: #b0484d; }
+      .header ul li a.active {
         color: #b0484d; }

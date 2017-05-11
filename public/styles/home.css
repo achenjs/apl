@@ -1,17 +1,64 @@
-.home {
-  padding-top: 300px; }
-  .home .carousel .carousel-list {
+.home .carousel .carousel-list {
+  width: 100%;
+  height: 450px;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  overflow: hidden; }
+  .home .carousel .carousel-list .carousel-item {
     width: 100%;
-    height: 450px;
-    position: relative; }
-    .home .carousel .carousel-list .carousel-item {
-      width: 100%;
-      height: 100%;
-      position: relative; }
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    display: none;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    .home .carousel .carousel-list .carousel-item.active {
+      display: inline-block; }
+
+.home .carousel .Btn {
+  position: absolute;
+  cursor: pointer;
+  width: 22px;
+  height: 38px;
+  top: 50%;
+  margin-top: -19px;
+  z-index: 10; }
+
+.home .carousel .left-btn {
+  background: url("../images/leftBtn.png") no-repeat;
+  left: 20px; }
+
+.home .carousel .right-btn {
+  background: url("../images/rightBtn.png") no-repeat;
+  right: 20px; }
+
+.home .carousel .carousel-index-list {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  z-index: 100;
+  text-align: center; }
+  .home .carousel .carousel-index-list .carousel-index-item {
+    display: inline-block;
+    width: 40px;
+    height: 5px;
+    margin-right: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer; }
+    .home .carousel .carousel-index-list .carousel-index-item.active {
+      background: #fff; }
+    .home .carousel .carousel-index-list .carousel-index-item:last-child {
+      margin-right: 0; }
+
+.home .founder {
+  padding: 40px 0; }
   .home .founder .content h3 {
-    text-align: center; }
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px; }
   .home .founder .content ul {
-    list-style: none;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -31,7 +78,7 @@
         width: 200px;
         height: 200px; }
       .home .founder .content ul li .info {
-        width: 250px;
+        width: 90%;
         margin: auto; }
         .home .founder .content ul li .info .title p {
           font-size: 12px;
@@ -41,3 +88,59 @@
           .home .founder .content ul li .info .description p {
             text-align: left;
             text-indent: 2em; }
+
+.home .news-latest {
+  padding: 40px 0;
+  background: url("../images/latest.png") no-repeat; }
+  .home .news-latest .content h3 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px; }
+  .home .news-latest .content p.more {
+    text-align: right;
+    font-size: 12px;
+    cursor: pointer; }
+  .home .news-latest .content .latest dl {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .home .news-latest .content .latest dl dt {
+      width: 325px;
+      height: 200px; }
+      .home .news-latest .content .latest dl dt img {
+        width: 100%;
+        height: 100%; }
+    .home .news-latest .content .latest dl dd {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      margin-left: 15px;
+      height: 200px;
+      padding: 10px 15px;
+      background-color: #ffffff;
+      -webkit-box-shadow: 5px 5px 5px #888888;
+              box-shadow: 5px 5px 5px #888888;
+      position: relative; }
+      .home .news-latest .content .latest dl dd h5 {
+        width: 80%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+        .home .news-latest .content .latest dl dd h5 i {
+          background-color: #a23432;
+          display: inline-block;
+          width: 3px;
+          height: 12px;
+          vertical-align: middle;
+          margin-right: 6px; }
+      .home .news-latest .content .latest dl dd .text {
+        cursor: pointer;
+        color: #b0b0b0;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 2px; }
+      .home .news-latest .content .latest dl dd .date {
+        color: #b0b0b0;
+        position: absolute;
+        bottom: 10px;
+        right: 20px; }
