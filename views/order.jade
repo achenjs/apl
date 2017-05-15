@@ -1,0 +1,52 @@
+block content
+  div.order
+    div.motails
+      div.content
+        img(src='/images/success.png')
+        div.txt
+          h5 您的需求已提交
+          p 我们会在1-3个工作日做出反馈
+        div.que 确定
+    div.orderHead
+      h4 下单生产
+      p 请您填写以下表单或发邮件给
+        span aiqi@apluslabs.com，
+        |我们将第一时间和您取得联系
+    div.content
+      div.itemInput.active
+        span 项目名称
+        input(placeholder='请输入名称')
+      div.itemInput
+        span 需求描述
+        input(type='textarae', placeholder='请输入需求')
+      div.itemInput
+        span 生产件数
+        input(placeholder='请输入件数')
+      div.itemInput
+        span 交付时间
+        input(placeholder='请输入日期/如：2017-04-02')
+      div.itemInput
+        span 联系人
+          i *
+        input(placeholder='请输入姓名')
+        div.error
+          i
+          b 请输入联系人姓名 
+      div.itemInput
+        span 手机号
+          i *
+        input(placeholder='请输入号码')
+        div.error
+          i
+          b 请输入正确的手机号
+      div.itemInput
+        span 短信验证码
+          i *
+        input(placeholder='请输入验证码')
+        div.verCode 发送验证码
+        div.error
+          i
+          b 请输入正确的短信验证码
+      div.button 提交
+      
+    script(src='/javascripts/order.js')

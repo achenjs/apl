@@ -2,7 +2,7 @@ $(function(){
   //  轮播图列表
   axios('/carousel')
     .then((result) => {
-      var data = JSON.parse(result.data.result).carousels
+      var data = result.data.result.carousels
       var str = '',     //  图片
           str1 = ''     //  图片对应下标
       for (let i in data) {
@@ -17,8 +17,11 @@ $(function(){
         str1 += '<li class="carousel-index-item"></li>'
       }
       $('.carousel-index-list').append(str1)
-      var width = $('.carousel-index-list').width() //  下标box的宽度
-      $('.carousel-index-list').css('marginLeft', - width / 2).find('.carousel-index-item').eq(0).addClass('active')
+      setTimeout(function() {
+        var width = $('.carousel-index-list').width() //  下标box的宽度
+        console.log(width)
+        $('.carousel-index-list').css('marginLeft', - width / 2).find('.carousel-index-item').eq(0).addClass('active')
+      }, 0)
     })
 
   class init {
@@ -76,18 +79,24 @@ $(function(){
 
   axios('/article')
     .then((result) => {
-      var data = JSON.parse(result.data.result)
+      var data = result.data.result
       var list = data.items
       var str = ''
       for (let i = 0; i < 2; i++) {
+        var newTime = new Date(list[i].gmt_create)
+        var year = newTime.getFullYear()
+        var month = newTime.getMonth() + 1
+        var date = newTime.getDate()
+        month = month < 10 ? '0' + month : month
+        date = date < 10 ? '0' + date : date
         str += '<dl>'
           +'<dt>'
             +'<img src="/images/latest01.png"></dt>'
           +'<dd>'
           +'<h5>'
-          +'<i></i><span title="洪泰智造工场洪泰智造工场洪泰智造工场洪泰智造工场洪泰智造工场洪泰智造工场洪泰智造工场">'+list[i].title+'</span></h5>'
+          +'<i></i><span title="'+list[i].title+'">'+list[i].title+'</span></h5>'
             +'<div class="text">'+ list[i].content +'</div>'
-            +'<p class="date">2017-05-11</p></dd>'
+            +'<p class="date">'+year + '-' + month + '-' + date+'</p></dd>'
             +'</dl>'
       }
       $('.latest').append(str)

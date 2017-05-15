@@ -1,0 +1,101 @@
+.college .collegeHead {
+  width: 100%;
+  height: 100%; }
+  .college .collegeHead img {
+    width: 100%;
+    height: 100%; }
+
+.college .contail {
+  padding: 20px 0; }
+  .college .contail h4.title {
+    border-bottom: 1px solid #dbdbdb;
+    padding: 10px 0;
+    font-weight: normal; }
+    .college .contail h4.title i {
+      display: inline-block;
+      width: 27px;
+      height: 22px;
+      vertical-align: middle;
+      margin-right: 10px;
+      margin-top: -2px; }
+  .college .contail div.pic {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer; }
+    .college .contail div.pic img {
+      width: 100%;
+      height: 100%; }
+    .college .contail div.pic .txt {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #f0f0f0;
+      color: #595959;
+      padding: 5px; }
+      .college .contail div.pic .txt h5 {
+        width: 80%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin: 0; }
+      .college .contail div.pic .txt p.date {
+        margin: 0;
+        font-size: 12px;
+        color: #9a9a9a;
+        margin-top: 2px; }
+  .college .contail .newVideo h4.title i {
+    background: url("../images/newVideo.png") no-repeat; }
+  .college .contail .newVideo dl {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .college .contail .newVideo dl dt {
+      width: 500px;
+      height: 400px; }
+      .college .contail .newVideo dl dt a {
+        width: 100%;
+        height: 100%;
+        display: inline-block; }
+    .college .contail .newVideo dl dd {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      margin-left: 10px; }
+      .college .contail .newVideo dl dd ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+        .college .contail .newVideo dl dd ul li {
+          width: 49%;
+          margin-top: 10px; }
+          .college .contail .newVideo dl dd ul li:nth-of-type(1), .college .contail .newVideo dl dd ul li:nth-of-type(2) {
+            margin-top: 0; }
+  .college .contail .pastVideo {
+    margin-top: 30px; }
+    .college .contail .pastVideo h4.title i {
+      background: url("../images/pastVideo.png") no-repeat; }
+    .college .contail .pastVideo ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .college .contail .pastVideo ul li {
+        width: 24%;
+        margin-top: 10px; }
+        .college .contail .pastVideo ul li:nth-of-type(1), .college .contail .pastVideo ul li:nth-of-type(2), .college .contail .pastVideo ul li:nth-of-type(3), .college .contail .pastVideo ul li:nth-of-type(4) {
+          margin-top: 0; }

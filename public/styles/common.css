@@ -1,7 +1,13 @@
 .row {
   margin: 0; }
 
-ul {
+ul, dl {
   list-style: none;
   margin: 0;
   padding: 0; }
+
+i, b {
+  font-style: normal; }
+
+a {
+  text-decoration: none; }

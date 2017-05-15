@@ -1,0 +1,117 @@
+.college {
+  .collegeHead {
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .contail {
+    padding: 20px 0;
+    h4.title {
+      border-bottom: 1px solid #dbdbdb;
+      padding: 10px 0;
+      font-weight: normal;
+      i {
+        display: inline-block;
+        width: 27px;
+        height: 22px;
+        vertical-align: middle;
+        margin-right: 10px;
+        margin-top: -2px;
+      }
+    }
+    div.pic {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      cursor: pointer;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .txt {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #f0f0f0;
+        color: #595959;
+        padding: 5px;
+        h5 {
+          width: 80%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          margin: 0;
+        }
+        p.date {
+          margin: 0;
+          font-size: 12px;
+          color: #9a9a9a;
+          margin-top: 2px;
+        }
+      }
+    }
+    .newVideo {
+      h4.title {
+        i {
+          background: url('../images/newVideo.png') no-repeat;
+        }
+      }
+      dl {
+        display: flex;
+        dt {
+          width: 500px;
+          height: 400px;
+          a {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+          }
+        }
+        dd {
+          flex: 1;
+          margin-left: 10px;
+          ul {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            li {
+              width: 49%;
+              margin-top: 10px;
+              &:nth-of-type(1), &:nth-of-type(2) {
+                margin-top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    .pastVideo {
+      margin-top: 30px;
+      h4.title {
+        i {
+          background: url('../images/pastVideo.png') no-repeat;
+        }
+      }
+      ul {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li {
+          width: 24%;
+          margin-top: 10px;
+          &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4) {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
