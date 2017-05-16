@@ -27,32 +27,65 @@
         margin: auto;
         .txtTop {
           img {
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             border: 1px solid #e7e7e7;
             margin-right: 20px;
+            vertical-align: middle;
           }
           .description {
             display: inline-block;
-            vertical-align: middle;
+            vertical-align: top;
+            margin-top: -2px;
             h5 {
-              margin-bottom: 15px;
+              font-size: 18px;
             }
-            i {
-              display: inline-block;
-              width: 20px;
-              height: 20px;
-              vertical-align: middle;
-              margin-right: 10px;
+            p {
+              margin: 0;
             }
-            .des {
-              i {
-                background: url('../images/des.png') no-repeat;
+            .headers {
+              display: flex;
+              p {
+                margin-bottom: 10px;
               }
-            }
-            .web {
-              i {
-                background: url('../images/web.png') no-repeat;
+              .left {
+                width: 180px;
+                overflow: hidden;
+                text-overflow:ellipsis;
+                white-space: nowrap;
+                .des {
+                  span {
+                    display: inline-block;
+                    margin-right: 15px;
+                    background: url('../images/des.png') no-repeat;
+                    background-size: 20px 20px;
+                    padding-left: 25px;
+                  }
+                  i {
+                    display: inline-block;
+                    margin-right: 5px;
+                  }
+                  b {
+                    font-weight: normal;
+                  }
+                }
+              }
+              .right {
+                width: 180px;
+                overflow: hidden;
+                text-overflow:ellipsis;
+                white-space: nowrap;
+                .web {
+                  span {
+                    display: inline-block;
+                  }
+                  a {
+                    display: inline-block;
+                    padding-left: 25px;
+                    background: url('../images/web.png') no-repeat;
+                    background-size: 20px 20px;
+                  }
+                }
               }
             }
           }

@@ -18,6 +18,7 @@ module.exports = function (app) {
   app.get('/intellect/order', Index.order)
   //  硬创学院
   app.get('/college', Index.college)
+  app.get('/collegeDetail', Index.collegeDetail)
   app.get('/collegeList', Index.collegeList)
   //  最新动态
   app.get('/newslatest', Index.newslatest)

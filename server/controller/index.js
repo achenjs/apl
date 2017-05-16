@@ -37,10 +37,19 @@ module.exports = {
     })
   },
 
-  newslatest(req, res) {
+  collegeDetail(req, res) {
     res.render('index', {
       title: '洪泰智造工场',
-      styleLink: 'newslatest'
+      styleLink: 'collegeDetail'
+    })
+  },
+
+  newslatest(req, res) {
+    var id = req.query.id
+    res.render('index', {
+      title: '洪泰智造工场',
+      styleLink: 'newslatest',
+      id: id
     })
   },
 
@@ -62,6 +71,7 @@ module.exports = {
   enterpriseDetail(req, res) {
     var id = req.query.id
     res.render('index', {
+      title: '洪泰智造工场',
       styleLink: 'enterpriseDetail',
       id: id
     })
@@ -70,6 +80,7 @@ module.exports = {
   latestDetail(req, res) {
     var id = req.query.id
     res.render('index', {
+      title: '洪泰智造工场',
       styleLink: 'latestDetail',
       id: id
     })

@@ -1,0 +1,10 @@
+.collegeDetail {
+  padding: 30px 0; }
+  .collegeDetail .head .return {
+    color: #7d7d7d; }
+    .collegeDetail .head .return a {
+      color: #7d7d7d; }
+  .collegeDetail .head .title {
+    margin-top: 50px; }
+  .collegeDetail .head .date {
+    color: #999999; }

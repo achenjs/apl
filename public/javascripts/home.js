@@ -1,81 +1,36 @@
 $(function(){
+  $('.header').addClass('active')
+
+  $('.carouselSwiper').css('height', $(window).height())
+  $(window).on('resize', () => {
+    $('.carouselSwiper').css('height', $(window).height())
+  })
   //  轮播图列表
   axios('/carousel')
     .then((result) => {
       var data = result.data.result.carousels
-      var str = '',     //  图片
-          str1 = ''     //  图片对应下标
+      var str = ''
       for (let i in data) {
         if (data[i].url) {
-          str += '<li class="carousel-item" style="background-image: url(https://apl-static.oss-cn-beijing.aliyuncs.com/'+ data[i].url +')"></li>'
+          str += '<div class="swiper-slide" style="background-image: url(https://apl-static.oss-cn-beijing.aliyuncs.com/'+ data[i].url +')">'
+          +'<div class="content"><div class="title">'+data[i].title+'</div>'
+          +'<div class="des">'+data[i].description+'</div></div>'
+          +'</div>'
         }
       }
-      $('.carousel-list').append(str)
-      var carouselItem = $('.carousel-list').find('.carousel-item')
-      carouselItem.eq(0).addClass('active')
-      for (let i = 0; i < carouselItem.length; i++) {
-        str1 += '<li class="carousel-index-item"></li>'
-      }
-      $('.carousel-index-list').append(str1)
-      setTimeout(function() {
-        var width = $('.carousel-index-list').width() //  下标box的宽度
-        console.log(width)
-        $('.carousel-index-list').css('marginLeft', - width / 2).find('.carousel-index-item').eq(0).addClass('active')
-      }, 0)
+      $('.carouselContent').append(str)
+      var mySwiper = new Swiper ('.carouselSwiper', {
+        loop: true,
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
+        paginationElement : 'li',
+        paginationClickable: true,
+        // 如果需要前进后退按钮
+        nextButton: '.carousel-next',
+        prevButton: '.carousel-prev',
+        autoplay: 3000
+      })
     })
-
-  class init {
-    constructor () {
-      this.index = 0
-    }
-    carousel () {
-      if (this.index < $('.carousel-item').length - 1) {
-        this.index++
-      }
-      else {
-        this.index = 0
-      }
-      $('.carousel-item').eq(this.index).fadeIn(1000).siblings().hide()
-      $('.carousel-index-item').eq(this.index).addClass('active').siblings().removeClass('active')
-    }
-    leftBtn () {
-      if (this.index > 0) {
-        this.index--
-      }
-      else {
-        this.index = $('.carousel-item').length - 1
-      }
-      $('.carousel-item').eq(this.index).fadeIn(1000).siblings().hide()
-      $('.carousel-index-item').eq(this.index).addClass('active').siblings().removeClass('active')
-    }
-  }
-  var render = new init()
-  var movement = setInterval(() => {
-    render.carousel()
-  }, 3000)
-  //  移入清楚定时器
-  $('.carousel').on('mouseover', () => {
-    clearInterval(movement)
-  })
-  //  移出开启定时器
-  $('.carousel').on('mouseout', () => {
-    movement = setInterval(() => {
-      render.carousel()
-    }, 3000)
-  })
-  //  轮播 左按钮
-  $('.left-btn').on('click', () => {
-    render.leftBtn()
-  })
-  //  轮播 右按钮
-  $('.right-btn').on('click', () => {
-    render.carousel()
-  })
-  //  轮播 下标点击切换
-  $('.carousel-index-item').on('click', (el) => {
-    console.log(1)
-    console.log(el)
-  })
 
   axios('/article')
     .then((result) => {
@@ -90,16 +45,43 @@ $(function(){
         month = month < 10 ? '0' + month : month
         date = date < 10 ? '0' + date : date
         str += '<dl>'
-          +'<dt>'
-            +'<img src="/images/latest01.png"></dt>'
-          +'<dd>'
-          +'<h5>'
-          +'<i></i><span title="'+list[i].title+'">'+list[i].title+'</span></h5>'
-            +'<div class="text">'+ list[i].content +'</div>'
-            +'<p class="date">'+year + '-' + month + '-' + date+'</p></dd>'
-            +'</dl>'
+              +'<dt><img src="/images/latest01.png"></dt>'
+              +'<dd>'
+              +'<h5>'
+              +'<i></i><span title="'+list[i].title+'">'+list[i].title+'</span></h5>'
+              +'<div class="text">'+ list[i].content +'</div>'
+              +'<p class="date">'+year + '-' + month + '-' + date+'</p></dd>'
+              +'</dl>'
       }
       $('.latest').append(str)
     })
+    new Swiper ('.officeSwiper', {
+      // 如果需要前进后退按钮
+      // nextButton: '.swiper-button-next',
+      // prevButton: '.swiper-button-prev',
+      centeredSlides: true,
+      paginationClickable: true,
+      spaceBetween: 30,
+    })
+    $('.silid').on('mouseover', function(){
+      $(this).find('.content').show()
+    })
+    $('.silid').on('mouseout', function(){
+      $(this).find('.content').hide()
+    })
+    // $(window).on('scroll', (el) => {
+    //   var scrollTop = $(document).scrollTop()
+    //   var top = $('.service').offset().top - $(document).height() / 2
+    //   if (scrollTop > top) {
+    //     $('.service .content dt').animate({'opacity': 1}, 3000)
+    //   }
+    // })
+    axios('/company')
+      .then((result) => {
+        var data = result.data.result.items
+        for (let i in data) {
+          $('.hatching .content').append('<img src="https://apl-static.oss-cn-beijing.aliyuncs.com/'+data[i].logo_url+'">')
+        }
+      })
 
 })

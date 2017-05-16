@@ -1,6 +1,17 @@
 block content
+  input(type='hidden', value='#{id}').id
   div.collegeDetail
-    div.row
+    div.head.row
+      div.col-md-2
+      div.col-md-8
+        p.return
+          a(href='/college') 硬创学院
+          span > 正文
+        h3.title 洪泰智造洪泰智造洪泰智造
+        p.date 2017-05-16
+      div.col-md-2
+    div.content.row
       div.col-md-2
       div.col-md-8
       div.col-md-2
+  script(src='/javascripts/collegeDetail.js')

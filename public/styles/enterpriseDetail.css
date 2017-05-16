@@ -24,25 +24,53 @@
       width: 70%;
       margin: auto; }
       .enterpriseDetail .contail .content .txt .txtTop img {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
         border: 1px solid #e7e7e7;
-        margin-right: 20px; }
+        margin-right: 20px;
+        vertical-align: middle; }
       .enterpriseDetail .contail .content .txt .txtTop .description {
         display: inline-block;
-        vertical-align: middle; }
+        vertical-align: top;
+        margin-top: -2px; }
         .enterpriseDetail .contail .content .txt .txtTop .description h5 {
-          margin-bottom: 15px; }
-        .enterpriseDetail .contail .content .txt .txtTop .description i {
-          display: inline-block;
-          width: 20px;
-          height: 20px;
-          vertical-align: middle;
-          margin-right: 10px; }
-        .enterpriseDetail .contail .content .txt .txtTop .description .des i {
-          background: url("../images/des.png") no-repeat; }
-        .enterpriseDetail .contail .content .txt .txtTop .description .web i {
-          background: url("../images/web.png") no-repeat; }
+          font-size: 18px; }
+        .enterpriseDetail .contail .content .txt .txtTop .description p {
+          margin: 0; }
+        .enterpriseDetail .contail .content .txt .txtTop .description .headers {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
+          .enterpriseDetail .contail .content .txt .txtTop .description .headers p {
+            margin-bottom: 10px; }
+          .enterpriseDetail .contail .content .txt .txtTop .description .headers .left {
+            width: 180px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap; }
+            .enterpriseDetail .contail .content .txt .txtTop .description .headers .left .des span {
+              display: inline-block;
+              margin-right: 15px;
+              background: url("../images/des.png") no-repeat;
+              background-size: 20px 20px;
+              padding-left: 25px; }
+            .enterpriseDetail .contail .content .txt .txtTop .description .headers .left .des i {
+              display: inline-block;
+              margin-right: 5px; }
+            .enterpriseDetail .contail .content .txt .txtTop .description .headers .left .des b {
+              font-weight: normal; }
+          .enterpriseDetail .contail .content .txt .txtTop .description .headers .right {
+            width: 180px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap; }
+            .enterpriseDetail .contail .content .txt .txtTop .description .headers .right .web span {
+              display: inline-block; }
+            .enterpriseDetail .contail .content .txt .txtTop .description .headers .right .web a {
+              display: inline-block;
+              padding-left: 25px;
+              background: url("../images/web.png") no-repeat;
+              background-size: 20px 20px; }
       .enterpriseDetail .contail .content .txt .txtContent {
         margin-top: 30px; }
         .enterpriseDetail .contail .content .txt .txtContent h4 {

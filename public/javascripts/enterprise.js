@@ -8,7 +8,7 @@ $(function() {
           pageCount: data.total_page,
           current: data.page_index,
           backFn: function(page) {
-            article(page)
+            enterprise(page)
           }
         })
       })
