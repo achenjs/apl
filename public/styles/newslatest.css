@@ -42,16 +42,18 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap; }
-      .news-latests .content .latest dl dd .text {
-        cursor: pointer;
+      .news-latests .content .latest dl dd .text a {
+        display: inline-block;
+        width: 100%;
         color: #b0b0b0;
+        height: 100px;
+        overflow: hidden;
         font-size: 12px;
-        line-height: 20px;
         letter-spacing: 2px;
-        height: 150px; }
-        .news-latests .content .latest dl dd .text p {
-          margin: 0;
-          padding: 0; }
+        text-decoration: none; }
+      .news-latests .content .latest dl dd .text p {
+        margin: 0;
+        padding: 0; }
       .news-latests .content .latest dl dd .date {
         color: #b0b0b0;
         position: absolute;

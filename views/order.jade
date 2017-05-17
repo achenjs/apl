@@ -13,36 +13,36 @@ block content
         span aiqi@apluslabs.com，
         |我们将第一时间和您取得联系
     div.content
-      div.itemInput.active
+      div.itemInput
         span 项目名称
-        input(placeholder='请输入名称')
+        input(placeholder='请输入名称').projectname
       div.itemInput
         span 需求描述
-        input(type='textarae', placeholder='请输入需求')
+        input(type='textarae', placeholder='请输入需求').des
       div.itemInput
         span 生产件数
-        input(placeholder='请输入件数')
+        input(placeholder='请输入件数').count
       div.itemInput
         span 交付时间
-        input(placeholder='请输入日期/如：2017-04-02')
+        input(placeholder='请输入日期/如：2017-04-02').date
       div.itemInput
         span 联系人
           i *
-        input(placeholder='请输入姓名')
+        input(placeholder='请输入姓名').username
         div.error
           i
           b 请输入联系人姓名 
       div.itemInput
         span 手机号
           i *
-        input(placeholder='请输入号码')
+        input(placeholder='请输入号码').phone
         div.error
           i
           b 请输入正确的手机号
       div.itemInput
         span 短信验证码
           i *
-        input(placeholder='请输入验证码')
+        input(placeholder='请输入验证码').captcha
         div.verCode 发送验证码
         div.error
           i

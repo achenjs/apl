@@ -47,12 +47,16 @@
             white-space: nowrap;
           }
           .text {
-            cursor: pointer;
-            color: #b0b0b0;
-            font-size: 12px;
-            line-height: 20px;
-            letter-spacing: 2px;
-            height: 150px;
+            a {
+              display: inline-block;
+              width: 100%;
+              color: #b0b0b0;
+              height: 100px;
+              overflow: hidden;
+              font-size: 12px;
+              letter-spacing: 2px;
+              text-decoration: none;
+            }
             p {
               margin: 0;
               padding: 0;

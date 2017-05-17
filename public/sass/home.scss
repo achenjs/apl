@@ -262,15 +262,20 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 40px;
-      img {
-        display: block;
-        width: 18%;
-        height: 50px;
-        padding-right: 18px;
-        border-right: 1px solid #f2f2f2;
-        &:last-child {
-          border-right: 0;
-          padding-right: 0;
+      a {
+        display: inline-block;
+        width: 24%;
+        height: 100%;
+        img {
+          display: block;
+          width: 80%;
+          height: 50px;
+          padding-right: 18px;
+          border-right: 1px solid #f2f2f2;
+          &:last-child {
+            border-right: 0;
+            padding-right: 0;
+          }
         }
       }
     }
@@ -299,9 +304,13 @@
           dt {
             width: 325px;
             height: 200px;
-            img {
+            a {
               width: 100%;
               height: 100%;
+              img {
+                width: 100%;
+                height: 100%;
+              }
             }
           }
           dd {
@@ -327,13 +336,15 @@
               }
             }
             .text {
-              cursor: pointer;
-              color: #9c9ca6;
-              font-size: 12px;
-              line-height: 20px;
-              letter-spacing: 2px;
-              height: 100px;
-              overflow: hidden;
+              a {
+                width: 100%;
+                color: #9c9ca6;
+                font-size: 12px;
+                letter-spacing: 2px;
+                height: 100px;
+                overflow: hidden;
+                text-decoration: none;
+              }
             }
             .date {
               color: #9c9ca6;

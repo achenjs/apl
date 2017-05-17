@@ -105,9 +105,15 @@
         text-align: center; }
         .intellect .equipment ul li div img {
           width: 250px;
-          height: 250px; }
+          height: 250px;
+          border-radius: 50%;
+          -webkit-box-shadow: 1px 1px 1px #ececec;
+                  box-shadow: 1px 1px 1px #ececec;
+          padding: 30px; }
       .intellect .equipment ul li p {
-        text-align: center; }
+        margin-top: 20px;
+        text-align: center;
+        font-size: 18px; }
 
 .intellect .case {
   padding: 50px 0;
@@ -132,7 +138,8 @@
         background: #ffffff; }
         .intellect .case ul li div img {
           width: 250px;
-          height: 250px; }
+          height: 250px;
+          padding: 30px; }
       .intellect .case ul li p {
         margin-top: 10px;
         text-align: center; }

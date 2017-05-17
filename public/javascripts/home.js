@@ -1,4 +1,6 @@
 $(function(){
+  var URL = 'https://apl-static.oss-cn-beijing.aliyuncs.com/'
+
   $('.header').addClass('active')
 
   $('.carouselSwiper').css('height', $(window).height())
@@ -37,7 +39,11 @@ $(function(){
       var data = result.data.result
       var list = data.items
       var str = ''
-      for (let i = 0; i < 2; i++) {
+      var length = list.length
+      if (length > 2) {
+        length = 2
+      }
+      for (let i = 0; i < length; i++) {
         var newTime = new Date(list[i].gmt_create)
         var year = newTime.getFullYear()
         var month = newTime.getMonth() + 1
@@ -45,12 +51,12 @@ $(function(){
         month = month < 10 ? '0' + month : month
         date = date < 10 ? '0' + date : date
         str += '<dl>'
-              +'<dt><img src="/images/latest01.png"></dt>'
-              +'<dd>'
-              +'<h5>'
-              +'<i></i><span title="'+list[i].title+'">'+list[i].title+'</span></h5>'
-              +'<div class="text">'+ list[i].content +'</div>'
-              +'<p class="date">'+year + '-' + month + '-' + date+'</p></dd>'
+                +'<dt><a href="/newslatest/detail?id='+list[i].id+'"><img src="'+URL+list[i].cover+'"></a></dt>'
+                +'<dd>'
+                +'<h5>'
+                +'<i></i><span title="'+list[i].title+'">'+list[i].title+'</span></h5>'
+                +'<div class="text"><a href="/newslatest/detail?id='+list[i].id+'">'+ list[i].content +'</a></div>'
+                +'<p class="date">'+year + '-' + month + '-' + date+'</p></dd>'
               +'</dl>'
       }
       $('.latest').append(str)
@@ -69,18 +75,11 @@ $(function(){
     $('.silid').on('mouseout', function(){
       $(this).find('.content').hide()
     })
-    // $(window).on('scroll', (el) => {
-    //   var scrollTop = $(document).scrollTop()
-    //   var top = $('.service').offset().top - $(document).height() / 2
-    //   if (scrollTop > top) {
-    //     $('.service .content dt').animate({'opacity': 1}, 3000)
-    //   }
-    // })
     axios('/company')
       .then((result) => {
         var data = result.data.result.items
         for (let i in data) {
-          $('.hatching .content').append('<img src="https://apl-static.oss-cn-beijing.aliyuncs.com/'+data[i].logo_url+'">')
+          $('.hatching .content').append('<a href="/home/enterpriseDetail?id='+data[i].id+'"><img src="'+URL+data[i].logo_url+'"></a>')
         }
       })
 

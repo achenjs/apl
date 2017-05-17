@@ -116,10 +116,15 @@
           img {
             width: 250px;
             height: 250px;
+            border-radius: 50%;
+            box-shadow: 1px 1px 1px #ececec;
+            padding: 30px;
           }
         }
         p {
+          margin-top: 20px;
           text-align: center;
+          font-size: 18px;
         }
       }
     }
@@ -145,6 +150,7 @@
           img {
             width: 250px;
             height: 250px;
+            padding: 30px;
           }
         }
         p {

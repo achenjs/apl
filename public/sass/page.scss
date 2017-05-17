@@ -6,8 +6,8 @@
 }
 .tcdPageCode a {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   color: #428bca;
   padding: 10px;
   border: 1px solid #ddd;
@@ -26,10 +26,10 @@
 }
 .tcdPageCode span.current {
   display: inline-block;
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-  margin: 0 5px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
   color: #fff;
   background-color: #cccccc;
   border: 1px solid #cccccc;
@@ -38,8 +38,8 @@
 }
 .tcdPageCode span.disabled {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   padding: 10px;
   margin: 0 5px;
   color: #cccccc;

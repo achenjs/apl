@@ -1,23 +1,40 @@
 const gulp = require('gulp')
-const server = require('gulp-express')
-const sass = require('gulp-sass')
-const autoprefixer = require('gulp-autoprefixer')
-
-gulp.task('server', () => {
+const server = require('gulp-express')                          //- express关联
+const sass = require('gulp-sass')                               //- scss文件编辑
+const autoprefixer = require('gulp-autoprefixer')               //- CSS自动补充前缀
+const smushit = require('gulp-smushit')                         //- 图片压缩（只用于jpg、png）
+const minifyCss = require('gulp-minify-css')                    //- 压缩CSS为一行；
+const rev = require('gulp-rev')                                 //- 对文件名加MD5后缀
+const revCollector = require('gulp-rev-collector')              //- 路径替换
+gulp.task('server', function() {
   server.run(['bin/www'])
   gulp.watch(['public/sass/**/*'], ['styles'])
   gulp.watch(['views/**/*.{html,jade}'], server.notify)
-  gulp.watch(['public/images/**/*'], server.notify)
+  gulp.watch(['public/images/**/*'])
   gulp.watch(['app.js', 'routes/**/*', 'server/**/*'], [server.run])
 })
 
-gulp.task('styles', () => {
+gulp.task('styles', function() {
   return gulp.src('./public/sass/*.{sass,scss}')
       .pipe(sass())
       .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'opera 12.1', 'ios 6', 'android 4'))
+      .pipe(minifyCss())
+      .pipe(rev())
       .pipe(gulp.dest(function() {
         return './public/styles'
       }))
+      .pipe(rev.manifest())
+      .pipe(gulp.dest('./rev'))
+})
+
+gulp.task('images', function() {
+  return gulp.src('public/images/*')
+      .pipe(smushit({
+        verbose: true
+      }))
+      .pipe(gulp.dest('/dist/images'))
 })
 
 gulp.task('default', ['server'])
+
+gulp.task('build', ['images', 'styles'])

@@ -1,17 +1,25 @@
+append block head
+  link(rel="stylesheet", href="http://vjs.zencdn.net/5.19.2/video-js.css")
+
 block content
   input(type='hidden', value='#{id}').id
   div.collegeDetail
     div.head.row
       div.col-md-2
       div.col-md-8
-        p.return
-          a(href='/college') 硬创学院
-          span > 正文
-        h3.title 洪泰智造洪泰智造洪泰智造
+        //-
+          p.return
+            a(href='/college') 硬创学院
+            span > 正文
+        h3.title
         p.date 2017-05-16
       div.col-md-2
     div.content.row
       div.col-md-2
-      div.col-md-8
+      div.videoContent.col-md-8
       div.col-md-2
+    div
+      <iframe height=498 width=510 src='http://player.youku.com/embed/XMjc2MDcyMDI4NA==' frameborder=0 'allowfullscreen'></iframe>
+  script(src="//vjs.zencdn.net/5.19/video.min.js")
+  script(src='/javascripts/format.js')
   script(src='/javascripts/collegeDetail.js')

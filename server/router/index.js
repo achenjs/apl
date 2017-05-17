@@ -18,11 +18,15 @@ module.exports = function (app) {
   app.get('/intellect/order', Index.order)
   //  硬创学院
   app.get('/college', Index.college)
-  app.get('/collegeDetail', Index.collegeDetail)
+  // app.get('/collegeDetail', Index.collegeDetail)
   app.get('/collegeList', Index.collegeList)
+  app.get('/collegeId', Index.collegeId)
   //  最新动态
   app.get('/newslatest', Index.newslatest)
   app.get('/newslatest/detail', Index.latestDetail)
   app.get('/articleId', Index.articleId)
   app.get('/recommend', Index.recommend)
+  //  智造服务订单
+  app.post('/addorder', Index.addorder)
+  app.post('/captcha', Index.captcha)
 }

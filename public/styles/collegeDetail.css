@@ -8,3 +8,6 @@
     margin-top: 50px; }
   .collegeDetail .head .date {
     color: #999999; }
+  .collegeDetail .content {
+    background: #000000;
+    height: 300px; }
