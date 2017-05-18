@@ -61,6 +61,7 @@ $(function(){
                 +'</dl>'
         }
         $('.latest').append(str)
+        $('.latest img').hide()
       } catch (err) {
 
       }
