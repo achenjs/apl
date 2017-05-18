@@ -16,11 +16,11 @@ $(function() {
           date = date < 10 ? '0' + date : date
           str += '<dl>'
           +'<dt>'
-          +'<a href="/article/'+list[i].uuid+'" target="_blank">'
+          +'<a href="/article/'+list[i].uuid+'.html" target="_blank">'
           +'<img src="'+URL+list[i].cover+'"></a></dt>'
           +'<dd>'
           +'<h5 title="'+ list[i].title +'">'+list[i].title+'</h5>'
-          +'<div class="text"><a href="/article/'+list[i].uuid+'" target="_blank">'+ list[i].content +'</a></div>'
+          +'<div class="text"><a href="/article/'+list[i].uuid+'.html" target="_blank">'+ list[i].content +'</a></div>'
           +'<p class="date"><i></i>'+year + '-' + month + '-' + date+'</p></dd>'
           +'</dl>'
         }
