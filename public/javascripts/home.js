@@ -52,11 +52,11 @@ $(function(){
           month = month < 10 ? '0' + month : month
           date = date < 10 ? '0' + date : date
           str += '<dl>'
-                  +'<dt><a href="/newslatest/detail?id='+list[i].id+'"><img src="'+URL+list[i].cover+'"></a></dt>'
+                  +'<dt><a href="/article/'+list[i].uuid+'.html" target="_blank"><img src="'+URL+list[i].cover+'"></a></dt>'
                   +'<dd>'
                   +'<h5>'
                   +'<i></i><span title="'+list[i].title+'">'+list[i].title+'</span></h5>'
-                  +'<div class="text"><a href="/newslatest/detail?id='+list[i].id+'">'+ list[i].content +'</a></div>'
+                  +'<div class="text"><a href="/article/'+list[i].uuid+'.html" target="_blank">'+ list[i].content +'</a></div>'
                   +'<p class="date">'+year + '-' + month + '-' + date+'</p></dd>'
                 +'</dl>'
         }
