@@ -1,0 +1,1 @@
+"use strict";$(function(){window.onscroll=function(){window.scrollY>500?$(".returnTop").show():$(".returnTop").hide()},$(".returnTop").on("click",function(){$(".returnTop").hide(),$("body,html").stop().animate({scrollTop:0},500)})});

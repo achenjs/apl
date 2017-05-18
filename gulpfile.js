@@ -25,42 +25,43 @@ gulp.task('styles', function() {
         return './public/styles'
       }))
 })
-//
-// gulp.task('images', function() {
-//   return gulp.src('./public/images/*')
-//       .pipe(smushit({
-//         verbose: true
-//       }))
-//       .pipe(gulp.dest('./dist/images'))
-// })
-//
-// gulp.task('js', function() {
-//   return gulp.src('./public/javascripts/*')
-//     .pipe(babel({
-//       presets: ['env']
-//     }))
-//     .pipe(gulp.dest('./dist/javascript'))
-//     .pipe(uglify())
-//     .pipe(rev())
-//     .pipe(rev.manifest('js.json'))
-//     .pipe(gulp.dest('./rev'))
-// })
-//
-// gulp.task('css', function() {
-//   return gulp.src('./public/styles/*')
-//       .pipe(gulp.dest(function() {
-//         return './dist/styles'
-//       }))
-//       .pipe(minifyCss())
-//       .pipe(rev())
-//       .pipe(rev.manifest('css.json'))
-//       .pipe(gulp.dest('./rev'))
-// })
-//
-// gulp.task('rev', function() {
-//   gulp.src(['./rev/*.json', './views/*'])
-//     .pipe(revCollector())
-//     .pipe(gulp.dest('./dist/views'))
-// })
+
+gulp.task('images', function() {
+  return gulp.src('./public/images/*')
+      .pipe(smushit({
+        verbose: true
+      }))
+      .pipe(gulp.dest('./dist/images'))
+})
+
+gulp.task('js', function() {
+  return gulp.src('./public/javascripts/*')
+    .pipe(babel({
+      presets: ['env']
+    }))
+    .pipe(uglify())
+    .pipe(rev())
+    .pipe(gulp.dest('./dist/javascripts'))
+    .pipe(rev.manifest('js.json'))
+    .pipe(gulp.dest('./rev'))
+})
+
+gulp.task('css', function() {
+  return gulp.src('./public/styles/*')
+      .pipe(minifyCss())
+      .pipe(rev())
+      .pipe(gulp.dest(function() {
+        return './dist/styles'
+      }))
+      .pipe(rev.manifest('css.json'))
+      .pipe(gulp.dest('./rev'))
+})
+
+gulp.task('rev', function() {
+  gulp.src(['./rev/*.json', './views/**/*'])
+    .pipe(revCollector())
+    .pipe(gulp.dest('./dist/views'))
+})
 
 // gulp.task('build', ['images', 'css', 'js', 'rev'])
+// gulp.task('build', ['rev'])
