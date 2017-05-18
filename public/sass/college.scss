@@ -1,0 +1,146 @@
+.college {
+  .collegeHead {
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .contail {
+    padding: 20px 0;
+    h4.title {
+      border-bottom: 1px solid #dbdbdb;
+      padding: 10px 0;
+      font-weight: normal;
+      i {
+        display: inline-block;
+        width: 27px;
+        height: 22px;
+        vertical-align: middle;
+        margin-right: 10px;
+        margin-top: -2px;
+      }
+    }
+    div.pic {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      cursor: pointer;
+      &:hover {
+        b {
+          animation: hover .5s linear both;
+        }
+      }
+      @keyframes hover {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      b {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 40px;
+        height: 40px;
+        background: url('../images/video.png') no-repeat;
+        background-position: center;
+        background-size: cover;
+        opacity: 0;
+      }
+      .txt {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, .5);
+        color: #ffffff;
+        padding: 5px 5px 0 5px;
+        h5 {
+          width: 80%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          margin: 0;
+        }
+        p.date {
+          margin: 0;
+          font-size: 12px;
+          color: #9a9a9a;
+          margin-top: 2px;
+        }
+      }
+    }
+    .newVideo {
+      h4.title {
+        i {
+          background: url('../images/newVideo.png') no-repeat;
+        }
+      }
+      dl {
+        display: flex;
+        dt {
+          width: 500px;
+          height: 400px;
+          a {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+          }
+        }
+        dd {
+          flex: 1;
+          margin-left: 10px;
+          ul.newList {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            li {
+              width: 49%;
+              height: 195px;
+              margin-top: 10px;
+              &:nth-of-type(1), &:nth-of-type(2) {
+                margin-top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    .pastVideo {
+      margin-top: 30px;
+      h4.title {
+        i {
+          background: url('../images/pastVideo.png') no-repeat;
+        }
+      }
+      ul.pastList {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li {
+          width: 24%;
+          height: 195px;
+          margin-top: 10px;
+          &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4) {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+block append head 
+  link(rel='stylesheet', href='/styles/page.css')
+    
+block content
+  div.college
+    div.collegeHead
+      img(src='/images/collegeHead.png')
+    div.contail.row
+      div.col-md-2
+      div.col-md-8
+        div.newVideo
+          h4.title
+            i
+            span 近期更新
+          dl
+            dt.newOne
+            dd
+              ul.newList
+        div.pastVideo
+          h4.title
+            i
+            span 往期视频
+          ul.pastList
+      div.col-md-2
+    div.tcdPageCode
+  script(src='/javascripts/format.js')
+  script(src='/javascripts/page.js')
+  script(src='/javascripts/college.js')
+    

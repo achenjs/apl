@@ -1,0 +1,23 @@
+block context
+  input(type='hidden', value='#{id}').id
+  div.latestDetail
+    div.row
+      div.col-md-2
+      div.contail.col-md-8
+        div.head
+          //-
+            p.return
+              a(href='/newslatest') 最新动态
+              span > 正文
+          h3.title 
+          p.date 
+        div.content
+          div.txt
+          div.list
+            h4 热门推荐
+            ul.listData
+              //-
+                li
+                  a 
+      div.col-md-2
+  script(src='/javascripts/latestDetail.js')

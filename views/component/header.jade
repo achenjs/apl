@@ -1,0 +1,17 @@
+block content
+  div.header
+    div.row
+      div.col-md-1
+      div.col-md-2
+        img(src='/images/logo.png')
+      div.col-md-7
+        - var list = [{title: "首页",url: '/home'},{title: "APL登录",url: 'https://apl.apluslabs.com'},{title: "生态服务",url: '/ecology'},{title: "智造服务",url: '/intellect'},{title: "硬创学院",url: '/college'},{title: "最新动态",url: '/newslatest'}]
+        ul
+          each item, i in list
+            li
+              a(href="#{item.url}").headActive #{item.title}
+      div.col-md-2
+        span(lang='cn').lang.active 中文
+        span /
+        span(lang='en').lang English
+  script(src='/javascripts/header.js')

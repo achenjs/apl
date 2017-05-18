@@ -1,0 +1,56 @@
+.tcdPageCode {
+  padding: 15px 20px;
+  text-align: left;
+  color: #ccc;
+  text-align:center;
+}
+.tcdPageCode a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  color: #428bca;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin: 0 5px;
+  border-radius: 4px;
+  vertical-align: middle;
+  &.prevPage {
+    background: url('../images/prevPage.png') no-repeat center center;
+  }
+  &.nextPage {
+    background: url('../images/nextPage.png') no-repeat center center;
+  }
+}
+.tcdPageCode a:hover {
+  border: 1px solid #cccccc;
+}
+.tcdPageCode span.current {
+  display: inline-block;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  background-color: #cccccc;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+.tcdPageCode span.disabled {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  margin: 0 5px;
+  color: #cccccc;
+  background: #cccccc;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  vertical-align: middle;
+  &.prevPage {
+    background: url('../images/prevPage.png') no-repeat center center;
+  }
+  &.nextPage {
+    background: url('../images/nextPage.png') no-repeat center center;
+  }
+}
