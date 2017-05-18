@@ -6,7 +6,7 @@ $(function () {
   var path = ''
   if (count > 1) {
     var index = pathname.indexOf('/')
-        indexTwo = pathname.indexOf('/', index + 1);
+        indexTwo = pathname.indexOf('/', index + 1)
         path = pathname.substring(index, indexTwo)
   } else {
     path = pathname
@@ -28,4 +28,13 @@ $(function () {
       $('.headActive').eq(5).addClass('active')
       break;
   }
+
+  //  中英文切换
+  $('.lang').on('click', function() {
+    $(this).addClass('active').siblings('.lang').removeClass('active')
+    // axios.get('/lang?lang=' + $(this).attr('lang'))
+    //   .then((result) => {
+    //     // location.reload()
+    //   })
+  })
 })

@@ -4,12 +4,31 @@ const commonServer = require('../config/commonServer')
 const constant = require('../config/constant')
 const api = require('../config/api')
 
+const header = require('../template/header')
 module.exports = {
+  //  中英文切换
+  lang(req, res, next) {
+    global.lang = req.query.lang
+    var url = req.baseUrl
+    res.send()
+  },
   index(req, res) {
     res.redirect('/home')
   },
   //  首页
   home(req, res) {
+    // var lang = global.lang
+    // var list = []
+    // switch (lang) {
+    //   case 'cn':
+    //     list = header.cn
+    //     break;
+    //   case 'en':
+    //     list = header.en
+    //   default:
+    //     list = header.cn
+    //     break;
+    // }
     res.render('index', {
       title: '洪泰智造工场',
       styleLink: 'home'

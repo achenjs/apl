@@ -8,7 +8,6 @@ $(function() {
 
   //  检查是否可以提交
   function isButton() {
-    console.log(isPhone)
     if (isPhone && isUsername && isCode) {
       $('.button').addClass('active')
     } else {
@@ -86,6 +85,10 @@ $(function() {
 
   //  提交
   $('.button').on('click', function() {
+    var count = $('.count').val()
+    if (count == '' || isNaN(count)) {
+      alert('必须为数字！')
+    }
     if (isUsername && isPhone && isCode) {
       var obj = {
         projectname: $('.projectname').val(),
@@ -97,7 +100,6 @@ $(function() {
       }
       axios.post('/addorder', obj)
         .then((result) => {
-          console.log(result)
         })
     }
   })

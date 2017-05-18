@@ -1,6 +1,6 @@
 $(function() {
   var id = $('.id').val()
-  axios('/companyId?id=' + 27)
+  axios('/companyId?id=' + id)
     .then((result) => {
       var data = result.data.result.company
       var newTime = new Date(data.gmt_create)

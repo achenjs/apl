@@ -1,8 +1,6 @@
 $(function() {
   var URL = 'https://apl-static.oss-cn-beijing.aliyuncs.com/'
 
-  console.log(new init(11111111).formatDate())
-
   var collegeList = function(page) {
     axios('/collegeList?page=' + page + '&page_size=5')
       .then((result) => {

@@ -15,6 +15,13 @@
     width: 125px;
     height: 43px;
   }
+  .lang {
+    color: #000000;
+    cursor: pointer;
+    &.active {
+      color: #b0484d;
+    }
+  }
   ul {
     li {
       display: inline-block;

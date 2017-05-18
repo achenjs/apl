@@ -29,4 +29,7 @@ module.exports = function (app) {
   //  智造服务订单
   app.post('/addorder', Index.addorder)
   app.post('/captcha', Index.captcha)
+
+  // 中英文切换
+  app.get('/lang', Index.lang)
 }

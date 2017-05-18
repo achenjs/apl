@@ -14,6 +14,11 @@
   .header img {
     width: 125px;
     height: 43px; }
+  .header .lang {
+    color: #000000;
+    cursor: pointer; }
+    .header .lang.active {
+      color: #b0484d; }
   .header ul li {
     display: inline-block;
     padding: 0 20px;
