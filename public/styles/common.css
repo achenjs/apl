@@ -14,3 +14,6 @@ a {
 
 .marginTop {
   margin-top: 60px; }
+
+.swiper-pagination-bullet-active {
+  color: #ffffff !important; }

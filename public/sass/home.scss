@@ -93,7 +93,7 @@
   .service {
     width: 100%;
     padding: 30px 0 50px 0;
-    background: url('../images/latest.png') no-repeat;
+    background: url('../images/latest.jpg') no-repeat;
     h3 {
       font-size: 24px;
       text-align: center;
@@ -157,6 +157,7 @@
           font-size: 0;
           border-right: 1px solid #e1e2e4;
           padding-right: 10px;
+          font-size: 0;
           &:last-child {
             border-right: none;
           }
@@ -173,6 +174,8 @@
             font-size: 14px;
           }
           .txt {
+            width: 90%;
+            margin: auto;
             text-align: left;
             font-size: 12px;
             color: #989898;
@@ -241,21 +244,22 @@
         background-image: url('../images/next.png');
       }
       .slide01 {
-        background: url('../images/beij.png');
+        background: url('../images/beij.jpg');
       }
       .slide02 {
-        background: url('../images/chengd.png');
+        background: url('../images/chengd.jpg');
       }
       .slide03 {
-        background: url('../images/guig.png');
+        background: url('../images/guig.jpg');
       }
       .slide04 {
-        background: url('../images/tianj.png');
+        background: url('../images/tianj.jpg');
       }
     }
   }
   .hatching {
-    padding: 50px 0 200px 0;
+    padding: 0;
+    height: 500px;
     background: url('../images/hatching.png') no-repeat;
     background-size: cover !important;
     background-position: center !important;
@@ -277,30 +281,30 @@
       padding: 30px;
       border: 1px solid #f2f2f2;
       display: flex;
-      justify-content: space-between;
       align-items: center;
       margin-bottom: 40px;
       a {
         display: inline-block;
         width: 24%;
         height: 100%;
+        margin-right: 20px;
+        border-right: 1px solid #ececec;
+        &:last-child {
+          border-right: 0;
+          padding-right: 0;
+        }
         img {
           display: block;
-          width: 80%;
-          height: 50px;
+          width: 100%;
+          height: 80px;
           padding-right: 18px;
-          border-right: 1px solid #f2f2f2;
-          &:last-child {
-            border-right: 0;
-            padding-right: 0;
-          }
         }
       }
     }
   }
   .news-latest {
     padding: 40px 0;
-    background: url('../images/latest.png') no-repeat;
+    background: url('../images/latest.jpg') no-repeat;
     background-position: center;
     background-size: cover;
     .content {

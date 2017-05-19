@@ -88,9 +88,9 @@ $(function(){
           var length = data.length
           var index = 0
           for (let i = 0; i < length; i++) {
-            if (index < 4) {
+            if (index < 5) {
               if (data[i].logo_url) {
-                str += '<a href="/home/enterpriseDetail?id='+data[i].id+'"><img src="'+URL+data[i].logo_url+'"></a>'
+                str += '<a href="/home/enterpriseDetail?id='+data[i].id+'"><img src="'+URL+data[i].base_logo_url+'"></a>'
                 index++
               }
             }

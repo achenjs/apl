@@ -69,12 +69,17 @@ gulp.task('rev', function() {
     .pipe(gulp.dest('./dist/views'))
 })
 
+gulp.task('ico', function() {
+  gulp.src('./public/favicon.ico')
+    .pipe(gulp.dest('./dist'))
+})
+
 gulp.task('clean', function() {
-  return gulp.src(['./dist/javascripts', './dist/views', './dist/styles', './dist/lib'])
+  return gulp.src(['./dist/favicon.ico' ,'./dist/javascripts', './dist/views', './dist/styles', './dist/lib'])
     .pipe(clean())
 })
 
 // gulp.task('build', ['images', 'css', 'js', 'rev'])
 gulp.task('build', ['clean'], function() {
-  gulp.start('css', 'js', 'lib', 'rev')
+  gulp.start('ico', 'css', 'js', 'lib', 'rev')
 })

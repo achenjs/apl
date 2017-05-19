@@ -45,7 +45,10 @@
         -webkit-box-flex: 1;
             -ms-flex: 1;
                 flex: 1;
-        line-height: 24px; }
+        line-height: 24px;
+        padding: 0 8px; }
+        .intellect .produce .contail .content .txt p {
+          text-indent: 2em; }
   .intellect .quality {
     padding: 50px 0 30px 0;
     background: url("../images/latest.png") no-repeat; }
