@@ -21,7 +21,7 @@
       color: #b18257; }
   .header ul li {
     display: inline-block;
-    padding: 0 20px;
+    width: 16%;
     text-align: center;
     cursor: pointer; }
     .header ul li a {

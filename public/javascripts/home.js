@@ -1,7 +1,7 @@
 $(function(){
   var URL = 'https://apl-static.oss-cn-beijing.aliyuncs.com/'
 
-  $('.header').addClass('active')
+  // $('.header').addClass('active')
 
   $('.carouselSwiper').css('height', $(window).height())
   $(window).on('resize', () => {
@@ -15,8 +15,8 @@ $(function(){
       for (let i in data) {
         if (data[i].url) {
           str += '<div class="swiper-slide" style="background-image: url(https://apl-static.oss-cn-beijing.aliyuncs.com/'+ data[i].url +')">'
-          +'<div class="content"><div class="title">'+data[i].title+'</div>'
-          +'<div class="des">'+data[i].description+'</div></div>'
+          +'<div class="content"><div class="box"><div class="title">'+data[i].title+'</div>'
+          +'<div class="des">'+data[i].description+'</div></div></div>'
           +'</div>'
         }
       }
@@ -86,11 +86,14 @@ $(function(){
         var str = ''
         try {
           var length = data.length
-          if (length > 4) {
-            length = 4
-          }
+          var index = 0
           for (let i = 0; i < length; i++) {
-            str += '<a href="/home/enterpriseDetail?id='+data[i].id+'"><img src="'+URL+data[i].logo_url+'"></a>'
+            if (index < 4) {
+              if (data[i].logo_url) {
+                str += '<a href="/home/enterpriseDetail?id='+data[i].id+'"><img src="'+URL+data[i].logo_url+'"></a>'
+                index++
+              }
+            }
           }
         } catch (err) {
 

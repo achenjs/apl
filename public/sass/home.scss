@@ -7,22 +7,30 @@
       background-size: cover;
       background-position: center;
       .content {
-        text-align: center;
-        width: 50%;
-        height: 25%;
         position: absolute;
+        text-align: center;
+        width: 100%;
+        height: 100%;
         left: 0;
         top: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
         color: #ffffff;
-        .title {
-          font-size: 36px;
+        background-color: rgba(0, 0, 0, .2);
+        &:after {
+          display:inline-block;
+        	width: 0;
+      	  height: 100%;
+        	vertical-align: middle;
+        	content: '';
         }
-        .des {
-          font-size: 18px;
-          margin-top: 10px;
+        .box {
+          display: inline-block;
+          vertical-align: middle;
+          .title {
+            font-size: 48px;
+          }
+          .des {
+            font-size: 24px;
+          }
         }
       }
     }
@@ -119,9 +127,15 @@
   .stService {
     width: 100%;
     height: 560px;
-    background: url('../images/stfw.png') no-repeat;
+    background: url('../images/stfw.jpg') no-repeat;
     background-size: cover !important;
     background-position: center !important;
+    h3 {
+      margin-top: 40px;
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
   }
   .project {
     padding: 40px 0;
@@ -343,6 +357,7 @@
             }
             .text {
               a {
+                display: inline-block;
                 width: 100%;
                 color: #9c9ca6;
                 font-size: 12px;

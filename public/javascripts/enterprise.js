@@ -6,7 +6,11 @@ $(function() {
         var data = result.data.result.items
         var str = ''
         for (let i in data) {
-          str += '<li><a href="/home/enterpriseDetail?id='+data[i].id+'"><img src="'+URL+data[i].logo_url+'"></a></li>'
+          if (data[i].logo_url) {
+            str += '<li><a href="/home/enterpriseDetail?id='+data[i].id+'" style="background: url('+URL+data[i].logo_url+')"><i style="background: url('+URL+data[i].logo_url+')"></i></li>'
+          } else {
+            str += '<li><a href="/home/enterpriseDetail?id='+data[i].id+'" title="'+data[i].product_nam+'">'+data[i].product_name+'</a></li>'
+          }
         }
         $('.list').append(str)
         // 启动分页
@@ -20,4 +24,5 @@ $(function() {
       })
   }
   enterprise()
+
 })

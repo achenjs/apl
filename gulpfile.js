@@ -58,6 +58,11 @@ gulp.task('css', function() {
       .pipe(gulp.dest('./rev'))
 })
 
+gulp.task('lib', function() {
+  return gulp.src('./public/lib/**/*')
+    .pipe(gulp.dest('./dist/lib'))
+})
+
 gulp.task('rev', function() {
   gulp.src(['./rev/*.json', './views/**/*'])
     .pipe(revCollector())
@@ -65,11 +70,11 @@ gulp.task('rev', function() {
 })
 
 gulp.task('clean', function() {
-  return gulp.src(['./dist/javascripts', './dist/views', './dist/styles'])
+  return gulp.src(['./dist/javascripts', './dist/views', './dist/styles', './dist/lib'])
     .pipe(clean())
 })
 
 // gulp.task('build', ['images', 'css', 'js', 'rev'])
 gulp.task('build', ['clean'], function() {
-  gulp.start('css', 'js', 'rev')
+  gulp.start('css', 'js', 'lib', 'rev')
 })
