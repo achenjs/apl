@@ -16,16 +16,16 @@ $(function () {
       $('.headActive').eq(0).addClass('active')
       break;
     case '/ecology':
-      $('.headActive').eq(2).addClass('active')
+      $('.headActive').eq(1).addClass('active')
       break;
     case '/intellect':
-      $('.headActive').eq(3).addClass('active')
+      $('.headActive').eq(2).addClass('active')
       break;
     case '/college':
-      $('.headActive').eq(4).addClass('active')
+      $('.headActive').eq(3).addClass('active')
       break;
     case '/newslatest':
-      $('.headActive').eq(5).addClass('active')
+      $('.headActive').eq(4).addClass('active')
       break;
   }
 
