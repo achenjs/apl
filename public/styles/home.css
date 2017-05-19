@@ -206,7 +206,7 @@
     background-size: cover !important;
     background-position: center !important; }
     .home .hatching h3 {
-      font-size: 18px;
+      font-size: 24px;
       text-align: center;
       margin-bottom: 20px; }
     .home .hatching p.more {
@@ -248,7 +248,7 @@
     background-position: center;
     background-size: cover; }
     .home .news-latest .content h3 {
-      font-size: 18px;
+      font-size: 24px;
       text-align: center;
       margin-bottom: 20px; }
     .home .news-latest .content p.more {
@@ -310,7 +310,7 @@
   .home .cooperation {
     padding: 50px 0; }
     .home .cooperation h3 {
-      font-size: 18px;
+      font-size: 24px;
       text-align: center;
       margin-bottom: 20px; }
     .home .cooperation .content ul {

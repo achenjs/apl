@@ -7,7 +7,7 @@ const ServerUrl = {
 module.exports = {
   localhostPort: 8888,
   difficulty: '100.0',
-  globalUrl: ServerUrl.pro,
+  globalUrl: ServerUrl.w,
   globalPort: '8080',
   time_out: 36000
 }
