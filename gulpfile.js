@@ -8,6 +8,7 @@ const rev = require('gulp-rev')                                 //- 对文件名
 const revCollector = require('gulp-rev-collector')             //- 路径替换
 const uglify = require('gulp-uglify')
 const babel = require('gulp-babel')
+const clean = require('gulp-clean')
 
 gulp.task('dev', function() {
   server.run(['./bin/www'])
@@ -63,5 +64,12 @@ gulp.task('rev', function() {
     .pipe(gulp.dest('./dist/views'))
 })
 
+gulp.task('clean', function() {
+  return gulp.src(['./dist/javascripts', './dist/views', './dist/styles'])
+    .pipe(clean())
+})
+
 // gulp.task('build', ['images', 'css', 'js', 'rev'])
-// gulp.task('build', ['rev'])
+gulp.task('build', ['clean'], function() {
+  gulp.start('css', 'js', 'rev')
+})
