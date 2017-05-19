@@ -3,7 +3,7 @@
   height: 60px;
   font-size: 14px;
   line-height: 60px;
-  background-color: rgba(255, 255, 255, .7);
+  background-color: rgb(255, 255, 255);
   box-shadow: 0 3px 5px #e2e2e2;
   &.active {
     position: fixed;
@@ -12,14 +12,14 @@
     z-index: 200;
   }
   img {
-    width: 125px;
+    width: 138px;
     height: 43px;
   }
   .lang {
     color: #000000;
     cursor: pointer;
     &.active {
-      color: #b0484d;
+      color: #b18257;
     }
   }
   ul {
@@ -33,10 +33,10 @@
         text-decoration: none;
         display: inline-block;
         &:hover {
-          color: #b0484d;
+          color: #b18257;
         }
         &.active {
-          color: #b0484d;
+          color: #b18257;
         }
       }
     }

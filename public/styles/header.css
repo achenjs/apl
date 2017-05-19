@@ -3,7 +3,7 @@
   height: 60px;
   font-size: 14px;
   line-height: 60px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: white;
   -webkit-box-shadow: 0 3px 5px #e2e2e2;
           box-shadow: 0 3px 5px #e2e2e2; }
   .header.active {
@@ -12,13 +12,13 @@
     left: 0;
     z-index: 200; }
   .header img {
-    width: 125px;
+    width: 138px;
     height: 43px; }
   .header .lang {
     color: #000000;
     cursor: pointer; }
     .header .lang.active {
-      color: #b0484d; }
+      color: #b18257; }
   .header ul li {
     display: inline-block;
     padding: 0 20px;
@@ -29,6 +29,6 @@
       text-decoration: none;
       display: inline-block; }
       .header ul li a:hover {
-        color: #b0484d; }
+        color: #b18257; }
       .header ul li a.active {
-        color: #b0484d; }
+        color: #b18257; }
