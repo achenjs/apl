@@ -257,9 +257,9 @@
           background-repeat: no-repeat; }
   .home .news-latest {
     padding: 40px 0;
-    background: url("../images/latest.jpg") no-repeat;
-    background-position: center;
-    background-size: cover; }
+    background: url("../images/latest.jpg") no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important; }
     .home .news-latest .content h3 {
       font-size: 24px;
       text-align: center;
@@ -319,7 +319,7 @@
         .home .news-latest .content .latest dl dd .date {
           color: #9c9ca6;
           position: absolute;
-          bottom: 10px;
+          bottom: 0;
           right: 20px; }
   .home .cooperation {
     padding: 50px 0; }

@@ -15,7 +15,7 @@
 					obj.append('<a href="javascript:;" class="prevPage"></a>');
 				}else{
 					obj.remove('.prevPage');
-					obj.append('<span class="disabled prevPage"></span>');
+					// obj.append('<span class="disabled prevPage"></span>');
 				}
 				//中间页码
 				if(args.current != 1 && args.current >= 4 && args.pageCount != 4){
@@ -51,7 +51,7 @@
 					obj.append('<a href="javascript:;" class="nextPage"></a>');
 				}else{
 					obj.remove('.nextPage');
-					obj.append('<span class="disabled nextPage"></span>');
+					// obj.append('<span class="disabled nextPage"></span>');
 				}
 			})();
 		},
