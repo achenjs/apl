@@ -6,7 +6,7 @@ $(function() {
       $('.returnTop').hide()
     }
   }
-  $('.returnTop').on('click', () => {
+  $('.returnTop').on('click', function() {
     $('.returnTop').hide()
     $('body,html').stop().animate({scrollTop: 0}, 500)
   })

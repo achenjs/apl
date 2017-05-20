@@ -1,7 +1,6 @@
-$(function() {
   var id = $('.id').val()
   axios('/companyId?id=' + id)
-    .then((result) => {
+    .then(function(result) {
       var data = result.data.result.company
       var newTime = new Date(data.gmt_create)
       var year = newTime.getFullYear()
@@ -19,4 +18,3 @@ $(function() {
       $('.txtContent h4').text(data.name)
       $('.info').text(data.description)
     })
-})

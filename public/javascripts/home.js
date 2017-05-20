@@ -1,15 +1,14 @@
-$(function(){
   var URL = 'https://apl-static.oss-cn-beijing.aliyuncs.com/'
 
   // $('.header').addClass('active')
 
   $('.carouselSwiper').css('height', $(window).height())
-  $(window).on('resize', () => {
+  $(window).on('resize', function() {
     $('.carouselSwiper').css('height', $(window).height())
   })
   //  轮播图列表
   axios('/carousel')
-    .then((result) => {
+    .then(function(result) {
       var data = result.data.result.carousels
       var str = ''
       for (let i in data) {
@@ -35,7 +34,7 @@ $(function(){
     })
 
   axios('/article')
-    .then((result) => {
+    .then(function(result) {
       var data = result.data.result
       var list = data.items
       var str = ''
@@ -74,14 +73,9 @@ $(function(){
       paginationClickable: true,
       spaceBetween: 30,
     })
-    $('.silid').on('mouseover', function(){
-      $(this).find('.content').show()
-    })
-    $('.silid').on('mouseout', function(){
-      $(this).find('.content').hide()
-    })
+
     axios('/company')
-      .then((result) => {
+      .then(function(result) {
         var data = result.data.result.items
         var str = ''
         try {
@@ -100,5 +94,3 @@ $(function(){
         }
         $('.hatching .content').append(str)
       })
-
-})

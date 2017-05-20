@@ -1,9 +1,8 @@
-$(function() {
   var URL = 'https://apl-static.oss-cn-beijing.aliyuncs.com/'
 
   var collegeList = function(page) {
     axios('/collegeList?page=' + page + '&page_size=5')
-      .then((result) => {
+      .then(function(result) {
         var data = result.data.result
         var list = data.items
         var newStr = ''
@@ -41,5 +40,3 @@ $(function() {
   }
 
   collegeList(1)
-
-})

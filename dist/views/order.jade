@@ -1,3 +1,6 @@
+block append head
+  link(rel="stylesheet", href="/lib/datetimepicker/css/bootstrap-datetimepicker.min.css")
+    
 block content
   div.order
     div.motails
@@ -14,39 +17,46 @@ block content
         |我们将第一时间和您取得联系
     div.content
       div.itemInput
-        span 项目名称
-        input(placeholder='请输入名称').projectname
+        span.labelSpan 项目名称
+        input(placeholder='请输入名称').input.projectname
       div.itemInput
-        span 需求描述
-        input(type='textarae', placeholder='请输入需求').des
+        span.labelSpan 需求描述
+        input(type='textarae', placeholder='请输入需求').input.des
       div.itemInput
-        span 生产件数
-        input(placeholder='请输入件数').count
+        span.labelSpan 生产件数
+        input(placeholder='请输入件数').input.count
+      //- div.itemInput
+      //-   span.labelSpan.jfDate 交付时间
+      //-   div(data-date="" data-date-format="yyyy MM dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd").input-group.date.form_date
+      //-     input(size="16" type="text" value="" readonly).form-control
+      //-     span.input-group-addon
+      //-       span.glyphicon.glyphicon-remove
+      //-     span.input-group-addon
+      //-       span.glyphicon.glyphicon-calendar
+      //-     input(type="hidden")#dtp_input2
       div.itemInput
-        span 交付时间
-        input(placeholder='请输入日期/如：2017-04-02').date
-      div.itemInput
-        span 联系人
+        span.labelSpan 联系人
           i *
-        input(placeholder='请输入姓名').username
+        input(placeholder='请输入姓名').input.username
         div.error
           i
           b 请输入联系人姓名 
       div.itemInput
-        span 手机号
+        span.labelSpan 手机号
           i *
-        input(placeholder='请输入号码').phone
+        input(placeholder='请输入号码').input.phone
         div.error
           i
           b 请输入正确的手机号
       div.itemInput
-        span 短信验证码
+        span.labelSpan 短信验证码
           i *
-        input(placeholder='请输入验证码').captcha
+        input(placeholder='请输入验证码').input.captcha
         div.verCode 发送验证码
         div.error
           i
           b 请输入正确的短信验证码
       div.button 提交
-      
-    script(src='/javascripts/order-f321a66464.js')
+    script(src='/lib/datetimepicker/js/bootstrap-datetimepicker.min.js')
+    script(src='/lib/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js')
+    script(src='/javascripts/order-56571ae280.js')

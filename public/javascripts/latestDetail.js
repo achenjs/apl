@@ -1,7 +1,6 @@
-$(function() {
   var id = $('.id').val()
   axios('/articleId?id=' + id)
-    .then((result) => {
+    .then(function(result) {
       var data = result.data.result.article
       $('.title').text(data.title)
       var newTime = new Date(data.gmt_create)
@@ -24,4 +23,3 @@ $(function() {
       }
       $('.listData').append(str)
     })
-})

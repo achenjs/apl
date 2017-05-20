@@ -13,8 +13,6 @@ const clean = require('gulp-clean')
 gulp.task('dev', function() {
   server.run(['./bin/www'])
   gulp.watch(['./public/sass/**/*'], ['styles'])
-  gulp.watch(['./views/**/*.{html,jade}'])
-  gulp.watch(['./public/images/**/*'])
   gulp.watch(['./app.js', 'routes/**/*', './server/**/*'], [server.run])
 })
 
@@ -38,7 +36,7 @@ gulp.task('images', function() {
 gulp.task('js', function() {
   return gulp.src('./public/javascripts/*')
     .pipe(babel({
-      presets: ['env']
+      presets: ['es2015']
     }))
     .pipe(uglify())
     .pipe(rev())

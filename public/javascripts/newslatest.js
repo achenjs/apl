@@ -1,9 +1,8 @@
-$(function() {
   var URL = 'https://apl-static.oss-cn-beijing.aliyuncs.com/'
 
   var article = function (page) {
     axios('/article?page=' + page)
-      .then((result) => {
+      .then(function(result) {
         var data = result.data.result
         var list = data.items
         var str = ''
@@ -37,4 +36,3 @@ $(function() {
       })
   }
   article(1)
-})

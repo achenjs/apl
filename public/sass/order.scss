@@ -1,6 +1,9 @@
 .order {
   padding: 100px 0 60px 0;
   position: relative;
+  .input-group {
+    width: 75%;
+  }
   .orderHead {
     text-align: center;
     h4 {
@@ -30,9 +33,9 @@
       &.active {
         border: 1px solid #58a2f7;
       }
-      span {
-        width: 80px;
+      span.labelSpan {
         display: inline-block;
+        width: 80px;
         position: relative;
         i {
           color: #ef6963;
@@ -42,7 +45,10 @@
           margin-top: 3px;
         }
       }
-      input {
+      .jfDate {
+        margin-top: 6px;
+      }
+      input.input {
         flex: 1;
         border: none;
         margin-left: 20px;

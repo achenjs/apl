@@ -1,4 +1,15 @@
 $(function() {
+  $('.form_date').datetimepicker({
+    language:  'zh-CN',
+    weekStart: 1,
+    todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+  })
+
   //  表单验证
   var isUsername = false,
       isPhone = false,
@@ -22,39 +33,68 @@ $(function() {
   $(document).on('focus', 'input', function() {
     $(this).parent('.itemInput').addClass('active')
   })
+  $(document).on('keyup', 'input', function() {
+    isB()
+    isButton()
+  })
+
+  function isB() {
+    if ($('.username').val() === '') {
+      $('.username').siblings('.error').show()
+      isUsername = false
+    } else {
+      $('.username').siblings('.error').hide()
+      isUsername = true
+    }
+    if (!/^1[3|4|5|8][0-9]\d{4,8}$/.test($('.phone').val())) {
+      $('.phone').siblings('.error').show()
+      isPhone = false
+    } else {
+      $('.phone').siblings('.error').hide()
+      isPhone = true
+    }
+    if ($('.captcha').val() === '') {
+      $('.captcha').siblings('.error').show()
+      isCode = false
+    } else {
+      $('.captcha').siblings('.error').hide()
+      isCode = true
+    }
+  }
+
   $(document).on('blur', 'input', function() {
     $(this).parent('.itemInput').removeClass('active')
-    var className = $(this).attr('class')
-    var value = $(this).val()
-    switch (className) {
-      case 'username':
-        if (value === '') {
-          $(this).siblings('.error').show()
-          isUsername = false
-        } else {
-          $(this).siblings('.error').hide()
-          isUsername = true
-        }
-        break;
-      case 'phone':
-        if (!/^1[3|4|5|8][0-9]\d{4,8}$/.test(value)) {
-          $(this).siblings('.error').show()
-          isPhone = false
-        } else {
-          $(this).siblings('.error').hide()
-          isPhone = true
-        }
-        break;
-      case 'captcha':
-        if (value === '') {
-          $(this).siblings('.error').show()
-          isCode = false
-        } else {
-          $(this).siblings('.error').hide()
-          isCode = true
-        }
-        break;
-    }
+    // var className = $(this).attr('class')
+    // var value = $(this).val()
+    // switch (className) {
+    //   case 'input username':
+    //     if (value === '') {
+    //       $(this).siblings('.error').show()
+    //       isUsername = false
+    //     } else {
+    //       $(this).siblings('.error').hide()
+    //       isUsername = true
+    //     }
+    //     break;
+    //   case 'input phone':
+    //     if (!/^1[3|4|5|8][0-9]\d{4,8}$/.test(value)) {
+    //       $(this).siblings('.error').show()
+    //       isPhone = false
+    //     } else {
+    //       $(this).siblings('.error').hide()
+    //       isPhone = true
+    //     }
+    //     break;
+    //   case 'input captcha':
+    //     if (value === '') {
+    //       $(this).siblings('.error').show()
+    //       isCode = false
+    //     } else {
+    //       $(this).siblings('.error').hide()
+    //       isCode = true
+    //     }
+    //     break;
+    // }
     isButton()
   })
 
@@ -86,7 +126,7 @@ $(function() {
   //  提交
   $('.button').on('click', function() {
     var count = $('.count').val()
-    if (count == '' || isNaN(count)) {
+    if (count != '' || isNaN(count)) {
       alert('必须为数字！')
     }
     if (isUsername && isPhone && isCode) {
@@ -99,7 +139,7 @@ $(function() {
         captcha: $('.captcha').val()
       }
       axios.post('/addorder', obj)
-        .then((result) => {
+        .then(function(result) {
         })
     }
   })

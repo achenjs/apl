@@ -175,6 +175,8 @@
       background-repeat: no-repeat !important;
       margin-right: 0 !important;
       color: #ffffff; }
+      .home .office .officeSwiper .swiper-slide:hover .content {
+        display: block; }
       .home .office .officeSwiper .swiper-slide .title {
         background: rgba(0, 0, 0, 0.8);
         text-align: center;
@@ -196,7 +198,8 @@
           .home .office .officeSwiper .swiper-slide .content .info p {
             padding-left: 30px;
             background-repeat: no-repeat !important;
-            background-size: 15px 15px !important; }
+            background-size: 15px 15px !important;
+            x-ms-format-detection: none; }
           .home .office .officeSwiper .swiper-slide .content .info p:nth-of-type(1) {
             background: url("../images/phone.png"); }
           .home .office .officeSwiper .swiper-slide .content .info p:nth-of-type(2) {

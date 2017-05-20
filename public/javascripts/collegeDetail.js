@@ -1,9 +1,8 @@
-$(function() {
   videojs.options.flash.swf = "video-js.swf"
   var URL = 'https://apl-static.oss-cn-beijing.aliyuncs.com/'
   var id = $('.id').val()
   axios('/collegeId?id=' + id)
-    .then((result) => {
+    .then(function(result) {
       var data = result.data.result.class
       $('.title').text(data.name)
       $('.date').text(new init(data.gmt_create).formatDate())
@@ -33,6 +32,3 @@ $(function() {
           })
         })
       })
-
-
-})

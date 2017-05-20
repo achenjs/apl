@@ -1,8 +1,7 @@
-$(function() {
   var URL = 'https://apl-static.oss-cn-beijing.aliyuncs.com/'
   var enterprise = function () {
     axios('/company')
-      .then((result) => {
+      .then(function(result) {
         var data = result.data.result.items
         var str = ''
         for (let i in data) {
@@ -24,5 +23,3 @@ $(function() {
       })
   }
   enterprise()
-
-})
