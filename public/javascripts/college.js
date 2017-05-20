@@ -10,11 +10,11 @@ $(function() {
         var pastStr = ''
         for (let i = 1; i < list.length; i++) {
           if (i < 5) {
-            newStr += '<li><a href="'+list[i].url+'" target="_blank"><div class="pic"><img src="'+URL+list[i].logo_url+'">'
+            newStr += '<li><a href="'+list[i].url+'" target="_blank"><div class="pic"><i style="background: url("'+URL+list[i].logo_url+'")></i>'
             +'<b></b><div class="txt"><h5>'+list[i].name+'</h5><p class="date">'+new init(list[i].gmt_create).formatDate()+'</p></div>'
             +'</div></a></li>'
           } else {
-            pastStr += '<li><a href="'+list[i].url+'" target="_blank"><div class="pic"><img src="'+URL+list[i].logo_url+'">'
+            pastStr += '<li><a href="'+list[i].url+'" target="_blank"><div class="pic"><i style="background: url("'+URL+list[i].logo_url+'")></i>'
             +'<b></b><div class="txt"><h5>'+list[i].name+'</h5><p class="date">'+new init(list[i].gmt_create).formatDate()+'</p></div>'
             +'</div></a></li>'
           }
@@ -26,7 +26,7 @@ $(function() {
           $('.pastList').append(pastStr)
         }
         //  第一条
-        $('.newOne').append('<a href="'+list[0].url+'" target="_blank"><div class="pic"><img src="'+URL+list[0].logo_url+'">'
+        $('.newOne').append('<a href="'+list[0].url+'" target="_blank"><div class="pic"><i style="background: url("'+URL+list[0].logo_url+'")></i>>'
         +'<b></b><div class="txt"><h5>'+list[0].name+'</h5><p class="date">'+new init(list[0].gmt_modified).formatDate()+'</p></div>'
         +'</div></a>')
         // 启动分页

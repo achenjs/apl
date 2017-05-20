@@ -90,7 +90,7 @@ $(function(){
           for (let i = 0; i < length; i++) {
             if (index < 5) {
               if (data[i].logo_url) {
-                str += '<a href="/home/enterpriseDetail?id='+data[i].id+'"><img src="'+URL+data[i].base_logo_url+'"></a>'
+                str += '<a href="/home/enterpriseDetail?id='+data[i].id+'"><i style="background-image: url("'+URL+data[i].logo_url+'")"></i></a>'
                 index++
               }
             }

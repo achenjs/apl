@@ -38,9 +38,13 @@
     opacity: 0; }
   to {
     opacity: 1; } }
-    .college .contail div.pic img {
+    .college .contail div.pic i {
+      display: inline-block;
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      background-size: contain !important; }
     .college .contail div.pic b {
       position: absolute;
       left: 0;
