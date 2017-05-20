@@ -25,7 +25,7 @@ $(function() {
           +'</dl>'
         }
         $('.latest').append(str)
-        $('.text img').hide()
+        $('.text img').parent('p').hide()
         // 启动分页
         $(".tcdPageCode").createPage({
           pageCount: data.total_page,
