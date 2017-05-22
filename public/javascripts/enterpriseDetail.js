@@ -13,7 +13,7 @@
       $('.description h5').text(data.product_name)
       $('.des b').text(data.slogan)
       $('.Setdate i').text(year+'-'+month+'-'+date)
-      $('.web a').attr('href', "http://"+data.website).text(data.website)
+      $('.web a').attr('href', data.website).text(data.website)
       $('.companySize i').text(data.scale)
       $('.desInfo i').text(data.ceo)
       $('.txtContent h4').text(data.name)

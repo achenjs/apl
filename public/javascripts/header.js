@@ -5,9 +5,13 @@ $(function () {
   var count = !result ? 0 : result.length;
   var path = ''
   if (count > 1) {
-    var index = pathname.indexOf('/')
+    try {
+      var index = pathname.indexOf('/')
         indexTwo = pathname.indexOf('/', index + 1)
         path = pathname.substring(index, indexTwo)
+    } catch (e) {
+
+    }
   } else {
     path = pathname
   }
