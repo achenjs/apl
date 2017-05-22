@@ -14,7 +14,7 @@
     var str = ''
     for (let i in data) {
       if (data[i].url) {
-        str += '<div class="swiper-slide" style="background-image: url("'+ URL + data[i].url +'")">'
+        str += '<div class="swiper-slide" style="background-image: url('+ URL + data[i].url +')">'
         +'<div class="content"><div class="box"><div class="title">'+ data[i].title +'</div>'
         +'<div class="des">'+data[i].description+'</div></div></div>'
         +'</div>'
