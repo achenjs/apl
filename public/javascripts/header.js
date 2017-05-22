@@ -33,7 +33,7 @@ $(function () {
       break;
   }
 
-  var lang = $('#lang').attr('lang')
+  var lang = sessionStorage.getItem('lang')
   if (lang == 'cn') {
     $('.lang').eq(0).addClass('active').siblings().removeClass('active')
   } else if (lang == 'en') {
@@ -43,9 +43,11 @@ $(function () {
   //  中英文切换
   $('.lang').on('click', function() {
     $(this).addClass('active').siblings('.lang').removeClass('active')
-    axios.get('/lang?lang=' + $(this).attr('lang'))
-      .then((result) => {
-        location.reload()
-      })
+    sessionStorage.setItem('lang', $(this).attr('lang'))
+    location.reload()
+    // axios.get('/lang?lang=' + $(this).attr('lang'))
+    //   .then((result) => {
+    //     location.reload()
+    //   })
   })
 })
