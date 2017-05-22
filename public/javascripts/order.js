@@ -102,13 +102,14 @@
       var obj = {
         projectname: $('.projectname').val(),
         description: $('.des').val(),
-        count: $('.count').val(),
+        count: parseInt($('.count').val()),
         contact: $('.username').val(),
         mobile: $('.phone').val(),
         captcha: $('.captcha').val()
       }
       axios.post('/addorder', obj)
         .then(function(result) {
+          alert(result.data.result)
         })
     }
   })
