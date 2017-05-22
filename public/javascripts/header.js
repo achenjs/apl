@@ -33,12 +33,19 @@ $(function () {
       break;
   }
 
+  var lang = $('#lang').attr('lang')
+  if (lang == 'cn') {
+    $('.lang').eq(0).addClass('active').siblings().removeClass('active')
+  } else if (lang == 'en') {
+    $('.lang').eq(1).addClass('active').siblings().removeClass('active')
+  }
+
   //  中英文切换
   $('.lang').on('click', function() {
     $(this).addClass('active').siblings('.lang').removeClass('active')
-    // axios.get('/lang?lang=' + $(this).attr('lang'))
-    //   .then((result) => {
-    //     // location.reload()
-    //   })
+    axios.get('/lang?lang=' + $(this).attr('lang'))
+      .then((result) => {
+        location.reload()
+      })
   })
 })

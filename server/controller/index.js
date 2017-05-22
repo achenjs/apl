@@ -5,102 +5,128 @@ const constant = require('../config/constant')
 const api = require('../config/api')
 
 const header = require('../template/header')
+
+var lang = global.lang
+var list = []
+switch (lang) {
+  case 'cn':
+    list = header.cn
+    break;
+  case 'en':
+    list = header.en
+    break;
+  default:
+    list = header.cn
+    break;
+}
+
 module.exports = {
   //  中英文切换
   lang(req, res, next) {
     global.lang = req.query.lang
-    var url = req.baseUrl
-    res.send()
+    lang = global.lang
+    switch (lang) {
+      case 'cn':
+        list = header.cn
+        break;
+      case 'en':
+        list = header.en
+        break;
+      default:
+        list = header.cn
+        break;
+    }
+    res.send({
+      'lang': global.lang
+    })
   },
   index(req, res) {
     res.redirect('/home')
   },
   //  首页
   home(req, res) {
-    // var lang = global.lang
-    // var list = []
-    // switch (lang) {
-    //   case 'cn':
-    //     list = header.cn
-    //     break;
-    //   case 'en':
-    //     list = header.en
-    //   default:
-    //     list = header.cn
-    //     break;
-    // }
     res.render('index', {
-      title: '洪泰智造工场',
-      styleLink: 'home'
+      title: '洪泰智造工场-人工智能项目首选投资机构',
+      styleLink: 'home',
+      txt: list
     })
   },
   //  生态服务
   ecology(req, res) {
     res.render('index', {
-      title: '洪泰智造工场',
-      styleLink: 'ecology'
+      title: '洪泰智造工场-人工智能项目首选投资机构',
+      styleLink: 'ecology',
+      txt: list
     })
   },
   // 智造服务
   intellect(req, res) {
     res.render('index', {
-      title: '洪泰智造工场',
-      styleLink: 'intellect'
+      title: '洪泰智造工场-人工智能项目首选投资机构',
+      styleLink: 'intellect',
+      txt: list
     })
   },
   // 硬创学院
   college(req, res) {
     res.render('index', {
-      title: '洪泰智造工场',
-      styleLink: 'college'
+      title: '洪泰智造工场-人工智能项目首选投资机构',
+      styleLink: 'college',
+      txt: list
     })
   },
   //  硬创学院详情页
   collegeDetail(req, res) {
     var id = req.query.id
     res.render('index', {
-      title: '洪泰智造工场',
+      title: '洪泰智造工场-人工智能项目首选投资机构',
       styleLink: 'collegeDetail',
-      id: id
+      id: id,
+      txt: list
     })
   },
   //  最新动态
   newslatest(req, res) {
     var id = req.query.id
     res.render('index', {
-      title: '洪泰智造工场',
+      title: '洪泰智造工场-人工智能项目首选投资机构',
       styleLink: 'newslatest',
-      id: id
+      id: id,
+      txt: list
     })
   },
   order(req, res) {
     res.render('index', {
-      title: '洪泰智造工场',
-      styleLink: 'order'
+      title: '洪泰智造工场-人工智能项目首选投资机构',
+      styleLink: 'order',
+      txt: list
     })
   },
   enterprise(req, res) {
     res.render('index', {
-      title: '洪泰智造工场',
-      styleLink: 'enterprise'
+      title: '洪泰智造工场-人工智能项目首选投资机构',
+      styleLink: 'enterprise',
+      txt: list
     })
   },
   //  入孵企业详情页
   enterpriseDetail(req, res) {
     var id = req.query.id
     res.render('index', {
-      title: '洪泰智造工场',
+      title: '洪泰智造工场-人工智能项目首选投资机构',
       styleLink: 'enterpriseDetail',
-      id: id
+      id: id,
+      txt: list
     })
   },
   //
   latestDetail(req, res) {
     var id = req.query.id
     res.render('index', {
-      title: '洪泰智造工场',
+      title: '洪泰智造工场-人工智能项目首选投资机构',
       styleLink: 'latestDetail',
-      id: id
+      id: id,
+      txt: list
     })
   },
   //  首页轮播

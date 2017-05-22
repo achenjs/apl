@@ -13,7 +13,7 @@ const clean = require('gulp-clean')
 gulp.task('dev', function() {
   server.run(['./bin/www'])
   gulp.watch(['./public/sass/**/*'], ['styles'])
-  gulp.watch(['./app.js', 'routes/**/*', './server/**/*'], [server.run])
+  gulp.watch(['./app.js', './server/**/*'], [server.run])
 })
 
 gulp.task('styles', function() {
@@ -77,7 +77,6 @@ gulp.task('clean', function() {
     .pipe(clean())
 })
 
-// gulp.task('build', ['images', 'css', 'js', 'rev'])
 gulp.task('build', ['clean'], function() {
   gulp.start('ico', 'css', 'js', 'lib', 'rev')
 })

@@ -43,6 +43,8 @@
           overflow: hidden;
           text-overflow:ellipsis;
           white-space: nowrap;
+          font-size: 18px;
+          font-weight: bold;
           &:hover {
             color: #b18257;
             background: none !important;

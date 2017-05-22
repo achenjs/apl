@@ -27,7 +27,8 @@
     .header ul li a {
       color: #000000;
       text-decoration: none;
-      display: inline-block; }
+      display: inline-block;
+      line-height: 14px; }
       .header ul li a:hover {
         color: #b18257; }
       .header ul li a.active {
