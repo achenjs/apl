@@ -1,3 +1,4 @@
+(function() {
   var id = $('.id').val()
   axios('/articleId?id=' + id)
     .then(function(result) {
@@ -23,3 +24,5 @@
       }
       $('.listData').append(str)
     })
+  
+})()

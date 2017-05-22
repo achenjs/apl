@@ -1,3 +1,4 @@
+(function() {
   var id = $('.id').val()
   axios('/companyId?id=' + id)
     .then(function(result) {
@@ -18,3 +19,4 @@
       $('.txtContent h4').text(data.name)
       $('.info').text(data.description)
     })
+})()

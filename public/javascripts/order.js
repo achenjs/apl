@@ -1,21 +1,21 @@
-$(function() {
+(function() {
   $('.form_date').datetimepicker({
     language:  'zh-CN',
     weekStart: 1,
     todayBtn:  1,
-		autoclose: 1,
-		todayHighlight: 1,
-		startView: 2,
-		minView: 2,
-		forceParse: 0
+    autoclose: 1,
+    todayHighlight: 1,
+    startView: 2,
+    minView: 2,
+    forceParse: 0
   })
 
   //  表单验证
   var isUsername = false,
-      isPhone = false,
-      isCode = false,
-      isquest = true,
-      index = 60
+  isPhone = false,
+  isCode = false,
+  isquest = true,
+  index = 60
 
   //  检查是否可以提交
   function isButton() {
@@ -64,64 +64,33 @@ $(function() {
 
   $(document).on('blur', 'input', function() {
     $(this).parent('.itemInput').removeClass('active')
-    // var className = $(this).attr('class')
-    // var value = $(this).val()
-    // switch (className) {
-    //   case 'input username':
-    //     if (value === '') {
-    //       $(this).siblings('.error').show()
-    //       isUsername = false
-    //     } else {
-    //       $(this).siblings('.error').hide()
-    //       isUsername = true
-    //     }
-    //     break;
-    //   case 'input phone':
-    //     if (!/^1[3|4|5|8][0-9]\d{4,8}$/.test(value)) {
-    //       $(this).siblings('.error').show()
-    //       isPhone = false
-    //     } else {
-    //       $(this).siblings('.error').hide()
-    //       isPhone = true
-    //     }
-    //     break;
-    //   case 'input captcha':
-    //     if (value === '') {
-    //       $(this).siblings('.error').show()
-    //       isCode = false
-    //     } else {
-    //       $(this).siblings('.error').hide()
-    //       isCode = true
-    //     }
-    //     break;
-    // }
     isButton()
   })
 
   //  获取验证码
-    $('.verCode').on('click', function() {
-      if (!isPhone) {
-        alert('请先输入手机号！')
-      }
-      if (isquest && isPhone) {
-        isquest = false
-        clearInterval(move)
-        var move = setInterval(function() {
-          index--
-          if (index == 0) {
-            $('.verCode').text('发送验证码').removeClass('active')
-            isquest = true
-            clearInterval(move)
-          } else {
-            $('.verCode').text(index + '秒后发送').addClass('active')
-          }
-        }, 1000)
-        axios.post('/captcha', {mobile: $('.phone').val()})
-          .then(function(result) {
-            // Tosts(result.data.result.message)
-          })
-      }
-    })
+  $('.verCode').on('click', function() {
+    if (!isPhone) {
+      alert('请先输入手机号！')
+    }
+    if (isquest && isPhone) {
+      isquest = false
+      clearInterval(move)
+      var move = setInterval(function() {
+        index--
+        if (index == 0) {
+          $('.verCode').text('发送验证码').removeClass('active')
+          isquest = true
+          clearInterval(move)
+        } else {
+          $('.verCode').text(index + '秒后发送').addClass('active')
+        }
+      }, 1000)
+      axios.post('/captcha', {mobile: $('.phone').val()})
+        .then(function(result) {
+          // Tosts(result.data.result.message)
+        })
+    }
+  })
 
   //  提交
   $('.button').on('click', function() {
@@ -143,4 +112,5 @@ $(function() {
         })
     }
   })
-})
+
+})()
