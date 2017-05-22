@@ -120,7 +120,8 @@ module.exports = {
   },
   //  最新动态
   article(req, res) {
-    var options = http.getUrl(constant.globalUrl, constant.globalPort, api.article, "get")
+    var page = req.query.page
+    var options = http.getUrl(constant.globalUrl, constant.globalPort, api.article + '?page='+page, "get")
     commonServer.request(options, function(data){
       if (data === '') {
         res.send({
@@ -135,7 +136,8 @@ module.exports = {
   },
   //  硬创学院列表
   collegeList(req, res) {
-    var options = http.getUrl(constant.globalUrl, constant.globalPort, api.collegeList, "get")
+    var page = req.query.page
+    var options = http.getUrl(constant.globalUrl, constant.globalPort, api.collegeList + '?page=' + page, "get")
     commonServer.request(options, function(data){
       if (data === '') {
         res.send({
@@ -166,7 +168,8 @@ module.exports = {
   },
   //  入孵企业列表
   company(req, res) {
-    var options = http.getUrl(constant.globalUrl, constant.globalPort, api.company, "get")
+    var page = req.query.page
+    var options = http.getUrl(constant.globalUrl, constant.globalPort, api.company + '?page=' + page, "get")
     commonServer.request(options, function(data){
       if (data === '') {
         res.send({
