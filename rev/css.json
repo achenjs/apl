@@ -1,16 +1,21 @@
 {
-  "college.css": "college-c8b312b0cc.css",
+  "college.css": "college-92a7d9a7c7.css",
   "collegeDetail.css": "collegeDetail-281eed0414.css",
   "common.css": "common-0c1a155ffa.css",
-  "ecology.css": "ecology-c3995ef18c.css",
-  "enterprise.css": "enterprise-51ecb1dd0d.css",
+  "ecology.css": "ecology-10aedc4ea8.css",
+  "enterprise.css": "enterprise-ba80b9c096.css",
   "enterpriseDetail.css": "enterpriseDetail-86791f0d34.css",
   "footer.css": "footer-e07d66e893.css",
   "header.css": "header-b7b5656622.css",
+<<<<<<< HEAD
   "home.css": "home-99293c8958.css",
   "intellect.css": "intellect-ead60c6eb0.css",
+=======
+  "home.css": "home-9463c7a6dc.css",
+  "intellect.css": "intellect-e188b00c8f.css",
+>>>>>>> bb33b5f00c5a1881a0655ebcafeaf76e69c2078c
   "latestDetail.css": "latestDetail-6f54de7e57.css",
-  "newslatest.css": "newslatest-d89f55e03f.css",
+  "newslatest.css": "newslatest-718130b73c.css",
   "order.css": "order-613632d817.css",
   "page.css": "page-bc5c00b7a1.css",
   "returnTop.css": "returnTop-ef6d7edfcd.css"

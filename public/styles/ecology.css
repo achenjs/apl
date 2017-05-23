@@ -2,10 +2,19 @@
   padding-bottom: 40px; }
   .ecology .ecologyHead {
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    position: relative; }
     .ecology .ecologyHead img {
       width: 100%;
       height: 100%; }
+    .ecology .ecologyHead p.txt {
+      position: absolute;
+      width: 100%;
+      bottom: 34px;
+      margin: auto;
+      text-align: center;
+      color: #ffffff;
+      font-size: 14px; }
   .ecology .contail .content dl {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -26,7 +35,7 @@
               flex: 1;
       padding: 40px 0; }
       .ecology .contail .content dl dd h5 {
-        font-size: 20px;
+        font-size: 28px;
         margin-bottom: 20px; }
       .ecology .contail .content dl dd div {
         color: #9c9ca6;

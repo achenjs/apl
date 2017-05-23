@@ -1,4 +1,5 @@
 const express = require('express')
+const session = require('express-session')
 const path = require('path')
 const favicon = require('serve-favicon')
 const logger = require('morgan')
@@ -23,6 +24,12 @@ app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
+app.use(session({
+  secret: '12345',
+  cookie: {maxAge: 80000},
+  resava: false,
+  saveUninitialized: true
+}))
 if (process.env.NODE_ENV == 'production') {
   app.use(express.static(path.join(__dirname, 'dist')))
 } else {

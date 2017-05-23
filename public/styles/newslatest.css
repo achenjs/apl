@@ -1,9 +1,18 @@
 .news-latests .latestHead {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  position: relative; }
   .news-latests .latestHead img {
     width: 100%;
     height: 100%; }
+  .news-latests .latestHead p.txt {
+    position: absolute;
+    width: 100%;
+    bottom: 34px;
+    margin: auto;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px; }
 
 .news-latests .content {
   padding: 40px 0; }
