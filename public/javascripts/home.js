@@ -50,17 +50,22 @@
           var date = newTime.getDate()
           month = month < 10 ? '0' + month : month
           date = date < 10 ? '0' + date : date
+          var content = list[i].content.substr(0,100)+'...';
           str += '<dl>'
           +'<dt><a href="/article/'+list[i].uuid+'.html" target="_blank"><img src="'+ URL + list[i].cover + '"></a></dt>'
           +'<dd>'
           +'<h5>'
-          +'<i></i><span title="'+list[i].title+'">'+list[i].title+'</span></h5>'
-          +'<div class="text"><a href="/article/'+list[i].uuid+'.html" target="_blank">'+ list[i].content +'</a></div>'
+          +'<a href="/article/'+list[i].uuid+'.html">'
+          +'<i></i><span title="'+list[i].title+'">'+list[i].title+'</span></a></h5>'
+          +'<div class="text">'+content+'</div>'
           +'<p class="date">'+year + '-' + month + '-' + date+'</p></dd>'
           +'</dl>'
         }
         $('.latest').append(str)
-        $('.text img').parent('p').hide()
+        $('.text img').parent('p').hide();
+        a();
+        
+        
       } catch (err) {
 
       }
@@ -73,7 +78,16 @@
     paginationClickable: true,
     spaceBetween: 30,
   })
-
+  function a() {
+    for(var i=0;i<$('.latest').find('dl').length;i++){
+          if($('.latest').find('dl').eq(i).find('dt').height()<$('.latest').find('dl').eq(i).find('dd').height()){
+              $('.latest').find('dl').eq(i).find('dt').css('height',$('.latest').find('dl').eq(i).find('dd').outerHeight());
+          }
+        }
+  }
+  $(window).on('resize',function(){
+    a();
+  })
   axios('/company')
     .then(function(result) {
       var data = result.data.result.items

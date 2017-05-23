@@ -425,9 +425,10 @@
         dl {
           display: flex;
           margin-bottom: 20px;
+          min-height:200px;
           dt {
             width: 325px;
-            height: 200px;
+            height:200px;
             a {
               width: 100%;
               height: 100%;
@@ -440,7 +441,6 @@
           dd {
             flex: 1;
             margin-left: 15px;
-            height: 200px;
             padding: 10px 15px;
             background-color: #ffffff;
             box-shadow: 5px 5px 5px #9c9ca6;
@@ -450,26 +450,28 @@
               overflow: hidden;
               text-overflow: ellipsis;
               white-space: nowrap;
-              i {
-                background-color: #a23432;
-                display: inline-block;
-                width: 3px;
-                height: 12px;
-                vertical-align: middle;
-                margin-right: 6px;
+              a{
+                  i {
+                    background-color: #a23432;
+                    display: inline-block;
+                    width: 3px;
+                    height: 12px;
+                    vertical-align: middle;
+                    margin-right: 6px;
+                  }  
+                  span{
+                    color:#000;
+                    font-size:14px;
+                    cursor:pointer;s
+                  } 
               }
+              
             }
             .text {
-              a {
-                display: inline-block;
-                width: 100%;
-                color: #9c9ca6;
+              color: #9c9ca6;
                 font-size: 12px;
                 letter-spacing: 2px;
-                height: 100px;
-                overflow: hidden;
-                text-decoration: none;
-              }
+              
             }
             .date {
               color: #9c9ca6;
