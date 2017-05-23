@@ -237,18 +237,6 @@
               x-ms-format-detection: none;
               background-position: 0 center !important;
             }
-            p:nth-of-type(1) {
-              background: url('../images/phone.png');
-              background-position-y:center;
-            }
-            p:nth-of-type(2) {
-              background: url('../images/email.png');
-              background-position-y:center;
-            }
-            p:nth-of-type(3) {
-              background: url('../images/address.png');
-              background-position-y:3px;
-            }
           }
         }
       }
@@ -263,12 +251,54 @@
       }
       .slide01 {
         background: url('../images/beij.jpg');
+        .info{
+            p:nth-of-type(1) {
+              background: url('../images/phone.png');
+              background-position-y:center!important;
+            }
+            p:nth-of-type(2) {
+              background: url('../images/email.png');
+              background-position-y:center!important;
+            }
+            p:nth-of-type(3) {
+              background: url('../images/address.png');
+              background-position-y:3px!important;
+            }
+        }
       }
       .slide02 {
         background: url('../images/chengd.jpg');
+        .info{
+            p:nth-of-type(1) {
+              background: url('../images/phone.png');
+              background-position-y:center!important;
+            }
+            p:nth-of-type(2) {
+              background: url('../images/email.png');
+              background-position-y:center!important;
+            }
+            p:nth-of-type(3) {
+              background: url('../images/address.png');
+              background-position-y:3px!important;
+            }
+        }
       }
       .slide03 {
         background: url('../images/guig.jpg');
+        .info{
+            p:nth-of-type(1) {
+              background: url('../images/phone.png');
+              background-position-y:center!important;
+            }
+            p:nth-of-type(2) {
+              background: url('../images/email.png');
+              background-position-y:center!important;
+            }
+            p:nth-of-type(3) {
+              background: url('../images/address.png');
+              background-position-y:3px!important;
+            }
+        }
       }
       .slide04 {
         background: url('../images/tianj.jpg');

@@ -204,15 +204,6 @@
             background-size: 15px 15px !important;
             x-ms-format-detection: none;
             background-position: 0 center !important; }
-          .home .office .officeSwiper .swiper-slide .content .info p:nth-of-type(1) {
-            background: url("../images/phone.png");
-            background-position-y: center; }
-          .home .office .officeSwiper .swiper-slide .content .info p:nth-of-type(2) {
-            background: url("../images/email.png");
-            background-position-y: center; }
-          .home .office .officeSwiper .swiper-slide .content .info p:nth-of-type(3) {
-            background: url("../images/address.png");
-            background-position-y: 3px; }
     .home .office .officeSwiper .swiper-button-next, .home .office .officeSwiper .swiper-button-prev {
       background-size: 15px 25px; }
     .home .office .officeSwiper .swiper-button-prev {
@@ -221,10 +212,37 @@
       background-image: url("../images/next.png"); }
     .home .office .officeSwiper .slide01 {
       background: url("../images/beij.jpg"); }
+      .home .office .officeSwiper .slide01 .info p:nth-of-type(1) {
+        background: url("../images/phone.png");
+        background-position-y: center !important; }
+      .home .office .officeSwiper .slide01 .info p:nth-of-type(2) {
+        background: url("../images/email.png");
+        background-position-y: center !important; }
+      .home .office .officeSwiper .slide01 .info p:nth-of-type(3) {
+        background: url("../images/address.png");
+        background-position-y: 3px !important; }
     .home .office .officeSwiper .slide02 {
       background: url("../images/chengd.jpg"); }
+      .home .office .officeSwiper .slide02 .info p:nth-of-type(1) {
+        background: url("../images/phone.png");
+        background-position-y: center !important; }
+      .home .office .officeSwiper .slide02 .info p:nth-of-type(2) {
+        background: url("../images/email.png");
+        background-position-y: center !important; }
+      .home .office .officeSwiper .slide02 .info p:nth-of-type(3) {
+        background: url("../images/address.png");
+        background-position-y: 3px !important; }
     .home .office .officeSwiper .slide03 {
       background: url("../images/guig.jpg"); }
+      .home .office .officeSwiper .slide03 .info p:nth-of-type(1) {
+        background: url("../images/phone.png");
+        background-position-y: center !important; }
+      .home .office .officeSwiper .slide03 .info p:nth-of-type(2) {
+        background: url("../images/email.png");
+        background-position-y: center !important; }
+      .home .office .officeSwiper .slide03 .info p:nth-of-type(3) {
+        background: url("../images/address.png");
+        background-position-y: 3px !important; }
     .home .office .officeSwiper .slide04 {
       background: url("../images/tianj.jpg"); }
       .home .office .officeSwiper .slide04 .info p:nth-of-type(1) {
