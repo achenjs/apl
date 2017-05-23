@@ -33,7 +33,6 @@ $(function(){
         autoplay: 3000
       })
     })
-
   axios('/article')
     .then((result) => {
       var data = result.data.result
