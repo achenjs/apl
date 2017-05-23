@@ -274,17 +274,14 @@
     .home .office .officeSwiper .slide04 {
       background: url("../images/tianj.jpg"); }
       .home .office .officeSwiper .slide04 .info p:nth-of-type(1) {
-        background: url("../images/email.png") !important;
-        background-position-y: center !important;
-        padding-left: 30px;
-        background-repeat: no-repeat !important;
-        background-size: 15px 15px !important; }
+        background: url("../images/phone.png");
+        background-position-y: center !important; }
       .home .office .officeSwiper .slide04 .info p:nth-of-type(2) {
-        background: url("../images/address.png") !important;
-        background-position-y: 3px !important;
-        padding-left: 30px;
-        background-repeat: no-repeat !important;
-        background-size: 15px 15px !important; }
+        background: url("../images/email.png");
+        background-position-y: center !important; }
+      .home .office .officeSwiper .slide04 .info p:nth-of-type(3) {
+        background: url("../images/address.png");
+        background-position-y: 3px !important; }
   .home .hatching {
     padding: 0;
     height: 370px;
