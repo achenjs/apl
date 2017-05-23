@@ -30,7 +30,7 @@
       // 如果需要前进后退按钮
       nextButton: '.carousel-next',
       prevButton: '.carousel-prev',
-      autoplay: 3000
+      autoplay: 4000
     })
   })
   axios('/article')
