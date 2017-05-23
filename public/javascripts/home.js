@@ -50,7 +50,7 @@
           var date = newTime.getDate()
           month = month < 10 ? '0' + month : month
           date = date < 10 ? '0' + date : date
-          var content = list[i].content.substr(0,100)+'...';
+          var content = list[i].content.substr(0,150)+'...';
           str += '<dl>'
           +'<dt><a href="/article/'+list[i].uuid+'.html" target="_blank"><img src="'+ URL + list[i].cover + '"></a></dt>'
           +'<dd>'
