@@ -27,8 +27,8 @@ app.use(cookieParser())
 app.use(session({
   secret: '12345',
   cookie: {maxAge: 80000},
-  resava: false,
-  saveUninitialized: true
+  saveUninitialized: true,
+  resave: true
 }))
 if (process.env.NODE_ENV == 'production') {
   app.use(express.static(path.join(__dirname, 'dist')))
@@ -40,6 +40,9 @@ router(app)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
+  if (!req.session) {
+    res.redirect('/home')
+  }
   var err = new Error('Not Found')
   err.status = 404
   next(err)
