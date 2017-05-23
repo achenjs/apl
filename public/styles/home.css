@@ -36,7 +36,8 @@
     .home .carouselSwiper .swiper-button-next {
       background-image: url("../images/next.png"); }
   .home .founder {
-    padding: 40px 0; }
+    padding: 30px 0;
+    margin-top: -56px; }
     .home .founder .content h3 {
       font-size: 24px;
       text-align: center;
