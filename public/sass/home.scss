@@ -5,8 +5,8 @@
     width: 100%;
     bottom: 60px;
     .swiper-slide {
-      background-size: cover;
-      background-position: center;
+      background-size: cover !important;
+      background-position: center !important;
       .content {
         position: absolute;
         text-align: center;
@@ -15,7 +15,7 @@
         left: 0;
         top: 0;
         color: #ffffff;
-        background-color: rgba(0, 0, 0, .2);
+        background-color: rgba(0, 0, 0, .3);
         &:after {
           display:inline-block;
         	width: 0;
@@ -121,7 +121,11 @@
         dt {
           font-size: 12px;
           color: #838383;
+          h4 {
+            color: #333333;
+          }
           .txt {
+            font-weight: normal;
             line-height: 22px;
           }
         }
@@ -199,12 +203,17 @@
         background-repeat: no-repeat !important;
         margin-right: 0 !important;
         color: #ffffff;
+        &:hover {
+          .content {
+            display: block;
+          }
+        }
         .title {
           background: rgba(0, 0, 0, .8);
           text-align: center;
-          padding: 5px 0;
+          padding: 10px 0;
           p {
-            font-size: 14px;
+            font-size: 18px;
             margin: 0;
           }
         }
@@ -225,6 +234,8 @@
               padding-left: 30px;
               background-repeat: no-repeat !important;
               background-size: 15px 15px !important;
+              x-ms-format-detection: none;
+              background-position: 0 center !important;
             }
             p:nth-of-type(1) {
               background: url('../images/phone.png');
@@ -310,18 +321,21 @@
         height: 60px;
         padding: 0 10px;
         border-right: 1px solid #ececec;
-        &:last-child {
+        margin: 10px 0;
+        &:nth-child(5n) {
           border-right: 0;
           padding-right: 0;
+        }
+        &:last-child {
+          border-right: 0;
         }
         i {
           display: inline-block;
           width: 100%;
           height: 100%;
-          background-image: url('../images/FESCO.png');
-          background-position: center;
-          background-size: contain;
-          background-repeat: no-repeat;
+          background-position: center !important;
+          background-size: contain !important;
+          background-repeat: no-repeat !important;
         }
       }
     }
@@ -434,9 +448,9 @@
             display: inline-block;
             width: 100%;
             height: 100%;
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
+            background-position: center !important;
+            background-size: contain !important;
+            background-repeat: no-repeat !important;
           }
         }
         &:nth-of-type(1) {

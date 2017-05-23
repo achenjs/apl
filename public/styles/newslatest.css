@@ -23,6 +23,13 @@
         display: inline-block;
         width: 100%;
         height: 100%; }
+        .news-latests .content .latest dl dt a i {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          background-position: center !important;
+          background-repeat: no-repeat !important;
+          background-size: contain !important; }
         .news-latests .content .latest dl dt a img {
           width: 100%;
           height: 100%; }

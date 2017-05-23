@@ -10,6 +10,7 @@ html
       link(rel='stylesheet', href='/styles/header.css')
       link(rel='stylesheet', href='/styles/footer.css')
       link(rel='stylesheet', href='/styles/returnTop.css')
+      div #{apl}
       - if(styleLink == 'home')
         link(rel='stylesheet', href='/styles/home.css')
       - else if (styleLink == 'ecology')
@@ -28,6 +29,7 @@ html
         link(rel='stylesheet', href='/styles/enterpriseDetail.css')
       -else if (styleLink == 'latestDetail')
         link(rel='stylesheet', href='/styles/latestDetail.css')
+      script(src='/lib/promise.js')
       script(src='/lib/jquery/dist/jquery.min.js')
       script(src='/lib/bootstrap/dist/js/bootstrap.min.js')
       script(src='/lib/axios/dist/axios.min.js')

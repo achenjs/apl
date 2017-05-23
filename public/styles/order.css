@@ -1,6 +1,8 @@
 .order {
   padding: 100px 0 60px 0;
   position: relative; }
+  .order .input-group {
+    width: 75%; }
   .order .orderHead {
     text-align: center; }
     .order .orderHead h4 {
@@ -27,17 +29,19 @@
       position: relative; }
       .order .content .itemInput.active {
         border: 1px solid #58a2f7; }
-      .order .content .itemInput span {
-        width: 80px;
+      .order .content .itemInput span.labelSpan {
         display: inline-block;
+        width: 80px;
         position: relative; }
-        .order .content .itemInput span i {
+        .order .content .itemInput span.labelSpan i {
           color: #ef6963;
           text-align: right;
           position: absolute;
           right: 0;
           margin-top: 3px; }
-      .order .content .itemInput input {
+      .order .content .itemInput .jfDate {
+        margin-top: 6px; }
+      .order .content .itemInput input.input {
         -webkit-box-flex: 1;
             -ms-flex: 1;
                 flex: 1;

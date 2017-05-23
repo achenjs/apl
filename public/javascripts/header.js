@@ -5,9 +5,13 @@ $(function () {
   var count = !result ? 0 : result.length;
   var path = ''
   if (count > 1) {
-    var index = pathname.indexOf('/')
+    try {
+      var index = pathname.indexOf('/')
         indexTwo = pathname.indexOf('/', index + 1)
         path = pathname.substring(index, indexTwo)
+    } catch (e) {
+
+    }
   } else {
     path = pathname
   }
@@ -29,12 +33,21 @@ $(function () {
       break;
   }
 
+  var lang = sessionStorage.getItem('lang')
+  if (lang == 'cn') {
+    $('.lang').eq(0).addClass('active').siblings().removeClass('active')
+  } else if (lang == 'en') {
+    $('.lang').eq(1).addClass('active').siblings().removeClass('active')
+  }
+
   //  中英文切换
   $('.lang').on('click', function() {
     $(this).addClass('active').siblings('.lang').removeClass('active')
+    sessionStorage.setItem('lang', $(this).attr('lang'))
+    location.reload()
     // axios.get('/lang?lang=' + $(this).attr('lang'))
     //   .then((result) => {
-    //     // location.reload()
+    //     location.reload()
     //   })
   })
 })

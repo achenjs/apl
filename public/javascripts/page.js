@@ -58,6 +58,7 @@
 		//绑定事件
 		bindEvent:function(obj,args){
 			return (function(){
+				obj.unbind('click')
 				obj.on("click","a.tcdNumber",function(){
 					var current = parseInt($(this).text());
 					ms.fillHtml(obj,{"current":current,"pageCount":args.pageCount});

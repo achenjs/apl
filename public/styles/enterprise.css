@@ -44,7 +44,9 @@
           color: #999999;
           overflow: hidden;
           text-overflow: ellipsis;
-          white-space: nowrap; }
+          white-space: nowrap;
+          font-size: 18px;
+          font-weight: bold; }
           .enterprise .content ul li a:hover {
             color: #b18257;
             background: none !important; }

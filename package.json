@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "build": "NODE_ENV=production supervisor bin/www",
+    "production": "NODE_ENV=production pm2 restart 0"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
@@ -17,6 +19,7 @@
   },
   "devDependencies": {
     "babel-preset-env": "^1.4.0",
+    "babel-preset-es2015": "^6.24.1",
     "connect-livereload": "^0.6.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",

@@ -7,7 +7,7 @@ const ServerUrl = {
 var obj = {
   localhostPort: 8888,
   difficulty: '100.0',
-  globalUrl: ServerUrl.q,
+  globalUrl: ServerUrl.w,
   globalPort: '8080',
   time_out: 36000
 }

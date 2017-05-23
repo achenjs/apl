@@ -1,45 +1,54 @@
-$(function() {
+(function(){
   var URL = 'https://apl-static.oss-cn-beijing.aliyuncs.com/'
 
   var collegeList = function(page) {
-    axios('/collegeList?page=' + page + '&page_size=5')
-      .then((result) => {
+    axios('/collegeList?page=' + page)
+      .then(function(result) {
         var data = result.data.result
         var list = data.items
         var newStr = ''
         var pastStr = ''
-        for (let i = 1; i < list.length; i++) {
-          if (i < 5) {
-            newStr += '<li><a href="'+list[i].url+'" target="_blank"><div class="pic"><i style="background: url("'+URL+list[i].logo_url+'")></i>'
-            +'<b></b><div class="txt"><h5>'+list[i].name+'</h5><p class="date">'+new init(list[i].gmt_create).formatDate()+'</p></div>'
-            +'</div></a></li>'
-          } else {
-            pastStr += '<li><a href="'+list[i].url+'" target="_blank"><div class="pic"><i style="background: url("'+URL+list[i].logo_url+'")></i>'
-            +'<b></b><div class="txt"><h5>'+list[i].name+'</h5><p class="date">'+new init(list[i].gmt_create).formatDate()+'</p></div>'
+        // <p class="date">'+new init(list[i].gmt_create).formatDate()+'</p>
+        if (page >= 2) {
+          for (let i in list) {
+            pastStr += '<li><a href="'+list[i].url+'" target="_blank"><div class="pic"><img src="'+URL+list[i].logo_url+'"></i>'
+            +'<b></b><div class="txt"><h5 title="'+list[i].name+'">'+list[i].name+'</h5></div>'
             +'</div></a></li>'
           }
-        }
-        if (newStr) {
+          $('.newVideo').hide()
+        } else {
+          for (let i = 1; i < list.length; i++) {
+            if (i < 5) {
+              newStr += '<li><a href="'+list[i].url+'" target="_blank"><div class="pic"><img src="'+URL+list[i].logo_url+'"></i>'
+              +'<b></b><div class="txt"><h5 title="'+list[i].name+'">'+list[i].name+'</h5></div>'
+              +'</div></a></li>'
+            } else {
+              pastStr += '<li><a href="'+list[i].url+'" target="_blank"><div class="pic"><img src="'+URL+list[i].logo_url+'"></i>'
+              +'<b></b><div class="txt"><h5 title="'+list[i].name+'">'+list[i].name+'</h5></div>'
+              +'</div></a></li>'
+            }
+          }
+          $('.newVideo').show()
+          $('.newList').empty()
           $('.newList').append(newStr)
+          //  第一条
+          $('.newOne').empty()
+          $('.newOne').append('<a href="'+list[0].url+'" target="_blank"><div class="pic"><img src="'+URL+list[0].logo_url+'"></i>'
+          +'<b></b><div class="txt"><h5 title="'+list[0].name+'">'+list[0].name+'</h5></div>'
+          +'</div></a>')
         }
-        if (pastStr) {
-          $('.pastList').append(pastStr)
-        }
-        //  第一条
-        $('.newOne').append('<a href="'+list[0].url+'" target="_blank"><div class="pic"><i style="background: url("'+URL+list[0].logo_url+'")></i>>'
-        +'<b></b><div class="txt"><h5>'+list[0].name+'</h5><p class="date">'+new init(list[0].gmt_modified).formatDate()+'</p></div>'
-        +'</div></a>')
+        $('.pastList').empty()
+        $('.pastList').append(pastStr)
         // 启动分页
         $(".tcdPageCode").createPage({
           pageCount: data.total_page,
           current: data.page_index,
           backFn: function(page) {
-            article(page)
+            collegeList(page)
           }
         })
       })
   }
 
   collegeList(1)
-
-})
+})()

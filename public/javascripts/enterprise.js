@@ -1,17 +1,19 @@
-$(function() {
+(function() {
   var URL = 'https://apl-static.oss-cn-beijing.aliyuncs.com/'
-  var enterprise = function () {
-    axios('/company')
-      .then((result) => {
-        var data = result.data.result.items
+  var enterprise = function (page) {
+    axios('/company?page=' + page)
+      .then(function(result) {
+        var data = result.data.result
+        var list = data.items
         var str = ''
-        for (let i in data) {
-          if (data[i].logo_url) {
-            str += '<li><a href="/home/enterpriseDetail?id='+data[i].id+'" style="background: url('+URL+data[i].base_logo_url+')"><i style="background: url('+URL+data[i].logo_url+')"></i></li>'
+        for (let i in list) {
+          if (list[i].logo_url) {
+            str += '<li><a href="/home/enterpriseDetail?id='+list[i].id+'" style="background: url('+URL+list[i].base_logo_url+')"><i style="background: url('+URL+list[i].logo_url+')"></i></li>'
           } else {
-            str += '<li><a href="/home/enterpriseDetail?id='+data[i].id+'" title="'+data[i].product_nam+'">'+data[i].product_name+'</a></li>'
+            str += '<li><a href="/home/enterpriseDetail?id='+list[i].id+'" title="'+list[i].product_nam+'">'+list[i].product_name+'</a></li>'
           }
         }
+        $('.list').empty()
         $('.list').append(str)
         // 启动分页
         $(".tcdPageCode").createPage({
@@ -23,6 +25,5 @@ $(function() {
         })
       })
   }
-  enterprise()
-
-})
+  enterprise(1)
+})()
