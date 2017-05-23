@@ -6,7 +6,7 @@ const api = require('../config/api')
 
 const header = require('../template/header')
 
-var lang = global.lang
+var lang = ''
 var list = []
 switch (lang) {
   case 'cn':
@@ -23,8 +23,7 @@ switch (lang) {
 module.exports = {
   //  中英文切换
   lang(req, res, next) {
-    global.lang = req.query.lang
-    lang = global.lang
+    lang = req.query.lang
     switch (lang) {
       case 'cn':
         list = header.cn
@@ -37,7 +36,7 @@ module.exports = {
         break;
     }
     res.send({
-      'lang': global.lang
+      'lang': lang
     })
   },
   index(req, res) {
