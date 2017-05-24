@@ -1,6 +1,6 @@
 block append head
   link(rel="stylesheet", href="/lib/datetimepicker/css/bootstrap-datetimepicker.min.css")
-    
+
 block content
   div.order
     - if (lang === 'cn')
@@ -71,15 +71,15 @@ block content
         p Please fill in the form below or send an email to 
           span aiqi@apluslabs.com，
           |We will contact you as soon as possible
-      div.content
+      div(style="width: 570px;").content
         div.itemInput
-          span.labelSpan Name of project
+          span(style="width: 200px;").labelSpan Name of project
           input(placeholder='Name of project').input.projectname
         div.itemInput
-          span.labelSpan Description of requirement
+          span(style="width: 200px;").labelSpan Description of requirement
           input(type='textarae', placeholder='Description of requirement').input.des
         div.itemInput
-          span.labelSpan Number of pieces of production
+          span(style="width: 200px;").labelSpan Number of pieces of production
           input(placeholder='Number of pieces of production').input.count
         //- div.itemInput
         //-   span.labelSpan.jfDate Due time
@@ -91,24 +91,24 @@ block content
         //-       span.glyphicon.glyphicon-calendar
         //-     input(type="hidden")#dtp_input2
         div.itemInput
-          span.labelSpan Contact person
+          span(style="width: 200px;").labelSpan Contact person
             i *
           input(placeholder='Contact person').input.username
           div.error
             i
             b 请输入联系人姓名 
         div.itemInput
-          span.labelSpan Mobile number
+          span(style="width: 200px;").labelSpan Mobile number
             i *
           input(placeholder='Mobile number').input.phone
           div.error
             i
             b 请输入正确的手机号
         div.itemInput
-          span.labelSpan Verification code
+          span(style="width: 200px;").labelSpan Verification code
             i *
           input(placeholder='Verification code').input.captcha
-          div(style="top: 13px;").verCode Get verification code
+          div.verCode Get verification code
           div.error
             i
             b 请输入正确的短信验证码
