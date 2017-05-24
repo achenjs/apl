@@ -1,6 +1,31 @@
 .home {
   width: 100%;
   height: 100%; }
+  @media screen and (max-width: 950px) {
+    .home .title {
+      font-size: 1.4em; }
+    .home .des {
+      font-size: 1.1em; } }
+  @media screen and (min-width: 951px) and (max-width: 992px) {
+    .home .title {
+      font-size: 1.6em; }
+    .home .des {
+      font-size: 1.3em; } }
+  @media screen and (min-width: 993px) and (max-width: 1400px) {
+    .home .title {
+      font-size: 1.8em; }
+    .home .des {
+      font-size: 1.4em; } }
+  @media screen and (min-width: 1200px) {
+    .home .title {
+      font-size: 2em; }
+    .home .des {
+      font-size: 1.5em; } }
+  @media screen and (min-width: 1201px) {
+    .home .title {
+      font-size: 3em; }
+    .home .des {
+      font-size: 1.8em; } }
   .home .carouselSwiper {
     width: 100%;
     bottom: 60px; }
@@ -25,10 +50,6 @@
         .home .carouselSwiper .swiper-slide .content .box {
           display: inline-block;
           vertical-align: middle; }
-          .home .carouselSwiper .swiper-slide .content .box .title {
-            font-size: 48px; }
-          .home .carouselSwiper .swiper-slide .content .box .des {
-            font-size: 24px; }
     .home .carouselSwiper .swiper-button-next, .home .carouselSwiper .swiper-button-prev {
       background-size: 15px 25px; }
     .home .carouselSwiper .swiper-button-prev {

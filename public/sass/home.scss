@@ -1,6 +1,51 @@
 .home {
   width: 100%;
   height: 100%;
+  @media screen and (max-width:950px){
+    .title{
+      font-size:1.4em;
+    }
+    .des{
+      font-size:1.1em;
+    }
+  }
+
+  @media screen and (min-width:951px) and (max-width:992px){
+    .title{
+      font-size:1.6em;
+    }
+    .des{
+      font-size:1.3em;
+    }
+  }
+
+  @media screen and (min-width:993px) and (max-width:1400px){
+    .title{
+      font-size:1.8em;
+    }
+    .des{
+      font-size:1.4em;
+    }
+  }
+  @media screen and (min-width:1200px){
+    .title{
+      font-size:2em;
+    }
+    .des{
+      font-size:1.5em;
+    }
+  }
+
+  @media screen and (min-width:1201px){
+    .title{
+      font-size:3em;
+    }
+    .des{
+      font-size:1.8em;
+    }
+  }
+  
+
   .carouselSwiper {
     width: 100%;
     bottom: 60px;
@@ -26,12 +71,6 @@
         .box {
           display: inline-block;
           vertical-align: middle;
-          .title {
-            font-size: 48px;
-          }
-          .des {
-            font-size: 24px;
-          }
         }
       }
     }
