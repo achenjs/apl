@@ -3,60 +3,116 @@ block append head
     
 block content
   div.order
-    div.motails
+    - if (lang === 'cn')
+      div.motails
+        div.content
+          img(src='/images/success.png')
+          div.txt
+            h5 您的需求已提交
+            p 我们会在1-3个工作日做出反馈
+          div.que 确定
+      div.orderHead
+        h4 下单生产
+        p 请您填写以下表单或发邮件给
+          span aiqi@apluslabs.com，
+          |我们将第一时间和您取得联系
       div.content
-        img(src='/images/success.png')
-        div.txt
-          h5 您的需求已提交
-          p 我们会在1-3个工作日做出反馈
-        div.que 确定
-    div.orderHead
-      h4 下单生产
-      p 请您填写以下表单或发邮件给
-        span aiqi@apluslabs.com，
-        |我们将第一时间和您取得联系
-    div.content
-      div.itemInput
-        span.labelSpan 项目名称
-        input(placeholder='请输入名称').input.projectname
-      div.itemInput
-        span.labelSpan 需求描述
-        input(type='textarae', placeholder='请输入需求').input.des
-      div.itemInput
-        span.labelSpan 生产件数
-        input(placeholder='请输入件数').input.count
-      //- div.itemInput
-      //-   span.labelSpan.jfDate 交付时间
-      //-   div(data-date="" data-date-format="yyyy MM dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd").input-group.date.form_date
-      //-     input(size="16" type="text" value="" readonly).form-control
-      //-     span.input-group-addon
-      //-       span.glyphicon.glyphicon-remove
-      //-     span.input-group-addon
-      //-       span.glyphicon.glyphicon-calendar
-      //-     input(type="hidden")#dtp_input2
-      div.itemInput
-        span.labelSpan 联系人
-          i *
-        input(placeholder='请输入姓名').input.username
-        div.error
-          i
-          b 请输入联系人姓名 
-      div.itemInput
-        span.labelSpan 手机号
-          i *
-        input(placeholder='请输入号码').input.phone
-        div.error
-          i
-          b 请输入正确的手机号
-      div.itemInput
-        span.labelSpan 短信验证码
-          i *
-        input(placeholder='请输入验证码').input.captcha
-        div.verCode 发送验证码
-        div.error
-          i
-          b 请输入正确的短信验证码
-      div.button 提交
+        div.itemInput
+          span.labelSpan 项目名称
+          input(placeholder='请输入名称').input.projectname
+        div.itemInput
+          span.labelSpan 需求描述
+          input(type='textarae', placeholder='请输入需求').input.des
+        div.itemInput
+          span.labelSpan 生产件数
+          input(placeholder='请输入件数').input.count
+        //- div.itemInput
+        //-   span.labelSpan.jfDate 交付时间
+        //-   div(data-date="" data-date-format="yyyy MM dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd").input-group.date.form_date
+        //-     input(size="16" type="text" value="" readonly).form-control
+        //-     span.input-group-addon
+        //-       span.glyphicon.glyphicon-remove
+        //-     span.input-group-addon
+        //-       span.glyphicon.glyphicon-calendar
+        //-     input(type="hidden")#dtp_input2
+        div.itemInput
+          span.labelSpan 联系人
+            i *
+          input(placeholder='请输入姓名').input.username
+          div.error
+            i
+            b 请输入联系人姓名 
+        div.itemInput
+          span.labelSpan 手机号
+            i *
+          input(placeholder='请输入号码').input.phone
+          div.error
+            i
+            b 请输入正确的手机号
+        div.itemInput
+          span.labelSpan 短信验证码
+            i *
+          input(placeholder='请输入验证码').input.captcha
+          div.verCode 发送验证码
+          div.error
+            i
+            b 请输入正确的短信验证码
+        div.button 提交
+    - else if (lang === 'en')
+      div.motails
+        div.content
+          img(src='/images/success.png')
+          div.txt
+            h5 您的需求已提交
+            p 我们会在1-3个工作日做出反馈
+          div.que 确定
+      div.orderHead
+        h4 Production Ordering
+        p Please fill in the form below or send an email to 
+          span aiqi@apluslabs.com，
+          |We will contact you as soon as possible
+      div.content
+        div.itemInput
+          span.labelSpan Name of project
+          input(placeholder='Name of project').input.projectname
+        div.itemInput
+          span.labelSpan Description of requirement
+          input(type='textarae', placeholder='Description of requirement').input.des
+        div.itemInput
+          span.labelSpan Number of pieces of production
+          input(placeholder='Number of pieces of production').input.count
+        //- div.itemInput
+        //-   span.labelSpan.jfDate Due time
+        //-   div(data-date="" data-date-format="yyyy MM dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd").input-group.date.form_date
+        //-     input(size="16" type="text" value="" readonly).form-control
+        //-     span.input-group-addon
+        //-       span.glyphicon.glyphicon-remove
+        //-     span.input-group-addon
+        //-       span.glyphicon.glyphicon-calendar
+        //-     input(type="hidden")#dtp_input2
+        div.itemInput
+          span.labelSpan Contact person
+            i *
+          input(placeholder='Contact person').input.username
+          div.error
+            i
+            b 请输入联系人姓名 
+        div.itemInput
+          span.labelSpan Mobile number
+            i *
+          input(placeholder='Mobile number').input.phone
+          div.error
+            i
+            b 请输入正确的手机号
+        div.itemInput
+          span.labelSpan Verification code
+            i *
+          input(placeholder='Verification code').input.captcha
+          div(style="top: 13px;").verCode Get verification code
+          div.error
+            i
+            b 请输入正确的短信验证码
+        div.button Submit  
     script(src='/lib/datetimepicker/js/bootstrap-datetimepicker.min.js')
     script(src='/lib/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js')
     script(src='/javascripts/order.js')

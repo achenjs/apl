@@ -4,8 +4,12 @@ block append head
 block content
   div.enterprise
     div.enterpriseHead
-      img(src='/images/enterpriseHead.jpg')
-      p.txt 洪泰智造工场面向人工智能、物联网、智能硬件等领域提供投资+技术<br>服务深度孵化模式
+      - if (lang === 'cn')
+        img(src='/images/enterpriseHead.jpg')
+        p.txt 洪泰智造工场面向人工智能、物联网、智能硬件等领域提供投资+技术<br>服务深度孵化模式
+      - else if (lang === 'en')
+        img(src='/images/enterpriseHead_en.jpg')
+        p.txt Hongtai Aplus Labs provides investment + technical services depth incubation mode for artificial intelligence,<br>Internet of things, intelligent hardware and other fields .
     div.content.row
       div.col-lg-2.col-md-2.col-sm-2.col-xs-2
       div.col-lg-8.col-md-8.col-sm-8.col-xs-8
