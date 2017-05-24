@@ -41,7 +41,7 @@
         autoplay: 4000
       })
     })
-  axios('/article')
+  axios('/article?page=1&pagesize=10')
     .then(function(result) {
       var data = result.data.result
       var list = data.items
@@ -76,7 +76,7 @@
           html = html.substr(0,150)+'...'
           $('.text').eq(i).html(html);
         }
-        
+
         a();
 
 
