@@ -34,6 +34,9 @@ module.exports = {
   //  生态服务
   ecology(req, res) {
     var list = header.tem(req.session.lang)
+    if (!req.session.lang) {
+      req.session.lang = 'cn'
+    }
     res.render('index', {
       title: '洪泰智造工场-人工智能项目首选投资机构',
       styleLink: 'ecology',
@@ -44,6 +47,9 @@ module.exports = {
   // 智造服务
   intellect(req, res) {
     var list = header.tem(req.session.lang)
+    if (!req.session.lang) {
+      req.session.lang = 'cn'
+    }
     res.render('index', {
       title: '洪泰智造工场-人工智能项目首选投资机构',
       styleLink: 'intellect',
@@ -54,6 +60,9 @@ module.exports = {
   // 硬创学院
   college(req, res) {
     var list = header.tem(req.session.lang)
+    if (!req.session.lang) {
+      req.session.lang = 'cn'
+    }
     res.render('index', {
       title: '洪泰智造工场-人工智能项目首选投资机构',
       styleLink: 'college',
@@ -65,6 +74,9 @@ module.exports = {
   collegeDetail(req, res) {
     var id = req.query.id
     var list = header.tem(req.session.lang)
+    if (!req.session.lang) {
+      req.session.lang = 'cn'
+    }
     res.render('index', {
       title: '洪泰智造工场-人工智能项目首选投资机构',
       styleLink: 'collegeDetail',
@@ -77,6 +89,9 @@ module.exports = {
   newslatest(req, res) {
     var id = req.query.id
     var list = header.tem(req.session.lang)
+    if (!req.session.lang) {
+      req.session.lang = 'cn'
+    }
     res.render('index', {
       title: '洪泰智造工场-人工智能项目首选投资机构',
       styleLink: 'newslatest',
@@ -87,6 +102,9 @@ module.exports = {
   },
   order(req, res) {
     var list = header.tem(req.session.lang)
+    if (!req.session.lang) {
+      req.session.lang = 'cn'
+    }
     res.render('index', {
       title: '洪泰智造工场-人工智能项目首选投资机构',
       styleLink: 'order',
@@ -96,6 +114,9 @@ module.exports = {
   },
   enterprise(req, res) {
     var list = header.tem(req.session.lang)
+    if (!req.session.lang) {
+      req.session.lang = 'cn'
+    }
     res.render('index', {
       title: '洪泰智造工场-人工智能项目首选投资机构',
       styleLink: 'enterprise',
@@ -107,6 +128,9 @@ module.exports = {
   enterpriseDetail(req, res) {
     var id = req.query.id
     var list = header.tem(req.session.lang)
+    if (!req.session.lang) {
+      req.session.lang = 'cn'
+    }
     res.render('index', {
       title: '洪泰智造工场-人工智能项目首选投资机构',
       styleLink: 'enterpriseDetail',
@@ -119,6 +143,9 @@ module.exports = {
   latestDetail(req, res) {
     var id = req.query.id
     var list = header.tem(req.session.lang)
+    if (!req.session.lang) {
+      req.session.lang = 'cn'
+    }
     res.render('index', {
       title: '洪泰智造工场-人工智能项目首选投资机构',
       styleLink: 'latestDetail',
@@ -146,7 +173,19 @@ module.exports = {
   article(req, res) {
     var page = req.query.page
     var pagesize = req.query.pagesize
-    var options = http.getUrl(constant.globalUrl, constant.globalPort, api.article + '?page='+page+'&pagesize='+pagesize, "get")
+    var lang = 1
+    if (!req.session.lang) {
+      req.session.lang = 'cn'
+    }
+    switch (req.session.lang) {
+      case 'cn':
+        lang = 1
+        break;
+      case 'en':
+        lang = 2
+        break;
+    }
+    var options = http.getUrl(constant.globalUrl, constant.globalPort, api.article + '?page='+page+'&pagesize='+pagesize+'&lang='+lang, "get")
     commonServer.request(options, function(data){
       if (data === '') {
         res.send({
@@ -162,7 +201,19 @@ module.exports = {
   //  硬创学院列表
   collegeList(req, res) {
     var page = req.query.page
-    var options = http.getUrl(constant.globalUrl, constant.globalPort, api.collegeList + '?page=' + page, "get")
+    var lang = 1
+    if (!req.session.lang) {
+      req.session.lang = 'cn'
+    }
+    switch (req.session.lang) {
+      case 'cn':
+        lang = 1
+        break;
+      case 'en':
+        lang = 2
+        break;
+    }
+    var options = http.getUrl(constant.globalUrl, constant.globalPort, api.collegeList + '?page=' + page + '&lang=' + lang, "get")
     commonServer.request(options, function(data){
       if (data === '') {
         res.send({
@@ -194,7 +245,19 @@ module.exports = {
   //  入孵企业列表
   company(req, res) {
     var page = req.query.page
-    var options = http.getUrl(constant.globalUrl, constant.globalPort, api.company + '?page=' + page, "get")
+    var lang = 1
+    if (!req.session.lang) {
+      req.session.lang = 'cn'
+    }
+    switch (req.session.lang) {
+      case 'cn':
+        lang = 1
+        break;
+      case 'en':
+        lang = 2
+        break;
+    }
+    var options = http.getUrl(constant.globalUrl, constant.globalPort, api.company + '?page=' + page + '&lang=' + lang, "get")
     commonServer.request(options, function(data){
       if (data === '') {
         res.send({

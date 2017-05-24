@@ -21,3 +21,15 @@ a {
 .swiper-pagination-bullet-active {
   color: #ffffff !important;
 }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #eeeeee;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #eeeeee;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #eeeeee;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #eeeeee;
+}

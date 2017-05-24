@@ -27,7 +27,6 @@
                 +'<div class="text">'
                     +'<a href="/article/'+list[i].uuid+'.html" target="_blank">'+ list[i].content +'</a>'
                 +'</div>'
-                +'<p class="date"><i></i>'+year + '-' + month + '-' + date+'</p>'
             +'</dd>'
             +'</dl>'
             // str += '<dl>'
