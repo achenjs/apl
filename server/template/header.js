@@ -1,4 +1,4 @@
-module.exports = {
+var obj = {
   'cn': [{
     title: "首页",url: '/home'
   },{
@@ -23,6 +23,22 @@ module.exports = {
   },{
     title: "News",url: '/newslatest'
   },{
-    title: "APL login",url: 'https://apl.apluslabs.com'
+    title: "APL Signin",url: 'https://apl.apluslabs.com'
   }]
+}
+
+exports.tem = function(lang) {
+  var list = []
+  switch (lang) {
+    case 'cn':
+      list = obj.cn
+      break;
+    case 'en':
+      list = obj.en
+      break;
+    default:
+      list = obj.cn
+      break;
+  }
+  return list
 }

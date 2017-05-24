@@ -22,7 +22,7 @@ exports.request = function request(options, callback, params, NoPrintResult) {
 		})
 		result.on('end', function() {
       if(!NoPrintResult){
-          console.log("请求返回结果，result:" + data.toString())
+          // console.log("请求返回结果，result:" + data.toString())
       }else{
           console.log('请求返回结果，result：设置为不打印结果！')
       }

@@ -1,8 +1,12 @@
 block content
   div.ecology
     div.ecologyHead
-      img(src='images/ecologyHead.jpg')
-      p.txt 洪泰智造工场为创业者搭建了全要素的创业服务生态。
+      - if (lang === 'cn')
+        img(src='images/ecologyHead.jpg')
+        p.txt 洪泰智造工场为创业者搭建了全要素的创业服务生态。
+      - else if (lang === 'en')
+        img(src='images/ecologyHead_en.jpg')
+        p(style="bottom: 24px;").txt Aplus Labs established an all-round entrepreneurial services<br>ecological system for start-ups.
     div.contail.row
       div.col-lg-2.col-md-2.col-sm-2.col-xs-2
       div.col-lg-8.col-md-8.col-sm-8.col-xs-8.content
@@ -17,35 +21,51 @@ block content
                 |、Turingsence、升泰能源、踪视通、创品机器人等明星创业团队。
         dl
           dd
-            h5  洪泰智造工场
-            div 洪泰智造工场是全球领先的人工智能、智能制造创业服务平台，以领先的“投资
-                |+深度服务”的运营模式，为创业者提供全新的服务形态，为硬件创业者提供小批量
-                |试产服务。包括产品定义、产品研发、生产以及通过吸收和借鉴全球先进的营销经验
-                |与思维，构建全新的营销体系等，输出全流程、全要素、全生命周期的深度创业服务。
+            - if (lang === 'cn')
+              h5  洪泰智造工场
+              div 洪泰智造工场是全球领先的人工智能、智能制造创业服务平台，以领先的“投资
+                  |+深度服务”的运营模式，为创业者提供全新的服务形态，为硬件创业者提供小批量
+                  |试产服务。包括产品定义、产品研发、生产以及通过吸收和借鉴全球先进的营销经验
+                  |与思维，构建全新的营销体系等，输出全流程、全要素、全生命周期的深度创业服务。
+            - else if (lang === 'en')
+              h5 Aplus Labs
+              div Aplus Labs is the world's leading AI and intelligent manufacturing entrepreneurship services platform.  With the unique operating system of "investment + deep services", Aplus Labs provide a new form of services chain and trial production services for the start-ups. These services include product definition, R&D, production, and building a new marketing system through the absorption and learning from the global advanced marketing experience. Aplus Labs provide a whole process, |all-round, and life cycle deep services.
           dt
             img(src='/images/ecology02.png')
         dl
           dt
             img(src='/images/ecology03.png')
           dd
-            h5  智能硬件实验室
-            div 保证产品性能与质量的手段是检测和检验，对于创业者来讲，提供检测检验的实验设备
-                |既昂贵又专业，所以常陷入”非不为也，实 不能也“的困境。洪泰只能硬件实验室为创业
-                |者搭建电学实验室、可靠性实验室、射频实验室、认证预测实验室，帮助创业者解决检验条件，做出理想产品。
+            - if (lang === 'cn')
+              h5  智能硬件实验室
+              div 保证产品性能与质量的手段是检测和检验，对于创业者来讲，提供检测检验的实验设备
+                  |既昂贵又专业，所以常陷入”非不为也，实 不能也“的困境。洪泰只能硬件实验室为创业
+                  |者搭建电学实验室、可靠性实验室、射频实验室、认证预测实验室，帮助创业者解决检验条件，做出理想产品。
+            - else if (lang === 'en')
+              h5 Intelligent Hardware Labs
+              div In the early stages of the product development, it is very difficult for the entrepreneurs to encounter right manufacturers due to the small production vulome and high individual requirement. At the same time,  the product testing equipment is very expensive and professional and only few entrepreneurs are lucky enough to achieve it to test their early stage products. Aplus Labs are dedicated to help the hardware startups and the entrepreneurial teams to quickly achieve the |production from 0 to 1000 pieces. Through our SMT and assembling production center, as well as electrical laboratory, reliability laboratory, RF Laboratory, pre-verification testing laboratory and other professional labs and testing environment, Aplus Labs enables entrepreneurs to solve the difficulties in production, testing, thus accelarating R&D.
         dl
           dd
-            h5  尺度新媒体
-            div 全球第一个新媒体孵化器。为创业公司提供品牌、社群营销、发布会、融资估值管理、内容策划、事件营销等
-                |在内的公关服务。为创业公司对接全球范围内优秀的媒体资源，实现品牌价值和传播声量的跨越式发展。
+            - if (lang === 'cn')
+              h5  尺度新媒体
+              div 全球第一个新媒体孵化器。为创业公司提供品牌、社群营销、发布会、融资估值管理、内容策划、事件营销等
+                  |在内的公关服务。为创业公司对接全球范围内优秀的媒体资源，实现品牌价值和传播声量的跨越式发展。
+            - else if (lang === 'en')
+              h5 Scale New Media
+              div Scale New Media is the world's top new media incubator which provides services sush as branding , community marketing, press conferences, financing valuation management, content planning, event marketing and public relationship management. It provides start-ups with world's sound media resources to achieve rapid expansion of brand value.
           dt
             img(src='/images/ecology04.png')
         dl
           dt
             img(src='/images/ecology05.png')
           dd
-            h5  洪泰硬创学院
-            div 洪泰硬创学院提炼中国制造20年工程经验，形成一套独有的硬件创业课程体系。为学院提供包括硬创线下活动
-                |、硬创课程（教育培训）、硬创线上课堂、硬创实验室等在内的020硬件创业实验课程。
+            - if (lang === 'cn')
+              h5  洪泰硬创学院
+              div 洪泰硬创学院提炼中国制造20年工程经验，形成一套独有的硬件创业课程体系。为学院提供包括硬创线下活动
+                  |、硬创课程（教育培训）、硬创线上课堂、硬创实验室等在内的020硬件创业实验课程。
+            - else if (lang === 'en')
+              h5 Aplus Hardware Entrepreneurship Institute
+              div Aplus Hardware Entrepreneurship Institute refined 20 years of Chinese manufacturing experience and built a unique system of hardware startup courses. Aplus Hardware Entrepreneurship Institute provides hardware startup offline activities, hardware startup training courses (education and training), hardware startup online class, hardware startup laboratory, etc.
       div.col-lg-2.col-md-2.col-sm-2.col-xs-2
       
       

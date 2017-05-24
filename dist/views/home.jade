@@ -13,122 +13,230 @@ block content
     div.founder.row
       div.col-lg-2.col-md-2.col-sm-2.col-xs-2
       div.col-lg-8.col-md-8.col-sm-8.col-xs-8.content
-        h3 创始人团队
-        ul
-          li
-            img(src='/images/ymh.png')
-            div.info
-              div.title
-                h4 俞敏洪
-                p 新东方学校创始人/洪泰基金创始人
-              div.description
-                p 俞敏洪先生创办的北京新东方学校是中国规模最大、最具影响力的私立教育品牌和行业领导者。 2006年新东方在美国纽约证交所上市，成为中国第一家在美国上市的教育培训机构。
-                p 2014年与盛希泰创立洪泰基金。
-          li
-            img(src='/images/sxt.png')
-            div.info
-              div.title
-                h4 盛希泰
-                p 资深投资银行家/洪泰基金创始人
-              div.description
-                p 盛希泰先生曾任华泰联合证券公司董事长，两家一线证券公司缔造者， 具有二十年逾百家公司IPO及并购经验，培育了中联重科、大族激光等数十家上市公司。
-                p 2014年与俞敏洪创立洪泰基金。
-          li
-            img(src='/images/qhj.png')
-            div.info
-              div.title
-                h4 乔会君
-                p 洪泰基金合伙人/洪泰智造工场创始人
-              div.description
-                p 乔会君先生是人工智能时代知名的天使投资人、人工智能产业创新联盟副理事长，曾带领团队长期服务于全球各大运营商，在产品研发、供应链等方面拥有丰富的经验。
-                p 2015年创立洪泰智造工场。
+        - if (lang === 'cn')
+          h3 创始人团队
+          ul
+            li
+              img(src='/images/ymh.png')
+              div.info
+                div.title
+                  h4 俞敏洪
+                  p 新东方学校创始人/洪泰基金创始人
+                div.description
+                  p 俞敏洪先生1993年创办的北京新东方学校是中国规模最大、最具影响力的私立教育品牌和行业领导者。 2006年新东方在美国纽约证交所上市，成为中国第一家在美国上市的教育培训机构。
+                  p 2014年与盛希泰创立洪泰基金。
+            li
+              img(src='/images/sxt.png')
+              div.info
+                div.title
+                  h4 盛希泰
+                  p 资深投资银行家/洪泰基金创始人
+                div.description
+                  p 盛希泰先生曾任华泰联合证券公司董事长，两家一线证券公司缔造者， 具有二十年逾百家公司IPO及并购经验，培育了中联重科、大族激光等数十家上市公司。
+                  p 2014年与俞敏洪创立洪泰基金。
+            li
+              img(src='/images/qhj.png')
+              div.info
+                div.title
+                  h4 乔会君
+                  p 洪泰基金合伙人/洪泰智造工场创始人
+                div.description
+                  p 乔会君先生是人工智能时代知名的天使投资人、人工智能产业创新联盟副理事长，曾带领团队长期服务于全球各大运营商，在产品研发、供应链等方面拥有丰富的经验。
+                  p 2015年创立洪泰智造工场。
+        - else if (lang === 'en')
+          h3 Founders
+          ul
+            li
+              img(src='/images/ymh.png')
+              div.info
+                div.title
+                  h4 Minhong YU
+                  p Founder of the New Oriental Education & Technology Group／Founder of Aplus Capital
+                div.description
+                  p Mr.YU Minghong Founded the New Oriental Education & Technology Group in 1993 which has developed into the largest and most influential brand and leader in private education industry;
+                  p New Oriental Education & Technology Group was listed on NYSE in 2006, and is the China's first education and training institutions listed in the United States;
+                  p Founded Aplus Capital together with Mr. SHENG Xitai
+            li
+              img(src='/images/sxt.png')
+              div.info
+                div.title
+                  h4 Xitai SHENG
+                  p Senior investment banker / founder of Hongtai Fund
+                div.description
+                  p Mr. SHENG Xitai has led two securities companies to develop into leading position companies, and he is the former chairman of Huatai United Securities
+                  p Mr. SHENG Xitai has more than 20 years’ experience in IPO and M&A of hundreds of cases. He cultivated the best M&A team in China's capital market and also cultivated dozens of industry-leading listed companies, sush as Zoomlion, Han's laser and BlueFocus
+                  p Founded Aplus Capital together with Mr. YU Minhong
+            li
+              img(src='/images/qhj.png')
+              div.info
+                div.title
+                  h4 Huijun QIAO
+                  p Hongtai Fund Partner / Hongtai Chi Foundry Founder
+                div.description
+                  p Mr.QIAO Huijun is a well-known angel investor in the era of artificial intelligence and the Deputy Director of Artificial Intelligence Industry Innovation Alliance. Mr. QIAO has provided long-term services to the world's major telecom operators and is experienced in R&D, supply chain management, etc.
       div.col-lg-2.col-md-2.col-sm-2.col-xs-2
     //-  服务板块
     div.service.row
       div.col-lg-2.col-md-2.col-sm-2.col-xs-2
       div.col-lg-8.col-md-8.col-sm-8.col-xs-8
-        h3 战略版图
-        div.content
-          div.b
-            div.a
-              img(src='/images/jj.png').a1
-              h3 洪泰智造基金
-              p 洪泰智造基金由俞敏洪、盛希泰和乔会君共同发起，组织形式为有限合伙。主要投资方向为人工智能、智能制造、物联网等相关行业的早中期科技项目。目前已经投出三角兽、智能一点、TuringSense、尺度新媒体等极具潜力的明星创业公司。
-            div.a
-              img(src='/images/zzgc.png').a1
-              h3 洪泰智造工场
-              p 洪泰智造工场以领先的“投资+深度服务”的运营模式，为创业者提供全新的服务形态，为硬件创业者提供小批量试产服务。包括产品定义、产品研发、生产以及通过吸收和借鉴全球先进的营销经验与思维，构建全新的营销体系等，输出全流程、全要素、全生命周期的深度创业服务。
-          div.b
-            div.a
-              img(src='/images/wlc.png').a1
-              h3 洪泰未来城
-              p 洪泰未来城以智能制造生产基地为核心；以智能智造基金和产业基金为杠杆；以洪泰智造工场从孵化到成长到成熟全产业链的服务及全球行业资源为支撑； 以未来城内的智慧生活、智慧城市、智能交通为展示，综合打造一个标准化、专业化、智慧化、聚合智能制造上下游产业资源的立体生态圈。
-            div.a
-              img(src='/images/zhzx.png').a1
-              h3 洪泰智慧中心
-              p 洪泰智慧中心专注服务于科技创新型领域的成长期团队，重点领域包括人工智能、智能硬件、智慧城市等。通过集成洪泰丰富的资源和先进的理念，致力于打造规模大、效益好、运营佳的科技企业聚集地。
+        - if (lang === 'cn')
+          h3 战略版图
+          div.content
+            div.b
+              div.a
+                img(src='/images/jj.png').a1
+                h3 洪泰智造基金
+                p 洪泰智造基金由俞敏洪、盛希泰和乔会君共同发起，组织形式为有限合伙。主要投资方向为人工智能、智能制造、物联网等相关行业的早中期科技项目。目前已经投出三角兽、TuringSense、智能一点、尺度新媒体等极具潜力的明星创业公司。
+              div.a
+                img(src='/images/zzgc.png').a1
+                h3 洪泰智造工场
+                p 洪泰智造工场以领先的“投资+深度服务”的运营模式，为创业者提供全新的服务形态，为硬件创业者提供小批量试产服务。包括产品定义、产品研发、生产以及通过吸收和借鉴全球先进的营销经验与思维，构建全新的营销体系等，输出全流程、全要素、全生命周期的深度创业服务。
+            div.b
+              div.a
+                img(src='/images/wlc.png').a1
+                h3 洪泰未来城
+                p 洪泰未来城以智能制造生产基地为核心；以智能智造基金和产业基金为杠杆；以洪泰智造工场从孵化到成长到成熟全产业链的服务及全球行业资源为支撑； 以未来城内的智慧生活、智慧城市、智能交通为展示，综合打造一个标准化、专业化、智慧化、聚合智能制造上下游产业资源的立体生态圈。
+              div.a
+                img(src='/images/zhzx.png').a1
+                h3 洪泰智慧中心
+                p 洪泰智慧中心专注服务于科技创新型领域的成长期团队，重点领域包括人工智能、智能硬件、智慧城市等。通过集成洪泰丰富的资源和先进的理念，致力于打造规模大、效益好、运营佳的科技企业聚集地。
+        - else if (lang === 'en')
+          h3 Strategic map
+          div.content
+            div.b
+              div.a
+                img(src='/images/jj.png').a1
+                h3 Aplus Labs Manufacturing Fund
+                p Mr. YU Minhoong, SHENG Xitai and QIAO Huijun founded Aplus Intelligence and Manufacturing Fund, and organized the fund with limited partnership pattern. This fund focuses on early stage and mid-term projects on AI, Intelligent Manufacturing, IoT, etc. Aplus Labs provide start-ups with fund and deep services, and provide not only incubation areas, but also professional engineers, agile production lines (labs) and APL system.
+              div.a
+                img(src='/images/zzgc.png').a1
+                h3 Aplus Labs
+                p Aplus Labs is the world's leading AI and intelligent manufacturing entrepreneurship services platform.  With the unique operating system of "investment + deep services", Aplus Labs provide a new form of services chain and trial production services for the start-ups. These services include product definition, R&D, production, and building a new marketing system through the absorption and learning from the global advanced marketing experience. Aplus Labs provide a whole process, all-round, and life cycle deep services.
+            div.b
+              div.a
+                img(src='/images/wlc.png').a1
+                h3 Aplus Exiderdome
+                p Aplus Exiderdome will be allocated with world top fully automatic (the fourth industrial revolution) Intelligent Manufacturing Bases, Intelligence and Manufacturing Fund, Industrial Investment Fund and services and global resources on a whole industry chain which supports the development of start-ups. The core objective will be establishing high-level, professional and intelligent integrated industry ecosystems with the idea of exiderdome and connecting upstream and downstream |industry resources on IM, which is realized by intelligent life, smart city and ITS.
+              div.a
+                img(src='/images/zhzx.png').a1
+                h3 Aplus Smart Centers
+                p Aplus Smart Centers mainly provide services on high-tech developing businesses on AI, intelligent hardware, smart city, etc., and will be expanding, highly productive and well-operated high tech clusters.
       div.col-lg-2.col-md-2.col-sm-2.col-xs-2
     //-  办公地点
     div.office
       div.swiper-container.officeSwiper
-        div.swiper-wrapper
-            div.swiper-slide.silid.slide01 
-              div.title
-                p 北京
-                //- b BEIJING
-              div.content
-                p 北京办公区
-                //- b Bejing office area
-                div.info
-                  p.phone 010-5659-0598
-                  p.email feng@apluslabs.com
-                  p.address 北京市朝阳区四惠东华腾世纪总部公园D座三层 
-            div.swiper-slide.silid.slide02 
-              div.title
-                p 成都
-                //- b CHENGDU
-              div.content
-                p 成都办公区
-                //- b Chengdu office area
-                div.info
-                  p.phone 028-86646209
-                  p.email BP@apluslabs.com
-                  p.address 四川省成都市锦江区锦华路三段88号汇融国际D座9层 
-            div.swiper-slide.silid.slide03 
-              div.title
-                p 硅谷
-                //- b A+labs
-              div.content
-                p 硅谷办公区
-                //- b Guigu office area
-                div.info
-                  p.phone (646) 286-5176
-                  p.email Patrick_us@apluslabs.com
-                  p.address 4500 great america parkway, santa clara, ca, 95054
-            div.swiper-slide.silid.slide04 
-              div.title
-                p 天津
-                //- b TIANJIN
-              div.content
-                p 天津办公区
-                //- b Tianjin office area
-                div.info
-                  p.phone 13110083587
-                  p.email liweijia@apluslabs.com
-                  p.address 天津市河西区泰山路光电集团2号楼 
-        //- div.swiper-button-prev 
-        //- div.swiper-button-next
+        - if (lang === 'cn')
+          div.swiper-wrapper
+              div.swiper-slide.silid.slide01 
+                div.title
+                  p 北京
+                  //- b BEIJING
+                div.content
+                  p 北京办公区
+                  //- b Bejing office area
+                  div.info
+                    p.phone 010-5659-0598
+                    p.email feng@apluslabs.com
+                    p.address 北京市朝阳区四惠东华腾世纪总部公园D座三层 
+              div.swiper-slide.silid.slide02 
+                div.title
+                  p 成都
+                  //- b CHENGDU
+                div.content
+                  p 成都办公区
+                  //- b Chengdu office area
+                  div.info
+                    p.phone 028-86646209
+                    p.email BP@apluslabs.com
+                    p.address 四川省成都市锦江区锦华路三段88号汇融国际D座9层 
+              div.swiper-slide.silid.slide03 
+                div.title
+                  p 硅谷
+                  //- b A+labs
+                div.content
+                  p 硅谷办公区
+                  //- b Guigu office area
+                  div.info
+                    p.phone (646) 286-5176
+                    p.email Patrick_us@apluslabs.com
+                    p.address 4500 great america parkway, santa clara, ca, 95054
+              div.swiper-slide.silid.slide04 
+                div.title
+                  p 天津
+                  //- b TIANJIN
+                div.content
+                  p 天津办公区
+                  //- b Tianjin office area
+                  div.info
+                    p.phone 13110083587
+                    p.email liweijia@apluslabs.com
+                    p.address 天津市河西区泰山路光电集团2号楼 
+        - else if (lang === 'en')
+          div.swiper-wrapper
+              div.swiper-slide.silid.slide01 
+                div.title
+                  p Beijing
+                  //- b BEIJING
+                div.content
+                  p Beijing
+                  //- b Bejing office area
+                  div.info
+                    p.phone 010-5659-0598
+                    p.email feng@apluslabs.com
+                    p.address 3rd Floor, Building D, Huatengshiji Headquarters Park, Sihui East, Chaoyang District, Beijing
+              div.swiper-slide.silid.slide02 
+                div.title
+                  p Chengdu
+                  //- b CHENGDU
+                div.content
+                  p Chengdu
+                  //- b Chengdu office area
+                  div.info
+                    p.phone 028-86646209
+                    p.email BP@apluslabs.com
+                    p.address 9th Floor, Building D, Huirong International, No.88 Jinjiang Road 3rd Section, Jinjiang District, Chengdu, Sichuang 
+              div.swiper-slide.silid.slide03 
+                div.title
+                  p A+labs, Inc
+                  //- b A+labs
+                div.content
+                  p A+labs, Inc
+                  //- b Guigu office area
+                  div.info
+                    p.phone (646) 286-5176
+                    p.email Patrick_us@apluslabs.com
+                    p.address 4500 great america parkway, santa clara, ca, 95054
+              div.swiper-slide.silid.slide04 
+                div.title
+                  p Tianjin
+                  //- b TIANJIN
+                div.content
+                  p Tianjin
+                  //- b Tianjin office area
+                  div.info
+                    p.phone 13110083587
+                    p.email liweijia@apluslabs.com
+                    p.address Building No.2, TOEC Group, Taishan Road, Hexi District, Tianjin
     //-  生态服务
-    div.stService.row
-      div.col-lg-2.col-md-2.col-sm-2.col-xs-2
-      div.col-lg-8.col-md-8.col-sm-8.col-xs-8
-        h3 生态服务
-      div.col-lg-2.col-md-2.col-sm-2.col-xs-2
+    - if (lang === 'cn')
+      div.stService.row
+    - else if (lang === 'en')
+      div(style="background-image: url(/images/stfw_en.jpg)").stService.row
+        div.col-lg-2.col-md-2.col-sm-2.col-xs-2
+        div.col-lg-8.col-md-8.col-sm-8.col-xs-8
+          - if (lang === 'cn')
+            h3 生态服务
+          - else if (lang === 'en')
+            h3 Services
+        div.col-lg-2.col-md-2.col-sm-2.col-xs-2
     //-  投资项目
     div.project.row
       div.col-lg-2.col-md-2.col-sm-2.col-xs-2
       div.col-lg-8.col-md-8.col-sm-8.col-xs-8
-        h3 投资企业
+        - if (lang === 'cn')
+          h3 投资企业
+        - else if (lang === 'en')
+          h3 Investment enterprise
         div.content
           ul
             li
@@ -151,18 +259,28 @@ block content
     div.hatching.row
       div.col-lg-2.col-md-2.col-sm-2.col-xs-2
       div.col-lg-8.col-md-8.col-sm-8.col-xs-8
-        h3 孵化企业
-        p.more 
-          a(href='/home/enterprise') 查看更多 >
+        - if (lang === 'cn')
+          h3 孵化企业
+          p.more 
+            a(href='/home/enterprise') 查看更多 >
+        - else if (lang === 'en')
+          h3 Start-ups in our system
+          p.more 
+            a(href='/home/enterprise') more >
         div.content
       div.col-lg-2.col-md-2.col-sm-2.col-xs-2
     //- 最新动态
     div.news-latest.row
       div.col-lg-2.col-md-2.col-sm-2.col-xs-2
       div.col-lg-8.col-md-8.col-sm-8.col-xs-8.content
-        h3 最新动态
-        p.more 
-          a(href='/newslatest') 查看更多 >
+        - if (lang === 'cn')
+          h3 最新动态
+          p.more 
+            a(href='/newslatest') 查看更多 >
+        - else if (lang === 'en')
+          h3 Latest News
+          p.more 
+            a(href='/newslatest') more >
         div.latest
         //-  
           dl
@@ -179,7 +297,10 @@ block content
     div.cooperation.row
       div.col-lg-1.col-md-1.col-sm-1.col-xs-1
       div.col-lg-10.col-md-10.col-sm-10.col-xs-10
-        h3 战略合作
+        - if (lang === 'cn')
+          h3 战略合作
+        - else if (lang === 'en')  
+          h3 Strategic Cooperation
         div.content
           ul
             li
@@ -209,5 +330,5 @@ block content
               i
       div.col-lg-1.col-md-1.col-sm-1.col-xs-1
     script(src='/lib/swiper/dist/js/swiper.jquery.min.js')
-    script(src='/javascripts/home-0a7e9cc48e.js')
+    script(src='/javascripts/home-eace947799.js')
     

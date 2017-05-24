@@ -59,7 +59,10 @@
           overflow: hidden;
           h5 {
             width: 80%;
-            font-size: 18px;
+            a{
+              font-size: 18px;
+              color:#000!important;
+            }
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
