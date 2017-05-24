@@ -9,6 +9,7 @@ const revCollector = require('gulp-rev-collector')             //- 路径替换
 const uglify = require('gulp-uglify')
 const babel = require('gulp-babel')
 const clean = require('gulp-clean')
+const imagemin = require('gulp-imagemin')
 
 gulp.task('dev', function() {
   server.run(['./bin/www'])
@@ -31,6 +32,17 @@ gulp.task('images', function() {
         verbose: true
       }))
       .pipe(gulp.dest('./dist/images'))
+})
+
+gulp.task('image', function () {
+    // 1. 找到图片
+    return gulp.src('./public/images/*')
+    // 2. 压缩图片
+        .pipe(imagemin({
+            progressive: true
+        }))
+    // 3. 另存图片
+        .pipe(gulp.dest('./dist/images'))
 })
 
 gulp.task('js', function() {
