@@ -23,7 +23,7 @@ var obj = {
   },{
     title: "News",url: '/newslatest'
   },{
-    title: "APL login",url: 'https://apl.apluslabs.com'
+    title: "APL Signin",url: 'https://apl.apluslabs.com'
   }]
 }
 

@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  include ./component/header
+  div.marginTop
+    - if(styleLink == 'home')
+      include ./home
+    - else if (styleLink == 'ecology')
+      include ./ecology
+    -else if (styleLink == 'intellect')
+      include ./intellect
+    - else if (styleLink == 'college')
+      include ./college
+    -else if (styleLink == 'newslatest')
+      include ./newslatest
+    -else if (styleLink == 'order')
+      include ./order
+    -else if (styleLink == 'enterprise')
+      include ./enterprise
+    -else if (styleLink == 'enterpriseDetail')
+      include ./enterpriseDetail
+    -else if (styleLink == 'latestDetail')
+      include ./latestDetail
+  include ./component/footer
+  include ./component/returnTop

@@ -9,7 +9,13 @@
       var date = newTime.getDate()
       month = month < 10 ? '0' + month : month
       date = date < 10 ? '0' + date : date
-      $('.txtTop img').attr('src', 'https://apl-static.oss-cn-beijing.aliyuncs.com/' + data.logo_url)
+      var logo_url = data.logo_url;
+      if(logo_url){
+        logo_url = 'https://apl-static.oss-cn-beijing.aliyuncs.com/' + data.logo_url;
+      }else{
+        logo_url = '/images/default_logo.png';
+      }
+      $('.txtTop img').attr('src', logo_url)
       $('.description h5').text(data.product_name)
       $('.des b').text(data.slogan)
       $('.Setdate i').text(year+'-'+month+'-'+date)

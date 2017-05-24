@@ -21,6 +21,9 @@ module.exports = {
   //  首页
   home(req, res) {
     var list = header.tem(req.session.lang)
+    if (!req.session.lang) {
+      req.session.lang = 'cn'
+    }
     res.render('index', {
       title: '洪泰智造工场-人工智能项目首选投资机构',
       styleLink: 'home',
