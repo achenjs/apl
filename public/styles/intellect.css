@@ -56,7 +56,8 @@
         line-height: 24px;
         padding: 0 8px; }
         .intellect .produce .contail .content .txt p {
-          text-indent: 2em; }
+          text-indent: 2em;
+          text-align: justify; }
   .intellect .quality {
     padding: 50px 0 30px 0;
     background: url("../images/latest.jpg") no-repeat;
@@ -95,6 +96,7 @@
             list-style: disc;
             list-style-type: square;
             list-style-position: outside;
+            text-align: justify;
             margin-left: 20px;
             font-size: 13px;
             color: #a2a2a2;
