@@ -41,7 +41,7 @@
         autoplay: 4000
       })
     })
-  axios('/article')
+  axios('/article?page=1&pagesize=10')
     .then(function(result) {
       var data = result.data.result
       var list = data.items
@@ -66,7 +66,7 @@
           +'<a href="/article/'+list[i].uuid+'.html">'
           +'<i></i><span title="'+list[i].title+'">'+list[i].title+'</span></a></h5>'
           +'<div class="text">'+list[i].content+'</div>'
-          +'<p class="date">'+year + '-' + month + '-' + date+'</p></dd>'
+          +'</dd>'
           +'</dl>'
         }
         $('.latest').append(str)
@@ -76,7 +76,7 @@
           html = html.substr(0,150)+'...'
           $('.text').eq(i).html(html);
         }
-        
+
         a();
 
 
