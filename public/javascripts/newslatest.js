@@ -2,7 +2,7 @@
     var URL = 'https://apl-static.oss-cn-beijing.aliyuncs.com/'
 
     var article = function (page) {
-      axios('/article?page=' + page)
+      axios('/article?page=' + page + '&pagesize=10')
         .then(function(result) {
           var data = result.data.result
           var list = data.items

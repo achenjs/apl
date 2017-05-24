@@ -145,7 +145,8 @@ module.exports = {
   //  最新动态
   article(req, res) {
     var page = req.query.page
-    var options = http.getUrl(constant.globalUrl, constant.globalPort, api.article + '?page='+page, "get")
+    var pagesize = req.query.pagesize
+    var options = http.getUrl(constant.globalUrl, constant.globalPort, api.article + '?page='+page+'&pagesize='+pagesize, "get")
     commonServer.request(options, function(data){
       if (data === '') {
         res.send({

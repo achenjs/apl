@@ -2,6 +2,7 @@
   var URL = 'https://apl-static.oss-cn-beijing.aliyuncs.com/'
 
   // $('.header').addClass('active')
+  var lang = $('#lang').val()
 
   $('.carouselSwiper').css('height', $(window).height())
   $(window).on('resize', function() {
@@ -9,30 +10,37 @@
   })
   //  轮播图列表
   axios('/carousel')
-  .then(function(result) {
-    var data = result.data.result.carousels
-    var str = ''
-    for (let i in data) {
-      if (data[i].url) {
-        str += '<div class="swiper-slide" style="background-image: url('+ URL + data[i].url +')">'
-        +'<div class="content"><div class="box"><div class="title">'+ data[i].title +'</div>'
-        +'<div class="des">'+data[i].description+'</div></div></div>'
-        +'</div>'
+    .then(function(result) {
+      var data = result.data.result.carousels
+      var str = ''
+      for (let i in data) {
+        if (data[i].url) {
+          if (lang === 'cn') {
+            str += '<div class="swiper-slide" style="background-image: url('+ URL + data[i].url +')">'
+            +'<div class="content"><div class="box"><div class="title">'+ data[i].title +'</div>'
+            +'<div class="des">'+data[i].description+'</div></div></div>'
+            +'</div>'
+          } else if (lang === 'en') {
+            str += '<div class="swiper-slide" style="background-image: url('+ URL + data[i].url +')">'
+            +'<div class="content"><div class="box"><div class="title">'+ data[i].description +'</div>'
+            +'<div class="des">'+data[i].title+'</div></div></div>'
+            +'</div>'
+          }
+        }
       }
-    }
-    $('.carouselContent').append(str)
-    var mySwiper = new Swiper ('.carouselSwiper', {
-      loop: true,
-      // 如果需要分页器
-      pagination: '.swiper-pagination',
-      paginationElement : 'li',
-      paginationClickable: true,
-      // 如果需要前进后退按钮
-      nextButton: '.carousel-next',
-      prevButton: '.carousel-prev',
-      autoplay: 4000
+      $('.carouselContent').append(str)
+      var mySwiper = new Swiper ('.carouselSwiper', {
+        loop: true,
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
+        paginationElement : 'li',
+        paginationClickable: true,
+        // 如果需要前进后退按钮
+        nextButton: '.carousel-next',
+        prevButton: '.carousel-prev',
+        autoplay: 4000
+      })
     })
-  })
   axios('/article')
     .then(function(result) {
       var data = result.data.result
@@ -64,8 +72,8 @@
         $('.latest').append(str)
         $('.text img').parent('p').hide();
         a();
-        
-        
+
+
       } catch (err) {
 
       }
