@@ -15,7 +15,8 @@
       }else{
         logo_url = '/images/default_logo.png';
       }
-      $('.txtTop img').attr('src', logo_url)
+      $('.txtTop .imgs').css('background-image','url('+logo_url+')');
+      $('.txtTop .imgs').css({'background-repeat':'no-repeat','background-size':'contain','background-position':'center center'});
       $('.description h5').text(data.product_name)
       $('.des b').text(data.slogan)
       $('.Setdate i').text(year+'-'+month+'-'+date)
