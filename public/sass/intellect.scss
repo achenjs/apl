@@ -85,6 +85,8 @@
         justify-content: space-between;
         .item {
           width: 19%;
+          background:#fff;
+          height:auto;
           h3 {
             width: 100%;
             text-align: center;
@@ -97,8 +99,6 @@
           }
           ul {
             padding: 10px;
-            background: #ffffff;
-            min-height:120px;
             li {
               list-style: disc;
               list-style-type: square;
@@ -109,17 +109,7 @@
               margin-top: 5px;
             }
           }
-          &.active {
-            h3 {
-              background-color: #3f6c99;
-            }
-            ul {
-              box-shadow: 5px 5px 3px #b4b4b4;
-              li {
-                color: #999999;
-              }
-            }
-          }
+          
         }
       }
     }
