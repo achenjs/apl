@@ -66,7 +66,7 @@
           +'<a href="/article/'+list[i].uuid+'.html">'
           +'<i></i><span title="'+list[i].title+'">'+list[i].title+'</span></a></h5>'
           +'<div class="text">'+list[i].content+'</div>'
-          +'<p class="date">'+year + '-' + month + '-' + date+'</p></dd>'
+          +'</dd>'
           +'</dl>'
         }
         $('.latest').append(str)
