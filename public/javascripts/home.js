@@ -58,19 +58,25 @@
           var date = newTime.getDate()
           month = month < 10 ? '0' + month : month
           date = date < 10 ? '0' + date : date
-          var content = list[i].content.substr(0,150)+'...';
+          //var content = list[i].content.substr(0,150)+'...';
           str += '<dl>'
-          +'<dt><a href="/article/'+list[i].uuid+'.html" target="_blank"><img src="'+ URL + list[i].cover + '"></a></dt>'
+          +'<dt><a href="/article/'+list[i].uuid+'.html" target="_blank"><i style="background:url('+ URL + list[i].cover +')"></i></dt>'
           +'<dd>'
           +'<h5>'
           +'<a href="/article/'+list[i].uuid+'.html">'
           +'<i></i><span title="'+list[i].title+'">'+list[i].title+'</span></a></h5>'
-          +'<div class="text">'+content+'</div>'
+          +'<div class="text">'+list[i].content+'</div>'
           +'<p class="date">'+year + '-' + month + '-' + date+'</p></dd>'
           +'</dl>'
         }
         $('.latest').append(str)
-        $('.text img').parent('p').hide();
+        $('.text img').parent('p').remove();
+        for(var i = 0; i<$('.text').length; i++){
+          var html = $('.text').eq(i).html();
+          html = html.substr(0,150)+'...'
+          $('.text').eq(i).html(html);
+        }
+        
         a();
 
 

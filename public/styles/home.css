@@ -51,7 +51,8 @@
   .home .a p {
     line-height: 26px;
     font-size: 12px;
-    color: #838383; }
+    color: #838383;
+    text-align: justify; }
   .home .a1 {
     width: 48px;
     height: 48px;
@@ -96,7 +97,7 @@
             font-size: 12px;
             color: #999999; }
             .home .founder .content ul li .info .description p {
-              text-align: left;
+              text-align: justify;
               margin: 0;
               line-height: 21px; }
   .home .service {
@@ -192,7 +193,7 @@
         .home .project .content ul li .txt {
           width: 90%;
           margin: auto;
-          text-align: left;
+          text-align: justify;
           font-size: 12px;
           color: #989898;
           line-height: 21px; }
@@ -248,7 +249,8 @@
         background-position-y: center !important; }
       .home .office .officeSwiper .slide01 .info p:nth-of-type(3) {
         background: url("../images/address.png");
-        background-position-y: 3px !important; }
+        background-position-y: 3px !important;
+        text-align: justify; }
     .home .office .officeSwiper .slide02 {
       background: url("../images/chengd.jpg"); }
       .home .office .officeSwiper .slide02 .info p:nth-of-type(1) {
@@ -259,7 +261,8 @@
         background-position-y: center !important; }
       .home .office .officeSwiper .slide02 .info p:nth-of-type(3) {
         background: url("../images/address.png");
-        background-position-y: 3px !important; }
+        background-position-y: 3px !important;
+        text-align: justify; }
     .home .office .officeSwiper .slide03 {
       background: url("../images/guig.jpg"); }
       .home .office .officeSwiper .slide03 .info p:nth-of-type(1) {
@@ -270,7 +273,8 @@
         background-position-y: center !important; }
       .home .office .officeSwiper .slide03 .info p:nth-of-type(3) {
         background: url("../images/address.png");
-        background-position-y: 3px !important; }
+        background-position-y: 3px !important;
+        text-align: justify; }
     .home .office .officeSwiper .slide04 {
       background: url("../images/tianj.jpg"); }
       .home .office .officeSwiper .slide04 .info p:nth-of-type(1) {
@@ -281,7 +285,8 @@
         background-position-y: center !important; }
       .home .office .officeSwiper .slide04 .info p:nth-of-type(3) {
         background: url("../images/address.png");
-        background-position-y: 3px !important; }
+        background-position-y: 3px !important;
+        text-align: justify; }
   .home .hatching {
     padding: 0;
     height: 370px;
@@ -300,7 +305,8 @@
         cursor: pointer; }
     .home .hatching .content {
       width: 100%;
-      padding: 30px;
+      padding-top: 30px;
+      padding-bottom: 30px;
       border: 1px solid #f2f2f2;
       background: rgba(255, 255, 255, 0.5);
       margin-bottom: 40px; }
@@ -312,8 +318,7 @@
         border-right: 1px solid #ececec;
         margin: 10px 0; }
         .home .hatching .content a:nth-child(5n) {
-          border-right: 0;
-          padding-right: 0; }
+          border-right: 0; }
         .home .hatching .content a:last-child {
           border-right: 0; }
         .home .hatching .content a i {
@@ -350,9 +355,13 @@
         .home .news-latest .content .latest dl dt a {
           width: 100%;
           height: 100%; }
-          .home .news-latest .content .latest dl dt a img {
+          .home .news-latest .content .latest dl dt a i {
             width: 100%;
-            height: 100%; }
+            height: 100%;
+            display: block;
+            background-repeat: no-repeat !important;
+            background-size: contain !important;
+            background-position: center center !important; }
       .home .news-latest .content .latest dl dd {
         -webkit-box-flex: 1;
             -ms-flex: 1;
@@ -382,7 +391,8 @@
         .home .news-latest .content .latest dl dd .text {
           color: #9c9ca6;
           font-size: 12px;
-          letter-spacing: 2px; }
+          letter-spacing: 2px;
+          text-align: justify; }
         .home .news-latest .content .latest dl dd .date {
           color: #9c9ca6;
           position: absolute;

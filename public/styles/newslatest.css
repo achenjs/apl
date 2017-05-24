@@ -54,10 +54,12 @@
       overflow: hidden; }
       .news-latests .content .latest dl dd h5 {
         width: 80%;
-        font-size: 18px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap; }
+        .news-latests .content .latest dl dd h5 a {
+          font-size: 18px;
+          color: #000 !important; }
       .news-latests .content .latest dl dd .text a {
         display: inline-block;
         width: 100%;
