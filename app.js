@@ -26,9 +26,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(session({
   secret: '12345',
-  cookie: {maxAge: 80000},
+  cookie: {maxAge: 1000*60*60},
   saveUninitialized: true,
-  resave: true
+  resave: true,
+  rolling: true
 }))
 if (process.env.NODE_ENV == 'production') {
   app.use(express.static(path.join(__dirname, 'dist')))
