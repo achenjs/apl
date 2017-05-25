@@ -52,25 +52,18 @@
           length = 2
         }
         for (let i = 0; i < length; i++) {
-          console.log(i);
-          var newTime = new Date(list[i].gmt_create)
-          var year = newTime.getFullYear()
-          var month = newTime.getMonth() + 1
-          var date = newTime.getDate()
-          month = month < 10 ? '0' + month : month
-          date = date < 10 ? '0' + date : date
           var content = list[i].content;
           contents = content.replace(/\<p\>&nbsp;\<\/p\>/g,'');
           console.log(contents);
           str += '<dl>'
-          +'<dt><a href="/article/'+list[i].uuid+'.html" target="_blank"><i style="background:url('+ URL + list[i].cover +')"></i></dt>'
-          +'<dd>'
-          +'<h5>'
-          +'<a href="/article/'+list[i].uuid+'.html">'
-          +'<i></i><span title="'+list[i].title+'">'+list[i].title+'</span></a></h5>'
-          +'<div class="text">'+contents+'</div>'
-          +'</dd>'
-          +'</dl>'
+                  +'<dt><a href="/article/'+list[i].uuid+'.html" target="_blank"><i style="background:url('+ URL + list[i].cover +')"></i></dt>'
+                  +'<dd>'
+                    +'<h5>'
+                    +'<a href="/article/'+list[i].uuid+'.html">'
+                    +'<i></i><span title="'+list[i].title+'">'+list[i].title+'</span></a></h5>'
+                    +'<div class="text">'+contents+'</div>'
+                  +'</dd>'
+                +'</dl>'
         }
         $('.latest').html(str)
         $('.text img').parent('p').remove();
