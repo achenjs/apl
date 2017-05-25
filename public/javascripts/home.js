@@ -74,14 +74,12 @@
           var html = $('.text').eq(i).html();
           var lang = $('#lang').val();
             if(lang == 'cn'){
-              html = html.substr(0,190)+'...'
+              html = html.substr(0,100)+'...'
             }else{
-              html = html.substr(0,320)+'...'
+              html = html.substr(0,300)+'...'
             }
           $('.text').eq(i).html(html);
         }
-        a();
-
 
       } catch (err) {
 
@@ -94,16 +92,6 @@
     centeredSlides: true,
     paginationClickable: true,
     spaceBetween: 30,
-  })
-  function a() {
-    for(var i=0;i<$('.latest').find('dl').length;i++){
-          if($('.latest').find('dl').eq(i).find('dt').height()<$('.latest').find('dl').eq(i).find('dd').height()){
-              $('.latest').find('dl').eq(i).find('dt').css('height',$('.latest').find('dl').eq(i).find('dd').outerHeight());
-          }
-        }
-  }
-  $(window).on('resize',function(){
-    a();
   })
   axios('/company')
     .then(function(result) {
