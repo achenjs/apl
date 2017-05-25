@@ -74,7 +74,7 @@
           var html = $('.text').eq(i).html();
           var lang = $('#lang').val();
             if(lang == 'cn'){
-              html = html.substr(0,100)+'...'
+              html = html.substr(0,150)+'...'
             }else{
               html = html.substr(0,300)+'...'
             }
