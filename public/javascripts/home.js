@@ -53,8 +53,7 @@
         }
         for (let i = 0; i < length; i++) {
           var content = list[i].content;
-          contents = content.replace(/\<p\>&nbsp;\<\/p\>/g,'');
-          console.log(contents);
+          var contents = content.replace(/\<p\>&nbsp;\<\/p\>/g,'');
           str += '<dl>'
                   +'<dt><a href="/article/'+list[i].uuid+'.html" target="_blank"><i style="background:url('+ URL + list[i].cover +')"></i></dt>'
                   +'<dd>'
