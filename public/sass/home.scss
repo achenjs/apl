@@ -532,16 +532,29 @@
             overflow: hidden;
             h5 {
               width: 80%;
-              a{
-                font-size: 18px;
-                color:#000!important;
-              }
               overflow: hidden;
               text-overflow: ellipsis;
               white-space: nowrap;
+              a{
+                font-size: 18px;
+                color:#000!important;
+                i {
+                  display: inline-block;
+                  background-color: #a23432;
+                  width: 3px;
+                  height: 18px;
+                  vertical-align: middle;
+                  margin-right: 6px;
+                }
+                span {
+                  vertical-align: middle;
+                  font-size: 18px;
+                  color: #000000;
+                  cursor: pointer;
+                }
+              }
             }
             .text {
-
                 display: inline-block;
                 width: 100%;
                 color: #b0b0b0;
@@ -550,7 +563,6 @@
                 font-size: 12px;
                 letter-spacing: 2px;
                 text-decoration: none;
-
               p {
                 margin: 0;
                 padding: 0;

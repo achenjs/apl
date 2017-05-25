@@ -423,6 +423,18 @@
           .home .news-latest .content .latest dl dd h5 a {
             font-size: 18px;
             color: #000 !important; }
+            .home .news-latest .content .latest dl dd h5 a i {
+              display: inline-block;
+              background-color: #a23432;
+              width: 3px;
+              height: 18px;
+              vertical-align: middle;
+              margin-right: 6px; }
+            .home .news-latest .content .latest dl dd h5 a span {
+              vertical-align: middle;
+              font-size: 18px;
+              color: #000000;
+              cursor: pointer; }
         .home .news-latest .content .latest dl dd .text {
           display: inline-block;
           width: 100%;
