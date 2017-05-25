@@ -16,10 +16,6 @@ module.exports = {
     })
   },
   index(req, res) {
-    res.redirect('/home')
-  },
-  //  首页
-  home(req, res) {
     var list = header.tem(req.session.lang)
     if (!req.session.lang) {
       req.session.lang = 'cn'

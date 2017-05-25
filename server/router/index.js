@@ -3,7 +3,6 @@ const Index = require('../controller')
 module.exports = function (app) {
   //  首页
   app.get('/', Index.index)
-  app.get('/home', Index.home)
   app.get('/carousel', Index.carousel)
   app.get('/article', Index.article)
   //  入孵企业

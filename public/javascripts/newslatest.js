@@ -19,7 +19,7 @@
             +'</dt>'
             +'<dd>'
                 +'<h5 title="'+ list[i].title +'">'
-                  +'<a href="/article/'+list[i].uuid+'.html">'+list[i].title+'</a>'
+                  +'<a href="/article/'+list[i].uuid+'.html" target="_blank">'+list[i].title+'</a>'
                 +'</h5>'
                 +'<div class="text">'+contents+'</div>'
             +'</dd>'

@@ -62,7 +62,7 @@
                   +'<dt><a href="/article/'+list[i].uuid+'.html" target="_blank"><i style="background:url('+ URL + list[i].cover +')"></i></dt>'
                   +'<dd>'
                     +'<h5>'
-                    +'<a href="/article/'+list[i].uuid+'.html">'
+                    +'<a href="/article/'+list[i].uuid+'.html" target="_blank">'
                     +'<i></i><span title="'+list[i].title+'">'+list[i].title+'</span></a></h5>'
                     +'<div class="text">'+contents+'</div>'
                   +'</dd>'

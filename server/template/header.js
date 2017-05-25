@@ -1,6 +1,6 @@
 var obj = {
   'cn': [{
-    title: "首页",url: '/home'
+    title: "首页",url: '/'
   },{
     title: "生态服务",url: '/ecology'
   },{
@@ -13,7 +13,7 @@ var obj = {
     title: "APL登录",url: 'https://apl.apluslabs.com'
   }],
   'en': [{
-    title: "Home",url: '/home'
+    title: "Home",url: '/'
   },{
     title: "Ecosystem",url: '/ecology'
   },{

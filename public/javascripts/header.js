@@ -16,7 +16,7 @@ $(function () {
     path = pathname
   }
   switch (path) {
-    case '/home':
+    case '/':
       $('.headActive').eq(0).addClass('active')
       break;
     case '/ecology':
