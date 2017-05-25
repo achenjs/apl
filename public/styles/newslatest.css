@@ -60,7 +60,7 @@
         .news-latests .content .latest dl dd h5 a {
           font-size: 18px;
           color: #000 !important; }
-      .news-latests .content .latest dl dd .text a {
+      .news-latests .content .latest dl dd .text {
         display: inline-block;
         width: 100%;
         color: #b0b0b0;
@@ -69,10 +69,10 @@
         font-size: 12px;
         letter-spacing: 2px;
         text-decoration: none; }
-      .news-latests .content .latest dl dd .text p {
-        margin: 0;
-        padding: 0;
-        text-align: justify; }
+        .news-latests .content .latest dl dd .text p {
+          margin: 0;
+          padding: 0;
+          text-align: justify; }
       .news-latests .content .latest dl dd .date {
         color: #b0b0b0;
         position: absolute;
