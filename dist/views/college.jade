@@ -11,27 +11,30 @@ block content
         img(src='/images/collegeHead_en.jpg')
         p.txt The college offers 020 hardware pilot courses, including hardware off-line activities,<br>hardware lessons (education and training), hardware online classrooms, hardware labs, etc.
     div.contail
-      div.newVideo
-        h4.title
-          i
-          - if (lang === 'cn')
-            span 近期更新
-          - else if (lang === 'en')
-            span Recently updated
-        dl
-          dt.newOne
-          dd
-            ul.newList
       div.pastVideo
-        h4.title
-          i
-          - if (lang === 'cn')
-            span 往期视频
-          - else if (lang === 'en')
-            span Past video
+        //-
+          div.newVideo
+            h4.title
+              i
+              - if (lang === 'cn')
+                span 近期更新
+              - else if (lang === 'en')
+                span Recently updated
+            dl
+              dt.newOne
+              dd
+                ul.newList
+    
+        //-
+          h4.title
+            i
+            - if (lang === 'cn')
+              span 往期视频
+            - else if (lang === 'en')
+              span Past video
         ul.pastList
-    div.tcdPageCode
+     div.tcdPageCode
   script(src='/javascripts/format-b01cb04674.js')
   script(src='/javascripts/page-4f80f8b034.js')
-  script(src='/javascripts/college-8259a69a0a.js')
+  script(src='/javascripts/college-47222aa3d4.js')
     
