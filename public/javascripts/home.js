@@ -52,6 +52,7 @@
           length = 2
         }
         for (let i = 0; i < length; i++) {
+          console.log(i);
           var newTime = new Date(list[i].gmt_create)
           var year = newTime.getFullYear()
           var month = newTime.getMonth() + 1
@@ -60,6 +61,7 @@
           date = date < 10 ? '0' + date : date
           var content = list[i].content;
           contents = content.replace(/\<p\>&nbsp;\<\/p\>/g,'');
+          console.log(contents);
           str += '<dl>'
           +'<dt><a href="/article/'+list[i].uuid+'.html" target="_blank"><i style="background:url('+ URL + list[i].cover +')"></i></dt>'
           +'<dd>'
@@ -70,7 +72,6 @@
           +'</dd>'
           +'</dl>'
         }
-        console.log(str);
         $('.latest').html(str)
         $('.text img').parent('p').remove();
         $('.text br').parent('p').remove();
