@@ -10,29 +10,26 @@ block content
       - else if (lang === 'en')
         img(src='/images/collegeHead_en.jpg')
         p.txt The college offers 020 hardware pilot courses, including hardware off-line activities,<br>hardware lessons (education and training), hardware online classrooms, hardware labs, etc.
-    div.contail.row
-      div.col-lg-2.col-md-2.col-sm-2.col-xs-2
-      div.col-lg-8.col-md-8.col-sm-8.col-xs-8
-        div.newVideo
-          h4.title
-            i
-            - if (lang === 'cn')
-              span 近期更新
-            - else if (lang === 'en')
-              span Recently updated
-          dl
-            dt.newOne
-            dd
-              ul.newList
-        div.pastVideo
-          h4.title
-            i
-            - if (lang === 'cn')
-              span 往期视频
-            - else if (lang === 'en')
-              span Past video
-          ul.pastList
-      div.col-lg-2.col-md-2.col-sm-2.col-xs-2
+    div.contail
+      div.newVideo
+        h4.title
+          i
+          - if (lang === 'cn')
+            span 近期更新
+          - else if (lang === 'en')
+            span Recently updated
+        dl
+          dt.newOne
+          dd
+            ul.newList
+      div.pastVideo
+        h4.title
+          i
+          - if (lang === 'cn')
+            span 往期视频
+          - else if (lang === 'en')
+            span Past video
+        ul.pastList
     div.tcdPageCode
   script(src='/javascripts/format-b01cb04674.js')
   script(src='/javascripts/page-1bc5bdef1d.js')

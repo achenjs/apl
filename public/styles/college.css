@@ -15,7 +15,9 @@
     font-size: 14px; }
 
 .college .contail {
-  padding: 20px 0; }
+  width: 1156px;
+  padding: 20px 0;
+  margin: 0 auto; }
   .college .contail h4.title {
     border-bottom: 1px solid #dbdbdb;
     padding: 10px 0;
@@ -23,7 +25,7 @@
     .college .contail h4.title i {
       display: inline-block;
       width: 27px;
-      height: 22px;
+      height: 24px;
       vertical-align: middle;
       margin-right: 10px;
       margin-top: -2px; }
@@ -95,8 +97,8 @@
     display: -ms-flexbox;
     display: flex; }
     .college .contail .newVideo dl dt {
-      width: 500px;
-      height: 400px; }
+      width: 576px;
+      height: 324px; }
       .college .contail .newVideo dl dt a {
         width: 100%;
         height: 100%;
@@ -105,7 +107,7 @@
       -webkit-box-flex: 1;
           -ms-flex: 1;
               flex: 1;
-      margin-left: 10px; }
+      margin-left: 18px; }
       .college .contail .newVideo dl dd ul.newList {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -118,9 +120,9 @@
             -ms-flex-pack: justify;
                 justify-content: space-between; }
         .college .contail .newVideo dl dd ul.newList li {
-          width: 49%;
-          height: 195px;
-          margin-top: 10px; }
+          width: 272px;
+          height: 153px;
+          margin-top: 18px; }
           .college .contail .newVideo dl dd ul.newList li:nth-of-type(1), .college .contail .newVideo dl dd ul.newList li:nth-of-type(2) {
             margin-top: 0; }
   .college .contail .pastVideo {
@@ -136,10 +138,10 @@
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
       .college .contail .pastVideo ul.pastList li {
-        width: 24%;
-        height: 195px;
+        width: 272px;
+        height: 153px;
         margin-top: 10px;
-        margin-right: 10px; }
+        margin-right: 22px; }
         .college .contail .pastVideo ul.pastList li:nth-of-type(1), .college .contail .pastVideo ul.pastList li:nth-of-type(2), .college .contail .pastVideo ul.pastList li:nth-of-type(3), .college .contail .pastVideo ul.pastList li:nth-of-type(4) {
           margin-top: 0; }
         .college .contail .pastVideo ul.pastList li:nth-of-type(4n) {
