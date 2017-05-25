@@ -70,7 +70,8 @@
           +'</dd>'
           +'</dl>'
         }
-        $('.latest').append(str)
+        console.log(str);
+        $('.latest').html(str)
         $('.text img').parent('p').remove();
         $('.text br').parent('p').remove();
         for(var i = 0; i<$('.text').length; i++){
@@ -78,7 +79,6 @@
           html = html.substr(0,150)+'...'
           $('.text').eq(i).html(html);
         }
-
         a();
 
 
