@@ -2,6 +2,7 @@ block append head
   link(rel='stylesheet', href='/styles/page.css')
     
 block content
+  input(type="hidden" value="#{lang}")#lang
   div.news-latests
     div.latestHead
       - if (lang === 'cn')

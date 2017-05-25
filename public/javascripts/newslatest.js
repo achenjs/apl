@@ -11,7 +11,6 @@
             var content = list[i].content;
             var contents = content.replace(/\<p\>&nbsp;\<\/p\>/g,'');
             contents = contents.replace(/\<p\>\<br\><\/p\>/g,'');
-
             str += '<dl>'
             +'<dt>'
               +'<a href="/article/'+list[i].uuid+'.html" target="_blank">'
@@ -30,7 +29,12 @@
           $('.text img').parent('p').remove();
           for(var i = 0; i<$('.text').length; i++){
             var html = $('.text').eq(i).html();
-            html = html.substr(0,150)+'...'
+            var lang = $('#lang').val();
+            if(lang == 'cn'){
+              html = html.substr(0,150)+'...'
+            }else{
+              html = html.substr(0,300)+'...'
+            }
             $('.text').eq(i).html(html);
           }
           // 启动分页
