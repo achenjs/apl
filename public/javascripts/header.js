@@ -43,7 +43,7 @@ $(function () {
   //  中英文切换
   $('.lang').on('click', function() {
     $(this).addClass('active').siblings('.lang').removeClass('active')
-    axios.get('/lang?lang=' + $(this).attr('lang'))
+    axios.get('/lang?lang=' + $(this).attr('lang') + '&_=' + Date.now())
       .then((result) => {
         location.reload()
       })
