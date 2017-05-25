@@ -69,7 +69,12 @@
         $('.text img').parent('p').remove();
         for(var i = 0; i<$('.text').length; i++){
           var html = $('.text').eq(i).html();
-          html = html.substr(0,150)+'...'
+          var lang = $('#lang').val();
+            if(lang == 'cn'){
+              html = html.substr(0,150)+'...'
+            }else{
+              html = html.substr(0,300)+'...'
+            }
           $('.text').eq(i).html(html);
         }
         a();
