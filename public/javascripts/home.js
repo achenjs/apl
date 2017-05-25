@@ -29,6 +29,9 @@
         }
       }
       $('.carouselContent').append(str)
+      if (lang === 'en') {
+        $('.carouselContent .box').css('margin-left', '-50px');
+      }
       var mySwiper = new Swiper ('.carouselSwiper', {
         loop: true,
         // 如果需要分页器
@@ -56,14 +59,14 @@
           var contents = content.replace(/\<p\>&nbsp;\<\/p\>/g,'');
           contents = contents.replace(/\<p\>\<br\><\/p\>/g,'');
           str += '<dl>'
-          +'<dt><a href="/article/'+list[i].uuid+'.html" target="_blank"><i style="background:url('+ URL + list[i].cover +')"></i></dt>'
-          +'<dd>'
-          +'<h5>'
-          +'<a href="/article/'+list[i].uuid+'.html">'
-          +'<i></i><span title="'+list[i].title+'">'+list[i].title+'</span></a></h5>'
-          +'<div class="text">'+contents+'</div>'
-          +'</dd>'
-          +'</dl>'
+                  +'<dt><a href="/article/'+list[i].uuid+'.html" target="_blank"><i style="background:url('+ URL + list[i].cover +')"></i></dt>'
+                  +'<dd>'
+                    +'<h5>'
+                    +'<a href="/article/'+list[i].uuid+'.html">'
+                    +'<i></i><span title="'+list[i].title+'">'+list[i].title+'</span></a></h5>'
+                    +'<div class="text">'+contents+'</div>'
+                  +'</dd>'
+                +'</dl>'
         }
         $('.latest').html(str)
         $('.text img').parent('p').remove();
