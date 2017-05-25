@@ -2,6 +2,7 @@ block append head
   link(rel='stylesheet', href='/lib/swiper/dist/css/swiper.min.css')
     
 block content
+  input(type="hidden" value="#{lang}")#lang
   div.home
     //- 轮播
     div.swiper-container.swiper-container-horizontal.carouselSwiper
@@ -331,5 +332,5 @@ block content
               i
       div.col-lg-1.col-md-1.col-sm-1.col-xs-1
     script(src='/lib/swiper/dist/js/swiper.jquery.min.js')
-    script(src='/javascripts/home-417d0f5d3f.js')
+    script(src='/javascripts/home.js')
     

@@ -2,6 +2,7 @@ block append head
   link(rel='stylesheet', href='/lib/swiper/dist/css/swiper.min.css')
     
 block content
+  input(type="hidden" value="#{lang}")#lang
   div.home
     //- 轮播
     div.swiper-container.swiper-container-horizontal.carouselSwiper
