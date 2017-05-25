@@ -240,22 +240,40 @@ block content
         - else if (lang === 'en')
           h3 Investment enterprise
         div.content
-          ul
-            li
-              div.img
-                img(src='/images/sjs.png')
-              p.title 三角兽(北京)科技有限公司
-              div.txt 三角兽科技公司是一家人工智能语义公司，主要研究方向是基于语义来打造多语言AI 智能交互系统，为To B类合作方提供聊天、多轮对话和中控决策服务，让合作方获得智能交互的能力，让用户更自然的获取陪伴、信息、服务。
-            li
-              div.img
-                img(src='/images/zlyd.png')
-              p.title 北京智能一点科技有限公司
-              div.txt 北京智能一点科技有限公司，是一家利用人工智能技术全面提升客户智能交互体验的初创公司。该创业团队在人工智能、 大数据、移动互联网方面有深厚积累和独特资源，对语音交互和内容个性化推荐有丰富的想象力和深刻的理解。
-            li
-              div.img
-                img(src='/images/cd.png')
-              p.title 四川尺度文化传媒有限公司
-              div.txt 四川尺度文化传媒有限公司创建以来，坚持“诚信为本，客户至上”的宗旨，本着“品质为本，精益求精”的经营销售理念，力求给客户提供全方位优质服务的同时，也使企业得到长足的发展。期待与各位业界新老客户携手共进，共创辉煌。
+          - if (lang === 'cn')
+            ul
+              li
+                div.img
+                  img(src='/images/sjs.png')
+                p.title 三角兽(北京)科技有限公司
+                div.txt 三角兽科技公司是一家人工智能语义公司，主要研究方向是基于语义来打造多语言AI 智能交互系统，为To B类合作方提供聊天、多轮对话和中控决策服务，让合作方获得智能交互的能力，让用户更自然的获取陪伴、信息、服务。
+              li
+                div.img
+                  img(src='/images/zlyd.png')
+                p.title 北京智能一点科技有限公司
+                div.txt 北京智能一点科技有限公司，是一家利用人工智能技术全面提升客户智能交互体验的初创公司。该创业团队在人工智能、 大数据、移动互联网方面有深厚积累和独特资源，对语音交互和内容个性化推荐有丰富的想象力和深刻的理解。
+              li
+                div.img
+                  img(src='/images/cd.png')
+                p.title 四川尺度文化传媒有限公司
+                div.txt 四川尺度文化传媒有限公司创建以来，坚持“诚信为本，客户至上”的宗旨，本着“品质为本，精益求精”的经营销售理念，力求给客户提供全方位优质服务的同时，也使企业得到长足的发展。期待与各位业界新老客户携手共进，共创辉煌。
+          - else if (lang === 'en')
+            ul(style="height: 450px;")
+              li
+                div.img
+                  img(src='/images/sjs.png')
+                p.title The Trio-AI company
+                div.txt The Trio-AI company is an artificial intelligence semantic company. Trio-AI focuses on creating multi-language AI intelligent interactive system based on semantics. Provide chat, multi-round dialogue and control decision-making services for To-B style partners. The users can easily obtain intelligent interaction with partners and more natural access to accompany, information, services.
+              li
+                div.img
+                  img(src='/images/zlyd.png')
+                p.title Beijing Abitai Technology company
+                div.txt Beijing Abitai Technology company is a start-up company aiming at enhancing the customer intelligent interactive experience by artificial intelligence technology. The entrepreneurial team has a deep accumulation and unique resources in the artificial intelligence, large data, mobile Internet and has a wealth of imagination and profound understanding on the voice of interactive and personalized content recommendation.
+              li
+                div.img
+                  img(src='/images/cd.png')
+                p.title 四川尺度文化传媒有限公司
+                div.txt 四川尺度文化传媒有限公司创建以来，坚持“诚信为本，客户至上”的宗旨，本着“品质为本，精益求精”的经营销售理念，力求给客户提供全方位优质服务的同时，也使企业得到长足的发展。期待与各位业界新老客户携手共进，共创辉煌。
       div.col-lg-2.col-md-2.col-sm-2.col-xs-2 
     //-  入孵企业
     div.hatching.row
