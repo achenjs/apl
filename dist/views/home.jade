@@ -220,14 +220,15 @@ block content
     //-  生态服务
     - if (lang === 'cn')
       div.stService.row
+        div.col-lg-2.col-md-2.col-sm-2.col-xs-2
+        div.col-lg-8.col-md-8.col-sm-8.col-xs-8
+          h3 生态服务
+        div.col-lg-2.col-md-2.col-sm-2.col-xs-2
     - else if (lang === 'en')
       div(style="background-image: url(/images/stfw_en.jpg)").stService.row
         div.col-lg-2.col-md-2.col-sm-2.col-xs-2
         div.col-lg-8.col-md-8.col-sm-8.col-xs-8
-          - if (lang === 'cn')
-            h3 生态服务
-          - else if (lang === 'en')
-            h3 Ecological Services
+          h3 Ecological Services
         div.col-lg-2.col-md-2.col-sm-2.col-xs-2
     //-  投资项目
     div.project.row
