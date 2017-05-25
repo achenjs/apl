@@ -14,11 +14,12 @@ block content
           dt
             img(src='/images/ecology01.png')
           dd
-            h5  洪泰智造基金
-            div 全球第一支专注于人工智能及智能硬件领域的天使基金，
-                |总规模10亿元，主要对高科技领域处于种子轮、天使轮阶段的创业公司进行投资
-                |。截至目前，洪泰智造基金已投资三角兽、智能一点
-                |、Turingsence、升泰能源、踪视通、创品机器人等明星创业团队。
+            - if (lang === 'cn')
+              h5  洪泰智能智造基金
+              div 俞敏洪、盛希泰和乔会君共同发起洪泰智能智造基金，组织形式为有限合伙。主要投资方向为人工智能、智能制造、物联网等相关行业的早中期项目。洪泰智造工场为投资项目提供“基金＋深度服务”模式，除了提供资金和孵化空间外，还配有自有专家工程师团队、自建敏捷生产线（实验室）、自研APL系统。
+            - else if (lang === 'en')
+              h5  Aplus Labs Intelligence Manufacturing Fund
+              div Mr. YU Minhoong, SHENG Xitai and QIAO Huijun founded Aplus Intelligence and Manufacturing Fund, and organized the fund with limited partnership pattern. This fund focuses on early stage and mid-term projects on AI, Intelligent Manufacturing, IoT, etc. Aplus Labs provide start-ups with fund and deep services, and provide not only incubation areas, but also professional engineers, agile production lines (labs) and APL system.
         dl
           dd
             - if (lang === 'cn')
