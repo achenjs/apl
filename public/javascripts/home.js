@@ -59,7 +59,7 @@
           var contents = content.replace(/\<p\>&nbsp;\<\/p\>/g,'');
           contents = contents.replace(/\<p\>\<br\><\/p\>/g,'');
           str += '<dl>'
-                  +'<dt><a href="/article/'+list[i].uuid+'.html" target="_blank"><i style="background:url('+ URL + list[i].cover +')"></i></dt>'
+                  +'<dt style="width: 325px; height: 200px;"><a href="/article/'+list[i].uuid+'.html" target="_blank"><i style="background:url('+ URL + list[i].cover +')"></i></dt>'
                   +'<dd>'
                     +'<h5>'
                     +'<a href="/article/'+list[i].uuid+'.html" target="_blank">'
