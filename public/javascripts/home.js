@@ -29,6 +29,9 @@
         }
       }
       $('.carouselContent').append(str)
+      if (lang === 'en') {
+        $('.carouselContent .box').css('margin-left', '-50px');
+      }
       var mySwiper = new Swiper ('.carouselSwiper', {
         loop: true,
         // 如果需要分页器
