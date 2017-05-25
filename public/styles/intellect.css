@@ -30,7 +30,7 @@
       color: #ffffff;
       font-size: 14px; }
   .intellect .produce .contail {
-    padding: 50px 0 30px 0; }
+    padding: 50px 0; }
     .intellect .produce .contail h4 {
       text-align: center;
       font-size: 24px;
@@ -59,17 +59,18 @@
           text-indent: 2em;
           text-align: justify; }
   .intellect .quality {
-    padding: 50px 0 30px 0;
+    padding: 50px 0;
     background: url("../images/latest.jpg") no-repeat;
     background-size: cover; }
     .intellect .quality h4 {
       text-align: center;
       font-size: 24px;
-      margin-bottom: 30px; }
+      margin-bottom: 20px; }
     .intellect .quality .content p {
       text-align: center;
       color: #999999;
-      font-size: 12px; }
+      font-size: 12px;
+      margin-bottom: 20px; }
     .intellect .quality .content .list {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -101,7 +102,7 @@
             color: #a2a2a2;
             margin-top: 5px; }
   .intellect .equipment {
-    padding: 50px 0 30px 0; }
+    padding: 50px 0; }
     .intellect .equipment h4 {
       text-align: center;
       font-size: 24px;
@@ -162,15 +163,47 @@
           -ms-flex-pack: justify;
               justify-content: space-between; }
       .intellect .case ul li {
-        width: 24%; }
+        width: 25%;
+        margin-left: 20px; }
+        .intellect .case ul li:nth-last-child(1) {
+          margin-right: 20px; }
         .intellect .case ul li div {
           width: 100%;
           height: 250px;
           text-align: center;
-          background: #ffffff; }
+          background: #ffffff;
+          padding: 30px; }
           .intellect .case ul li div img {
             height: 250px;
             padding: 30px; }
         .intellect .case ul li p {
           margin-top: 10px;
           text-align: center; }
+      .intellect .case ul li:nth-of-type(1) .imgs {
+        width: 100%;
+        height: 100%;
+        background: url("/images/yx.png");
+        background-repeat: no-repeat !important;
+        background-size: contain !important;
+        background-position: center center !important; }
+      .intellect .case ul li:nth-of-type(2) .imgs {
+        width: 100%;
+        height: 100%;
+        background: url("/images/kt.png");
+        background-repeat: no-repeat !important;
+        background-size: contain !important;
+        background-position: center center !important; }
+      .intellect .case ul li:nth-of-type(3) .imgs {
+        width: 100%;
+        height: 100%;
+        background: url("/images/mt.png");
+        background-repeat: no-repeat !important;
+        background-size: contain !important;
+        background-position: center center !important; }
+      .intellect .case ul li:nth-of-type(4) .imgs {
+        width: 100%;
+        height: 100%;
+        background: url("/images/cg.png");
+        background-repeat: no-repeat !important;
+        background-size: contain !important;
+        background-position: center center !important; }

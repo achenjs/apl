@@ -2,10 +2,12 @@ $(function() {
   $('.quality .item').on('mouseover', function() {
     //$(this).addClass('active');
     $(this).css('box-shadow','5px 5px 3px #b4b4b4');
+    $(this).find('h3').css('background','#3f6c99');
   })
   $('.quality .item').on('mouseout', function() {
     //$(this).removeClass('active')
     $(this).css('box-shadow','0px 0px 0px transparent');
+    $(this).find('h3').css('background','');
   })
   var li = $('.equipment').find('ul').find('li');
   for(var i =0 ;i<li.length;i++){
