@@ -60,9 +60,7 @@
           month = month < 10 ? '0' + month : month
           date = date < 10 ? '0' + date : date
           var content = list[i].content;
-          console.log(content);
-          contents = content.replace(/\<p\>&nbsp;\<\/p\>/g,'');
-          
+          var contents = content.replace(/\<p\>&nbsp;\<\/p\>/g,'');
           str += '<dl>'
           +'<dt><a href="/article/'+list[i].uuid+'.html" target="_blank"><i style="background:url('+ URL + list[i].cover +')"></i></dt>'
           +'<dd>'
