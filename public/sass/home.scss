@@ -36,12 +36,30 @@
     }
   }
 
-  @media screen and (min-width:1201px){
+  @media screen and (min-width:1201px) and (max-width:1313px){
+    .title{
+      font-size:2.2em;
+    }
+    .des{
+      font-size:1.8em;
+    }
+  }
+
+  @media screen and (min-width:1313px) and (max-width:1440px){
+    .title{
+      font-size:2.35em;
+    }
+    .des{
+      font-size:1.8em;
+    }
+  }
+
+  @media screen and (min-width:1441px){
     .title{
       font-size:3em;
     }
     .des{
-      font-size:1.8em;
+      font-size:2em;
     }
   }
   
