@@ -54,6 +54,7 @@
         for (let i = 0; i < length; i++) {
           var content = list[i].content;
           var contents = content.replace(/\<p\>&nbsp;\<\/p\>/g,'');
+          contents = contents.replace(/\<p\>\<br\><\/p\>/g,'');
           str += '<dl>'
                   +'<dt><a href="/article/'+list[i].uuid+'.html" target="_blank"><i style="background:url('+ URL + list[i].cover +')"></i></dt>'
                   +'<dd>'
@@ -66,7 +67,6 @@
         }
         $('.latest').html(str)
         $('.text img').parent('p').remove();
-        $('.text br').parent('p').remove();
         for(var i = 0; i<$('.text').length; i++){
           var html = $('.text').eq(i).html();
           html = html.substr(0,150)+'...'
