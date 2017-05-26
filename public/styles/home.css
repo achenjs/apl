@@ -201,8 +201,7 @@
               justify-content: space-between;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center;
-      overflow: hidden; }
+              align-items: center; }
       .home .project .content ul li {
         width: 33%;
         height: 100%;
