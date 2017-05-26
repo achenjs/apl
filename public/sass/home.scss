@@ -71,7 +71,7 @@
       font-size:2em;
     }
   }
-  
+
 
   .carouselSwiper {
     width: 100%;
@@ -254,6 +254,7 @@
       ul {
         justify-content: space-between;
         align-items: center;
+        overflow:hidden;
         li {
           width: 33%;
           height:100%;
@@ -493,66 +494,94 @@
       .latest {
         dl {
           display: flex;
-          margin-bottom: 20px;
-          min-height:200px;
+          padding-bottom: 20px;
+          border-bottom: 1px solid #e0e0e0;
+          margin-top: 20px;
+          &:last-child {
+            border-bottom: none;
+          }
           dt {
             width: 325px;
-            height:200px;
+            height: 200px;
             a {
+              display: inline-block;
               width: 100%;
               height: 100%;
               i {
+                display: inline-block;
                 width: 100%;
                 height: 100%;
-                display:block;
-                background-repeat:no-repeat!important;
-                background-size:contain!important;
-                background-position:center center!important;
+                background-position: center !important;
+                background-repeat: no-repeat !important;
+                background-size: contain !important;
+              }
+              img {
+                width: 100%;
+                height: 100%;
               }
             }
           }
           dd {
             flex: 1;
             margin-left: 15px;
-            padding: 10px 15px;
+            height: 200px;
+            padding: 0 15px;
             background-color: #ffffff;
-            box-shadow: 5px 5px 5px #9c9ca6;
             position: relative;
+            overflow: hidden;
             h5 {
               width: 80%;
               overflow: hidden;
               text-overflow: ellipsis;
               white-space: nowrap;
-              margin-bottom:18px;
               a{
-                  i {
-                    background-color: #a23432;
-                    display: inline-block;
-                    width: 3px;
-                    height: 18px;
-                    vertical-align: middle;
-                    margin-right: 6px;
-                  }  
-                  span{
-                    color:#000;
-                    font-size:18px;
-                    cursor:pointer;
-                    vertical-align: middle;
-                  } 
+                font-size: 18px;
+                color:#000!important;
+                i {
+                  display: inline-block;
+                  background-color: #a23432;
+                  width: 3px;
+                  height: 18px;
+                  vertical-align: middle;
+                  margin-right: 6px;
+                }
+                span {
+                  vertical-align: middle;
+                  font-size: 18px;
+                  color: #000000;
+                  cursor: pointer;
+                }
               }
-              
             }
             .text {
-              color: #9c9ca6;
-              font-size: 12px;
-              letter-spacing: 2px;
-              text-align: justify;
+                display: inline-block;
+                width: 100%;
+                color: #b0b0b0;
+                height: 100px;
+                overflow: hidden;
+                font-size: 12px;
+                letter-spacing: 2px;
+                text-decoration: none;
+              p {
+                margin: 0;
+                padding: 0;
+                text-align: justify;
+              }
             }
             .date {
-              color: #9c9ca6;
+              color: #b0b0b0;
               position: absolute;
               bottom: 0;
               right: 20px;
+              i {
+                display: inline-block;
+                width: 15px;
+                height: 17px;
+                vertical-align: middle;
+                margin-top: -2px;
+                margin-right: 5px;
+                background: url('../images/latestDate.png') no-repeat;
+              }
             }
           }
         }
