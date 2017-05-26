@@ -8,6 +8,7 @@
   $(window).on('resize', function() {
     $('.carouselSwiper').css('height', $(window).height())
   })
+  
   //  轮播图列表
   axios('/carousel')
     .then(function(result) {
