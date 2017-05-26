@@ -10,11 +10,13 @@
 		fillHtml:function(obj,args){
 			return (function(){
 				obj.empty();
+				if (args.pageCount === 1) {
+					return
+				}
 				//上一页
 				if(args.current > 1){
 					obj.append('<a href="javascript:;" class="prevPage"></a>');
 				}else{
-					obj.empty();
 					obj.remove('.prevPage');
 					// obj.append('<span class="disabled prevPage"></span>');
 				}
@@ -51,7 +53,6 @@
 				if(args.current < args.pageCount){
 					obj.append('<a href="javascript:;" class="nextPage"></a>');
 				}else{
-					obj.empty();
 					obj.remove('.nextPage');
 					// obj.append('<span class="disabled nextPage"></span>');
 				}
