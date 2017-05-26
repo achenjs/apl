@@ -5,12 +5,12 @@ const ServerUrl = {
 }
 
 var obj = {
-  localhostPort: 8888,
-  difficulty: '100.0',
   globalUrl: ServerUrl.w,
   globalPort: '8080',
-  time_out: 36000
+  time_out: 36000         //  请求超时时间单位(ms)
 }
+
+//  终端输入NODE_ENV=production  在node可以通过process.env拿到NODE_ENV的值
 
 if (process.env.NODE_ENV == 'production') {
   obj.globalUrl = ServerUrl.production
