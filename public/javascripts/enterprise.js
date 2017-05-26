@@ -10,7 +10,7 @@
           if (list[i].logo_url) {
             str += '<li><a href="/home/enterpriseDetail?id='+list[i].id+'" style="background: url('+URL+list[i].base_logo_url+')"><i style="background: url('+URL+list[i].logo_url+')"></i></li>'
           } else {
-            str += '<li><a href="/home/enterpriseDetail?id='+list[i].id+'" title="'+list[i].product_nam+'">'+list[i].product_name+'</a></li>'
+            str += '<li><a href="/home/enterpriseDetail?id='+list[i].id+'" title="'+list[i].product_name+'">'+list[i].product_name+'</a></li>'
           }
         }
         $('.list').empty()

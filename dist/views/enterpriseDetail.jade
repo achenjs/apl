@@ -22,17 +22,30 @@ block content
                   p.web
                     span
                       a(target="_blank")
-                  div.left
-                    p.Setdate
-                      span 成立时间：
+                  - if (lang === 'cn')
+                    div.left
+                      p.Setdate
+                        span 成立时间：
+                        i 
+                    div.right
+                      p.companySize
+                        span 公司规模：
+                        i 
+                    div.desInfo
+                      span 公司CEO：
                       i 
-                  div.right
-                    p.companySize
-                      span 公司规模：
-                      i 
-                div.desInfo
-                  span 公司CEO：
-                  i 
+                  - else if (lang === 'en')
+                    div.left
+                      p.Setdate
+                        span founding time：
+                        i 
+                    div.right(style="margin-left: 18px")
+                      p.companySize
+                        span company size：
+                        i 
+                    div.desInfo
+                      span CEO：
+                      i
             div.txtContent
               h4 
               div.info 
