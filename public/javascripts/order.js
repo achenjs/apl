@@ -69,15 +69,13 @@
 
   //  获取验证码
   $('.verCode').on('click', function() {
-    if (!isPhone) {
-      alert('请先输入手机号！')
-    }
     if (isquest && isPhone) {
       isquest = false
       clearInterval(move)
       var move = setInterval(function() {
         index--
         if (index == 0) {
+          index = 60
           $('.verCode').text('发送验证码').removeClass('active')
           isquest = true
           clearInterval(move)
@@ -109,7 +107,7 @@
       }
       axios.post('/addorder', obj)
         .then(function(result) {
-          alert(result.data.result)
+          alert(result.data.result.message)
         })
     }
   })
