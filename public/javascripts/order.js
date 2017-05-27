@@ -33,7 +33,8 @@
   $(document).on('focus', 'input', function() {
     $(this).parent('.itemInput').addClass('active')
   })
-  $(document).on('keyup', 'input', function() {
+  $(document).on('blur', 'input', function() {
+    $(this).parent('.itemInput').removeClass('active')
     isB()
     isButton()
   })
@@ -61,11 +62,6 @@
       isCode = true
     }
   }
-
-  $(document).on('blur', 'input', function() {
-    $(this).parent('.itemInput').removeClass('active')
-    isButton()
-  })
 
   //  获取验证码
   $('.verCode').on('click', function() {
